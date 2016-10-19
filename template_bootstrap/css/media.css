@@ -24,8 +24,10 @@
 		padding: 14px;
 		position: absolute;
 		vertical-align: middle;
-		width: 100%;
+		min-width: 200px;
 		z-index: 12;
+			border-radius: 5px;
+	border: 1px solid gray;
 	}
 
 }
