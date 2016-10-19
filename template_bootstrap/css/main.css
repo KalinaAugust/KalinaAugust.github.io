@@ -1,23 +1,27 @@
 *::-webkit-input-placeholder {
 	color: #666;
 	opacity: 1;
+	font-size: 16px;
 }
 *:-moz-placeholder {
 	color: #666;
 	opacity: 1;
+	font-size: 16px;
 }
 *::-moz-placeholder {
 	color: #666;
 	opacity: 1;
+	font-size: 16px;
 }
 *:-ms-input-placeholder {
 	color: #666;
 	opacity: 1;
+	font-size: 16px;
 }
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
-	
+	background-color: coral;
 }
 body input:required:valid,
 body textarea:required:valid {
@@ -192,12 +196,6 @@ hr {
 	text-align: center;
 }
 
-
-.get_poke  {
-
-}
-
-
 .get_poke .button {
 	color: black;
 	font-size: 20px;
@@ -205,8 +203,7 @@ hr {
 	background-image:  url('../img/pokeball_button2.png'),  url('../img/pokeball_button2.png');
 	background-repeat: no-repeat;
 	background-position: center right, center left;
-	
-  margin-top: 20px;
+	margin-top: 20px;
 	padding: 18px;
 	display: block;
 	width: 100%;
@@ -225,3 +222,47 @@ hr {
 	box-shadow: 1px 1px 1px gray;
 	background-color: rgba(52, 191, 185, 0.8);
 }
+
+.hiden {
+	display: none;
+	}
+
+.hiden_form {
+	background-color:  rgba(140, 255, 255, .4);
+	padding: 15px;
+}
+
+.hiden_form h3 {
+	text-align: center;
+	font-size: 20px;
+}
+
+.hiden_form input {
+	display: block;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	box-shadow: none;
+	font-size: 18px;
+}
+
+.hiden_form input:focus {
+	background-color: #EEE5DE;
+}
+
+.hiden_button {
+	width: 200px;
+	display: block;
+	margin: auto;
+	padding: 5px 0 5px 0;
+	border: 1px solid rgba(52, 191, 185, 1);
+	border-radius: 5px;
+	background: -webkit-linear-gradient(top, #34BFBF 0%,#02A6A6 100%);
+	color: white;
+	font-size: 21px;
+	box-shadow: 3px 3px 3px gray;
+	border: 1px solid #006363;
+	}
+
+	.hiden_button:active {
+		box-shadow: 1px 1px 1px gray;
+	}
