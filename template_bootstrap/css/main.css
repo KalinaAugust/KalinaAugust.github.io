@@ -109,6 +109,7 @@ header nav a {
 
 .main {
 	font-family: "ACLineRegular";
+	margin-top: 40px;
 }
 
 .main p {
@@ -133,13 +134,13 @@ header nav a {
     to {top: 0px;}
 	}
 
-	.big_logo {
-		text-align: center;
-		font-size: 4em;
-		text-shadow: 2px 2px 2px gray;
-		font-family: "ACLineRegular";
-		margin: 0;
-	}
+.big_logo {
+	text-align: center;
+	font-size: 4em;
+	text-shadow: 2px 2px 2px gray;
+	font-family: "ACLineRegular";
+	margin: 0;
+}
 
 .red {
 	color: tomato;
@@ -261,6 +262,88 @@ hr {
 	text-shadow:  0px -1px 1px dimgray;
 	}
 
-	.hiden_button:active {
-		box-shadow: 1px 1px 1px gray;
-	}
+.hiden_button:active {
+	box-shadow: 1px 1px 1px gray;
+}
+
+.face_form {
+margin-top: 15px;
+
+
+}
+
+.hiden_img {
+	box-shadow: 0 0 8px dimgray;
+	border: 1px solid gray;
+	width:555px;
+
+}
+
+.face_form form img {
+	width: 200px;
+	box-shadow: none;
+	border: none;
+	position: absolute;
+	left: 5%;
+	bottom: 3%;
+}
+
+.face_form form {
+	position: relative;
+	height: 515px;
+	width: 100%;
+	background-color: #98cc9b;
+	border: 1px solid dimgray;
+	box-shadow: 0 0 8px dimgray;
+	border: 1px solid gray;
+	max-width: 555px;
+	padding-top: 15px;
+
+}
+
+.face_form input {
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 20px;
+	border-radius: 3px;
+	box-shadow: none;
+	font-size: 18px;
+}
+
+.face_form h1, h4 {
+	text-align: center;
+	
+}
+
+.face_form h1 {
+	font-family: "BeerRegular";
+	font-size: 45px;
+}
+
+.face_form h4 {
+	font-family: "BeerRegular";
+	font-size: 25px;
+}
+
+
+
+
+
+.face_form input[type="submit"] {
+	width: 200px;
+	display: block;
+	margin: auto;
+	padding: 5px 0 5px 0;
+	border: 1px solid rgba(52, 191, 185, 1);
+	border-radius: 5px;
+	background: -webkit-linear-gradient(top, #34BFBF 0%,#02A6A6 100%);
+	color: white;
+	font-size: 21px;
+	box-shadow: 3px 3px 3px gray;
+	border: 1px solid #006363;
+	text-shadow:  0px -1px 1px dimgray;
+}
+
+.face_form input[type="submit"]:active {
+	box-shadow: 1px 1px 1px gray;
+}
