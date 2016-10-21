@@ -20,27 +20,34 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-	.top_links {
-		background-color: #34BFBF;
-		display: none;
-		margin-top: 15px;
-		padding: 14px;
-		position: absolute;
-		vertical-align: middle;
-		min-width: 200px;
-		z-index: 12;
-		border-radius: 5px;
-		border: 1px solid gray;
-	}
+.top_links {
+	background-color: #34BFBF;
+	display: none;
+	margin-top: 15px;
+	padding: 14px;
+	position: absolute;
+	vertical-align: middle;
+	min-width: 200px;
+	z-index: 12;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
 
 .face_form form img {
-	width: 150px;
+	width: 100px;
 }
 
 .main img.right_float  {
  width: 90%;
 }
 
+.logo {
+	font-size: 40px;
+}
+
+.big_logo {
+	font-size: 3em;
+}
 }
 
 /* Extra Small Devices, Phones */
