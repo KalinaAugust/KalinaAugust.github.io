@@ -12,6 +12,9 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+	.hiden_img {
+	display: none;
+}
 
 }
 
@@ -30,12 +33,12 @@
 		border: 1px solid gray;
 	}
 
-.hiden_img {
-	display: none;
-}
-
 .face_form form img {
 	width: 150px;
+}
+
+.main img.right_float  {
+ width: 90%;
 }
 
 }

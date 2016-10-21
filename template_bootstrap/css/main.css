@@ -37,6 +37,7 @@ header {
 	/* background-color: #02A6A6; */
 	background: -webkit-linear-gradient(top, #34BFBF 0%,#02A6A6 100%);
 	position: relative;
+	border-bottom: 3px solid #006363;
 }
 
 .poke {
@@ -112,6 +113,48 @@ header nav a {
 	margin-top: 40px;
 }
 
+.main a {
+	color: tomato;
+	border-bottom: dotted 1px tomato;
+}
+
+.main a:hover {
+	border-bottom: none;
+}
+
+.main a:visited {
+	color: lightseagreen;
+	border-bottom: dotted 1px lightseagreen;
+}
+
+.main figure img {
+
+	box-shadow: 2px	2px 2px gray;
+	border: 1px solid gray;
+}
+
+
+
+.main figure {
+
+	float: left;
+	margin: 10px 15px 3px 12px;
+	float: right;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+figcaption {
+	font-size: 20px;
+}
+
+
+
+.main h1 {
+	text-align: center;
+}
+
 .main p {
 	font-weight: bold;
 	background-color: rgba(0, 0, 0, .1);
@@ -126,6 +169,11 @@ header nav a {
 	margin: 10px 15px 3px 12px;
 	box-shadow: 2px	2px 2px gray;
 	border: 1px solid gray;
+}
+
+.main img.right_float  {
+	float: right;
+
 }
 
 @-webkit-keyframes pokeball {
@@ -305,7 +353,7 @@ margin-top: 15px;
 	border: 1px solid dimgray;
 	box-shadow: 0 0 8px dimgray;
 	border: 1px solid gray;
-	max-width: 555px;
+	
 	padding-top: 15px;
 
 }
@@ -334,10 +382,6 @@ margin-top: 15px;
 	font-size: 25px;
 }
 
-
-
-
-
 .face_form input[type="submit"] {
 	width: 200px;
 	display: block;
@@ -360,4 +404,50 @@ margin-top: 15px;
 
 .face_form input[type="submit"]:hover {
 	transform: scale(1.01);
+}
+
+.scrl_scrl {
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+}
+
+
+footer {
+	background: -webkit-linear-gradient(top, #02A6A6 100%, #34BFBF 0%);
+	position: relative;
+	margin-top: 30px;
+	border-top: 3px solid #006363;
+
+}
+
+a.scroll  {
+
+	position: absolute;
+	top: -85px;
+}
+
+.scroll img {
+		width: 25%;
+}
+
+
+footer p {
+	display: inline;
+	text-align: center;
+	font-size: 12px;
+}
+
+.soc_buttons {
+	text-align: center;
+}
+
+.soc_buttons a {
+	color: black;
+	font-size: 35px;
+	transition: .5s;
+}
+
+.soc_buttons a:hover {
+	color: white;
 }
