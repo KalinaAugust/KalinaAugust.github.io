@@ -221,6 +221,10 @@ hr {
 	background: linear-gradient( rgba(52, 191, 185, .5), rgba(52, 191, 185, .9) );
 }
 
+.get_poke .button:hover {
+	transform: scale(1.01);
+}
+
 .hiden {
 	display: none;
 	}
@@ -260,10 +264,15 @@ hr {
 	box-shadow: 3px 3px 3px gray;
 	border: 1px solid #006363;
 	text-shadow:  0px -1px 1px dimgray;
+	translate: 0.2s;
 	}
 
 .hiden_button:active {
 	box-shadow: 1px 1px 1px gray;
+}
+
+.hiden_button:hover {
+	transform: scale(1.01);
 }
 
 .face_form {
@@ -342,8 +351,13 @@ margin-top: 15px;
 	box-shadow: 3px 3px 3px gray;
 	border: 1px solid #006363;
 	text-shadow:  0px -1px 1px dimgray;
+	translate: .2s;
 }
 
 .face_form input[type="submit"]:active {
 	box-shadow: 1px 1px 1px gray;
+}
+
+.face_form input[type="submit"]:hover {
+	transform: scale(1.01);
 }
