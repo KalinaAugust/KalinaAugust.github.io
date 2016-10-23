@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+	$(".item").magnificPopup({
+		type : "image",
+		gallery : {
+			enabled : true
+		},
+		remivalDelay: 300,
+		mainClass: "mfp-fade"
+	});
+
 	$(".auth_buttons").click(function() {
 		$(this).next().slideToggle();
 	});
