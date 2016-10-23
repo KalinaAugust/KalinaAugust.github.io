@@ -41,17 +41,35 @@
  width: 90%;
 }
 
-.logo {
-	font-size: 40px;
-}
-
 .big_logo {
 	font-size: 3em;
 }
+
+.scroll img {
+	width: 60%;
+}
+
+a.scroll  {
+
+	position: absolute;
+	top: -75px;
+}
+
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+
+.library a {
+	display: inline-block;
+	width: 225px;
+	margin: 0 3px 7px 0;
+}
+
+.logo {
+	font-size: 35px;
+}
+
 
 }
 

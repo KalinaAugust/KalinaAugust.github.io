@@ -18,7 +18,39 @@
 	opacity: 1;
 	font-size: 16px;
 }
+}/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
 
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
 	background-color: coral;
@@ -76,7 +108,7 @@ header nav a {
 
 
 
-.top_links a:hover, .active {
+.top_links a:hover, .now { 
 	border-bottom: solid 1px;
 	color: Salmon;
 	font-weight: bold;
@@ -416,20 +448,19 @@ margin-top: 15px;
 footer {
 	background: -webkit-linear-gradient(top, #02A6A6 100%, #34BFBF 0%);
 	position: relative;
-	margin-top: 30px;
+	margin-top: 60px;
 	border-top: 3px solid #006363;
 
 }
 
 a.scroll  {
-
 	position: absolute;
-	top: -85px;
+	top: -75px;
 }
 
 .scroll img {
+	width: 100px;
 }
-
 
 footer p {
 	display: inline;
@@ -457,64 +488,49 @@ footer p {
 
 .library a {
 	display: inline-block;
-	width: 185px;
+	width: 178px;
+	margin: 0 3px 7px 0;
+	border: 1px solid gray;
 }
 
 .library img {
 	max-width: 100%;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}/* overlay at start */
-.mfp-fade.mfp-bg {
-  opacity: 0;
-
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
-}
-/* overlay animate in */
-.mfp-fade.mfp-bg.mfp-ready {
-  opacity: 0.8;
-}
-/* overlay animate out */
-.mfp-fade.mfp-bg.mfp-removing {
-  opacity: 0;
+	box-shadow: 2px 2px 2px gray;
 }
 
-/* content at start */
-.mfp-fade.mfp-wrap .mfp-content {
-  opacity: 0;
+.library {
+	background-color: rgba(0, 0, 0, .1);
+	border-radius: 5px;
+	padding: 17px;
+	box-shadow: 0 0 5px gray;
+}
 
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
+.gallery {
+	margin: 30px 0 60px 0;
 }
-/* content animate it */
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-  opacity: 1;
+
+.gallery h2 {
+	font-family: "ACLineRegular";
+	padding: 0;
+	margin: 0;
 }
-/* content animate out */
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-  opacity: 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
