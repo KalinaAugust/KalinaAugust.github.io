@@ -407,11 +407,13 @@ margin-top: 15px;
 .face_form h1 {
 	font-family: "BeerRegular";
 	font-size: 45px;
+	text-shadow: 1px 1px 1px white;
 }
 
 .face_form h4 {
 	font-family: "BeerRegular";
 	font-size: 25px;
+	text-shadow: 1px 1px 1px white;
 }
 
 .face_form input[type="submit"] {

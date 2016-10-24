@@ -10,11 +10,16 @@
 
 }
 
+   /* castom */
+@media only screen and (max-width : 1199px) {
+	.hiden_img {
+		display: none;
+	}
+}
+
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-	.hiden_img {
-	display: none;
-}
 
 }
 
@@ -50,7 +55,6 @@
 }
 
 a.scroll  {
-
 	position: absolute;
 	top: -75px;
 }
@@ -62,12 +66,16 @@ a.scroll  {
 
 .library a {
 	display: inline-block;
-	width: 123px;
+	width: 79px;
 	margin: 0 3px 7px 0;
 }
 
 .logo {
 	font-size: 35px;
+}
+
+.library {
+	padding: 0;
 }
 
 }
