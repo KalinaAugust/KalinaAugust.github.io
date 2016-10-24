@@ -69,11 +69,13 @@ a.scroll  {
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 
-/* .library a {
-	display: inline-block;
-	width: 23%;
-	margin: 0 0.26314789% 0.61403509% 0;
-} */
+.comment_row q {
+	font-size: 13px;
+}
+
+.comment_row img {
+	width: 80px;
+}
 
 .logo {
 	font-size: 35px;
