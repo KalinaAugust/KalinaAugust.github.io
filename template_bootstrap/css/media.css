@@ -20,6 +20,11 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+.library a {
+	display: inline-block;
+	width: 23.5%;
+	margin: 0 0.26314789% 0.61403509% 0;
+}
 
 }
 
@@ -64,19 +69,16 @@ a.scroll  {
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 
-.library a {
+/* .library a {
 	display: inline-block;
-	width: 79px;
-	margin: 0 3px 7px 0;
-}
+	width: 23%;
+	margin: 0 0.26314789% 0.61403509% 0;
+} */
 
 .logo {
 	font-size: 35px;
 }
 
-.library {
-	padding: 0;
-}
 
 }
 

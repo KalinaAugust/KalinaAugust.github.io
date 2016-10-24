@@ -490,9 +490,10 @@ footer p {
 
 .library a {
 	display: inline-block;
-	width: 178px;
-	margin: 0 3px 7px 0;
+	width: 16.03%;
+	/* margin: 0 3px 7px 0; */
 	border: 1px solid gray;
+	margin: 0 0.26314789% 0.61403509% 0;
 }
 
 .library img {
@@ -503,7 +504,7 @@ footer p {
 .library {
 	background-color: rgba(0, 0, 0, .1);
 	border-radius: 5px;
-	padding: 17px;
+	padding: 2%;
 	box-shadow: 0 0 5px gray;
 }
 
