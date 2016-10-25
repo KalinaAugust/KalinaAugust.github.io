@@ -131,7 +131,7 @@ header nav a {
 
 .auth_buttons {
 	display: inline-block;
- 	margin-top: 10px;
+ 	margin: 12px 0 11px 0;
  	background: none;
  	border: none;
  	transition: .4s;
@@ -143,7 +143,7 @@ header nav a {
 
 
 .main {
-	font-family: "ACLineRegular";
+	font-family: "CaviarDreamsRegular";
 	margin-top: 40px;
 }
 
@@ -515,13 +515,13 @@ footer p {
 }
 
 .gallery h2, .about h1 {
-	font-family: "ACLineRegular";
-	padding: 0;
+	font-family: "CaviarDreamsRegular";
+	padding: 6px;
 	margin: 0;
 }
 
 .about {
-	font-family: "ACLineRegular";
+	font-family: "CaviarDreamsRegular";
 	font-weight: bold;
 }
 
@@ -550,12 +550,12 @@ footer p {
 
 .about h2 {
 	text-align: center;
-	padding: 6px;
+	padding: 12px;
 	margin: 0;
 }
 
 .comment_row {
-margin: 30px 0 160px 0;
+margin: 0px 0 160px 0;
 
 }
 
@@ -566,6 +566,7 @@ margin: 30px 0 160px 0;
 }
 
 .comments {
+	margin-top: 30px;
 	position: relative;
 	height: 110px;
 	background-color: rgba(0, 0, 0, .1);
@@ -586,8 +587,31 @@ margin: 30px 0 160px 0;
 	font-style: italic;
 }
 
+.table {
+	font-size: 20px;
+	margin: 30px 0 190px 0;
+}
 
+.table table td, .table table th {
+	border: 1px solid LightGray;
+	padding: 10px;
+	text-align: center;
+}
 
+.table table  {
+	min-width: 550px;
+	font-family: "CaviarDreamsRegular";
+	font-weight: bold;
+	border: 2px solid #DCFFFF;
+	margin: -1px -1px -1px -1px;
+}
 
+.table caption {
+	font-size: 35px;
+	padding: 35px;
+}
 
-
+.table table th  {
+	font-style: italic;
+	font-size: 23px;
+}
