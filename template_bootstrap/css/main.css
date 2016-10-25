@@ -187,6 +187,11 @@ figcaption {
 
 .main h1 {
 	text-align: center;
+	text-shadow: 2px 2px 0px gray;
+}
+
+.main h2 {
+text-shadow: 1px 2px 0px gray;
 }
 
 .main p {
@@ -319,6 +324,7 @@ hr {
 .hiden_form h3 {
 	text-align: center;
 	font-size: 20px;
+
 }
 
 .hiden_form input {
@@ -518,6 +524,7 @@ footer p {
 	font-family: "CaviarDreamsRegular";
 	padding: 6px;
 	margin: 0;
+	text-shadow: 2px 1px 0px gray;
 }
 
 .about {
@@ -549,6 +556,7 @@ footer p {
 }
 
 .about h2 {
+	text-shadow: 1px 2px 0px gray;
 	text-align: center;
 	padding: 12px;
 	margin: 0;
@@ -589,7 +597,7 @@ margin: 0px 0 160px 0;
 
 .table {
 	font-size: 20px;
-	margin: 30px 0 190px 0;
+	margin: 90px 0 290px 0;
 }
 
 .table table td, .table table th {
@@ -599,7 +607,7 @@ margin: 0px 0 160px 0;
 }
 
 .table table  {
-	min-width: 550px;
+	min-width: 750px;
 	font-family: "CaviarDreamsRegular";
 	font-weight: bold;
 	border: 2px solid #DCFFFF;
@@ -609,6 +617,7 @@ margin: 0px 0 160px 0;
 .table caption {
 	font-size: 35px;
 	padding: 35px;
+	text-shadow: 2px 2px 0px gray;
 }
 
 .table table th  {
