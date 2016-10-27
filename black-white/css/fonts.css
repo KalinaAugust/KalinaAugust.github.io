@@ -38,3 +38,14 @@
 	font-style: normal;
 	font-weight: normal;
 }
+
+/* font-family: "DisneyParkRegular"; */
+@font-face {
+    font-family: "DisneyParkRegular";
+    src: url("../fonts/DisneyParkRegular/DisneyParkRegular.eot");
+    src: url("../fonts/DisneyParkRegular/DisneyParkRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/DisneyParkRegular/DisneyParkRegular.woff") format("woff"),
+    url("../fonts/DisneyParkRegular/DisneyParkRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

@@ -27,3 +27,55 @@ body {
 	font-family: "RobotoRegular", sans-serif;
 	font-size: 16px;
 }
+
+.sector_one {
+	position: relative;
+}
+
+.header_index {
+	position: fixed;
+	width: 100%;
+	background: rgba(0, 0, 0, .3);
+	border-bottom: 1px solid rgba(0, 0, 0, .6);
+	z-index: 12;
+	}
+
+
+ul.top_links  {
+	display: inline-block;
+	list-style: none;
+	width: 300px;
+}
+
+.top_links li {
+	display: inline-block;
+	padding-left: 10px;
+}
+
+.top_links a {
+	color: #fff;
+	font-size: 22px;
+}
+
+
+.logo_text {
+	display: inline-block;
+	font-family: "DisneyParkRegular";
+	font-size: 38px;
+	color: #fff;
+	float: right;
+	text-align: right;
+}
+
+div.logo {
+	width: 600px;
+	margin: 45px auto 35px auto;
+}
+
+.logo img {
+	width: 600px;
+
+	
+}
+
+
