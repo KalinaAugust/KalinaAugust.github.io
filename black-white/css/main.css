@@ -42,14 +42,14 @@ body {
 
 
 ul.top_links  {
-	display: inline-block;
+	padding: 0;
+	margin: 0;
 	list-style: none;
-	width: 300px;
 }
 
 .top_links li {
 	display: inline-block;
-	padding-left: 10px;
+	padding: 10px;
 }
 
 .top_links a {
@@ -57,26 +57,68 @@ ul.top_links  {
 	font-size: 22px;
 }
 
-
-.logo_text {
-	display: inline-block;
-	font-family: "DisneyParkRegular";
-	font-size: 38px;
-	color: #555;
-	float: right;
-	text-align: right;
+.top_links a:hover {
+	color: rgba(195, 137, 63, .8);
 }
 
+.soc_buttons {
+	margin: 7px 0 5px 0;
+	float: right;
+}
+
+.soc_buttons a {
+	padding-right: 5px;
+	color: #555;
+	font-size: 29px;
+}
+
+.soc_buttons a:hover {
+	color: rgba(195, 137, 63, .8);
+}
+
+
+.auth_buttons {
+	margin-top: 5px;
+	background: none;
+	border: none;
+	color: #555;
+	font-size: 29px;
+}
+
+.auth_buttons:hover {
+	color: rgba(195, 137, 63, .8);
+}
+
+
+
+
+
+.logo_text {
+	font-family: "DisneyParkRegular";
+	font-size: 42px;
+	color: #555;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+
+
 div.logo {
-	width: 600px;
+	width: 60%;
 	margin: 45px auto 35px auto;
 }
 
 .logo img {
-	width: 600px;
-
-	
+	width: 100%;	
 }
+
+
+
+
+
+
+
 
 article {
 	height: 5000px;

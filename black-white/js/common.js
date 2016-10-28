@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+	$(".auth_buttons").click(function() {
+		$(this).next().slideToggle();
+	});
+	
 	//Таймер обратного отсчета
 	//Документация: http://keith-wood.name/countdown.html
 	//<div class="countdown" date-time="2015-01-07"></div>

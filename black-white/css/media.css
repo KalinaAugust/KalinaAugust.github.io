@@ -7,17 +7,36 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+		div.logo {
+	width: 80%;
+	margin: 45px auto 35px auto;
+}
 
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+	.top_links {
+		display: none;
+		position: absolute;
+		width: 90%;
+		background:  rgba(251, 238, 141, .3);
+		border: 1px solid rgba(0, 0, 0, .6);
+		top: 60px;
+		font-size: 12px;
+	}
+	div.logo {
+		width: 90%;
+}
+
 
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+	.logo_text {
+ 		font-size: 30px;
+}
 }
 
 /* Custom, iPhone Retina */
@@ -40,6 +59,9 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+		.top_links {
+	display: inline-block !important;
+}
 
 }
 
