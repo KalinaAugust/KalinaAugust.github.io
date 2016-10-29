@@ -1,3 +1,4 @@
+ @import url(http://allfont.ru/allfont.css?fonts=a_bremen);
 *::-webkit-input-placeholder {
 	color: #666;
 	opacity: 1;
@@ -53,7 +54,7 @@ ul.top_links  {
 }
 
 .top_links a {
-	font-family: "OpenSansLight";
+	font-family: 'a_Bremen', arial;
 	color: #555;
 	font-size: 20px;
 	text-transform: uppercase;
@@ -129,7 +130,7 @@ article {
 .gallery a {
 	padding: 15px;
 	display: inline-block;
-	width: 281px;
+	width: 270px;
 
 }
 
@@ -137,4 +138,8 @@ article {
 	display: inline-block;
 	width: 100%;
 	border: 1px solid rgba(0, 0, 0, .6);
+}
+
+figure {
+	position: relative;
 }
