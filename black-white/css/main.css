@@ -191,15 +191,15 @@ font-family: 'a_Bremen', arial;
 }
 
 .main_form input[placeholder=" Ваше имя..."] {
-	width: 47%;
+	width: 47.45%;
  	margin: 15px 0;
  	height: 35px;
 }
 
 .main_form input[placeholder=" Телефон..."] {
-	width: 47%;
+	width: 47.45%;
  	margin: 15px 0;
- 	margin-left: 5%;
+ 	margin-left: 4.3%;
  	height: 35px;
 }
 
@@ -211,7 +211,7 @@ border: 1px solid rgba(0, 0, 0, .6);
 
 .main_form button {
 	display: block;
-	margin: 0 auto;
+	margin: 15px auto;
 	background: white;
 	border: 1px solid rgba(0, 0, 0, .6);
 	width: 190px;
@@ -220,7 +220,7 @@ border: 1px solid rgba(0, 0, 0, .6);
 }
 
 .main_form button:hover {
-	background-color: rgba(0, 0, 0, .5);
+	background-color: rgba(102, 69, 9, .7);
 	color: #fff;
 }
 
