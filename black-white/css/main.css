@@ -1,22 +1,22 @@
 /*  @import url(http://allfont.ru/allfont.css?fonts=a_bremen); */
 *::-webkit-input-placeholder {
 	font-size: 15px;
-	color: #666;
+	color: #444;
 	opacity: 1;
 }
 *:-moz-placeholder {
 	font-size: 15px;
-	color: #666;
+	color: #444;
 	opacity: 1;
 }
 *::-moz-placeholder {
 	font-size: 15px;
-	color: #666;
+	color: #444;
 	opacity: 1;
 }
 *:-ms-input-placeholder {
 	font-size: 15px;
-	color: #666;
+	color: #444;
 	opacity: 1;
 }
 
@@ -186,7 +186,7 @@ font-family: 'a_Bremen', arial;
 .main_form textarea {
 	width: 100%;
  	margin: 15px 0;
- 	height: 60px;
+ 	height: 80px;
  	border: 1px solid rgba(0, 0, 0, .6);
 }
 
@@ -227,4 +227,5 @@ border: 1px solid rgba(0, 0, 0, .6);
 
 .main_form input:focus, .main_form textarea:focus {
 	background-color: rgba(232, 232, 232, .8);
+	border: 1px solid black;
 }
