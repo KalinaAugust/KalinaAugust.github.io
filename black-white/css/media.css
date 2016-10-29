@@ -2,9 +2,10 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-
+.gallery a {
+	width: 24.55555%;
 }
-
+}
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 		div.logo {
@@ -25,20 +26,67 @@
 		top: 60px;
 		font-size: 12px;
 	}
+
 	div.logo {
 		width: 90%;
 }
+
 .top_links a {
 	color: #000;
-	font-size: 22px;
+	font-size: 20px;
 }
 
+.gallery a {
+	width: 32.7%;
+}
+
+.gallery figcaption {
+	font-size: 15px;
+	opacity: 1;
+	padding: 10px 0 10px 0;
+}
+
+.logo p {
+	font-size: 20px;
+}
+
+.main_form form {
+ 	width: 100%;
+	padding: 10px;
+
+}
+
+.main_form input[placeholder=" Ваше имя..."] {
+	min-width: 250px;
+	width: 70%;
+	display: block;
+	margin: 15px auto;
+}
+
+.main_form input[placeholder=" Телефон..."] {
+	min-width: 250px;
+	width: 70%;
+	display: block;
+	margin: 30px auto 0 auto;
+}
+
+.main_form textarea {
+	width: 70%;
+	min-width: 250px;
+	display: block;
+	margin: 10px auto 30px auto;
+}
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-	.logo_text {
- 		font-size: 30px;
+.gallery a {
+	width: 49.1%;
+}
+.gallery figcaption {
+	font-size: 13px;
+	opacity: 1;
+	padding: 8px 0 8px 0;
 }
 }
 

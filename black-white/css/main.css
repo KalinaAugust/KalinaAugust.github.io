@@ -1,17 +1,21 @@
- @import url(http://allfont.ru/allfont.css?fonts=a_bremen);
+/*  @import url(http://allfont.ru/allfont.css?fonts=a_bremen); */
 *::-webkit-input-placeholder {
+	font-size: 15px;
 	color: #666;
 	opacity: 1;
 }
 *:-moz-placeholder {
+	font-size: 15px;
 	color: #666;
 	opacity: 1;
 }
 *::-moz-placeholder {
+	font-size: 15px;
 	color: #666;
 	opacity: 1;
 }
 *:-ms-input-placeholder {
+	font-size: 15px;
 	color: #666;
 	opacity: 1;
 }
@@ -58,7 +62,7 @@ ul.top_links  {
 	color: #555;
 	font-size: 20px;
 	text-transform: uppercase;
-	
+	transition: .3s;
 }
 
 .top_links a:hover {
@@ -74,6 +78,7 @@ ul.top_links  {
 	padding-right: 5px;
 	color: #555;
 	font-size: 29px;
+	transition: .3s;
 }
 
 .soc_buttons a:hover {
@@ -93,19 +98,6 @@ ul.top_links  {
 	color: rgba(195, 137, 63, .8);
 }
 
-
-
-
-
-.logo_text {
-	font-family: "DisneyParkRegular";
-	font-size: 42px;
-	color: #555;
-	text-align: center;
-	margin: 0;
-	padding: 0;
-}
-
 div.logo {
 	width: 70%;
 	margin: 45px auto 35px auto;
@@ -115,22 +107,17 @@ div.logo {
 	width: 100%;	
 }
 
-
-article {
-	height: 5000px;
-}
-
 .gallery {
-	padding: 15px;
+	padding: 1.09649123%;
 	background: rgba(251, 238, 141, .3);
 	border: 1px solid rgba(0, 0, 0, .6);
 
 }
 
 .gallery a {
-	padding: 15px;
+	padding: 1.09649123%;
 	display: inline-block;
-	width: 270px;
+	width: 24.7%;
 
 }
 
@@ -142,4 +129,102 @@ article {
 
 figure {
 	position: relative;
+}
+
+.gallery figcaption {
+	width: 99.3%;
+	position: absolute;
+	bottom: 20px;
+	left: 1px;
+	text-align: center;
+	background: rgba(251, 238, 141, .7);
+	font-family: 'a_Bremen', arial;
+	color: #333;
+	padding: 15px 0 15px 0;
+	opacity: 0;
+	transition: .3s;
+}
+
+.gallery figure:hover figcaption {
+	opacity: 1;
+}
+
+.logo p {
+	font-size: 30px;
+	font-family: 'a_Bremen', arial;
+	text-align: center;
+	margin: 0;
+}
+
+input {
+	display: inline-block;
+	
+}
+
+.main_form h2 {
+font-family: 'a_Bremen', arial;
+ text-align: center;
+ 
+}
+
+.main_form {
+	background-color: gray;
+	margin: 30px 0 30px 0;
+	background: rgba(251, 238, 141, .3);
+	border: 1px solid rgba(0, 0, 0, .6);
+}
+
+
+.main_form form {
+	margin: 0 auto;
+ 	width: 60%;
+	padding: 15px;
+
+}
+
+
+.main_form textarea {
+	width: 100%;
+ 	margin: 15px 0;
+ 	height: 60px;
+ 	border: 1px solid rgba(0, 0, 0, .6);
+}
+
+.main_form input[placeholder=" Ваше имя..."] {
+	width: 47%;
+ 	margin: 15px 0;
+ 	height: 35px;
+}
+
+.main_form input[placeholder=" Телефон..."] {
+	width: 47%;
+ 	margin: 15px 0;
+ 	margin-left: 5%;
+ 	height: 35px;
+}
+
+
+.main_form input {
+margin: 0 auto;
+border: 1px solid rgba(0, 0, 0, .6);
+}
+
+.main_form button {
+	display: block;
+	margin: 0 auto;
+	background: white;
+	border: 1px solid rgba(0, 0, 0, .6);
+	width: 190px;
+	height: 35px;
+	transition: .3s;
+}
+
+.main_form button:hover {
+	background-color: rgba(0, 0, 0, .5);
+	color: #fff;
+}
+
+
+.main_form input:focus, .main_form textarea:focus {
+	background-color: rgba(232, 232, 232, .8);
 }

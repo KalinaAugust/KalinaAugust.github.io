@@ -49,3 +49,11 @@
     font-style: normal;
     font-weight: normal;
 }
+
+/* font-family: "a_Bremen"; */
+@font-face {
+    font-family: "a_Bremen";
+    src: url("../fonts/Abramen/abremen.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
