@@ -53,8 +53,11 @@ ul.top_links  {
 }
 
 .top_links a {
+	font-family: "OpenSansLight";
 	color: #555;
-	font-size: 22px;
+	font-size: 20px;
+	text-transform: uppercase;
+	
 }
 
 .top_links a:hover {
@@ -102,10 +105,8 @@ ul.top_links  {
 	padding: 0;
 }
 
-
-
 div.logo {
-	width: 60%;
+	width: 70%;
 	margin: 45px auto 35px auto;
 }
 
@@ -114,12 +115,26 @@ div.logo {
 }
 
 
-
-
-
-
-
-
 article {
 	height: 5000px;
+}
+
+.gallery {
+	padding: 15px;
+	background: rgba(251, 238, 141, .3);
+	border: 1px solid rgba(0, 0, 0, .6);
+
+}
+
+.gallery a {
+	padding: 15px;
+	display: inline-block;
+	width: 281px;
+
+}
+
+.gallery img {
+	display: inline-block;
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, .6);
 }
