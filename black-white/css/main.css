@@ -228,4 +228,5 @@ border: 1px solid rgba(0, 0, 0, .6);
 .main_form input:focus, .main_form textarea:focus {
 	background-color: rgba(232, 232, 232, .8);
 	border: 1px solid black;
+	outline: none;
 }
