@@ -242,8 +242,12 @@ footer {
  padding: 5px;
 }
 
+.contacts a {
+	color: #000;
+}
+
 .contacts p {
-	font-size: 12px;
+	font-size: 13px;
 	margin: 0;
 	padding: 2px;
 }
