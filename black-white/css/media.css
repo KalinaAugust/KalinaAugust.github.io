@@ -12,7 +12,32 @@
 	width: 80%;
 	margin: 45px auto 35px auto;
 }
+.main_form form {
+ 	width: 100%;
+	padding: 10px;
 
+}
+
+.main_form input[placeholder=" Ваше имя"] {
+	min-width: 250px;
+	width: 70%;
+	display: block;
+	margin: 15px auto;
+}
+
+.main_form input[placeholder=" Телефон"] {
+	min-width: 250px;
+	width: 70%;
+	display: block;
+	margin: 30px auto 0 auto;
+}
+
+.main_form textarea {
+	width: 70%;
+	min-width: 250px;
+	display: block;
+	margin: 10px auto 30px auto;
+}
 }
 
 /* Small Devices, Tablets */
@@ -56,26 +81,7 @@
 
 }
 
-.main_form input[placeholder=" Ваше имя"] {
-	min-width: 250px;
-	width: 70%;
-	display: block;
-	margin: 15px auto;
-}
 
-.main_form input[placeholder=" Телефон"] {
-	min-width: 250px;
-	width: 70%;
-	display: block;
-	margin: 30px auto 0 auto;
-}
-
-.main_form textarea {
-	width: 70%;
-	min-width: 250px;
-	display: block;
-	margin: 10px auto 30px auto;
-}
 }
 
 /* Extra Small Devices, Phones */
