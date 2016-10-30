@@ -65,7 +65,8 @@ ul.top_links  {
 	transition: .3s;
 }
 
-.top_links a:hover {
+
+.top_links a:hover, a.here {
 	color: rgba(195, 137, 63, .8);
 }
 
@@ -75,7 +76,7 @@ ul.top_links  {
 }
 
 .soc_buttons a {
-	padding-right: 5px;
+	padding-right: 10px;
 	color: #555;
 	font-size: 29px;
 	transition: .3s;
@@ -237,7 +238,7 @@ footer {
 }
 
 .contacts {
- float: right;
+ float: left;
  padding: 5px;
 }
 
@@ -249,4 +250,10 @@ footer {
 
 .contacts i {
 	font-size:16px;	
+}
+
+article {
+	display: block;
+	padding: 300px;
+	height: 3000px;
 }
