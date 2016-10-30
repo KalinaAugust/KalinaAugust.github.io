@@ -56,14 +56,14 @@
 
 }
 
-.main_form input[placeholder=" Ваше имя..."] {
+.main_form input[placeholder=" Ваше имя"] {
 	min-width: 250px;
 	width: 70%;
 	display: block;
 	margin: 15px auto;
 }
 
-.main_form input[placeholder=" Телефон..."] {
+.main_form input[placeholder=" Телефон"] {
 	min-width: 250px;
 	width: 70%;
 	display: block;

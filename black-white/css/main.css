@@ -100,7 +100,7 @@ ul.top_links  {
 
 div.logo {
 	width: 70%;
-	margin: 45px auto 35px auto;
+	margin: 20px auto 35px auto;
 }
 
 .logo img {
@@ -190,13 +190,13 @@ font-family: 'a_Bremen', arial;
  	border: 1px solid rgba(0, 0, 0, .6);
 }
 
-.main_form input[placeholder=" Ваше имя..."] {
+.main_form input[placeholder=" Ваше имя"] {
 	width: 47.45%;
  	margin: 15px 0;
  	height: 35px;
 }
 
-.main_form input[placeholder=" Телефон..."] {
+.main_form input[placeholder=" Телефон"] {
 	width: 47.45%;
  	margin: 15px 0;
  	margin-left: 4.3%;
@@ -229,4 +229,24 @@ border: 1px solid rgba(0, 0, 0, .6);
 	background-color: rgba(232, 232, 232, .8);
 	border: 1px solid black;
 	outline: none;
+}
+
+footer {
+	background: rgba(251, 238, 141, .3);
+	border-top: 1px solid rgba(0, 0, 0, .6);
+}
+
+.contacts {
+ float: right;
+ padding: 5px;
+}
+
+.contacts p {
+	font-size: 12px;
+	margin: 0;
+	padding: 2px;
+}
+
+.contacts i {
+	font-size:16px;	
 }
