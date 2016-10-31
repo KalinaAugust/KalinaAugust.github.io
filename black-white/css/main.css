@@ -41,7 +41,7 @@ body {
 	position: fixed;
 	width: 100%;
 	background: rgba(251, 238, 141, .3);
-	border-bottom: 1px solid rgba(0, 0, 0, .6);
+	border-bottom: 1px solid rgba(0, 0, 0, .4);
 	z-index: 12;
 	}
 
@@ -111,7 +111,7 @@ div.logo {
 .gallery {
 	padding: 1.09649123%;
 	background: rgba(251, 238, 141, .3);
-	border: 1px solid rgba(0, 0, 0, .6);
+	border: 1px solid rgba(0, 0, 0, .4);
 
 }
 
@@ -125,7 +125,7 @@ div.logo {
 .gallery img {
 	display: inline-block;
 	width: 100%;
-	border: 1px solid rgba(0, 0, 0, .6);
+	border: 1px solid rgba(0, 0, 0, .4);
 }
 
 figure {
@@ -172,7 +172,7 @@ font-family: 'a_Bremen', arial;
 	background-color: gray;
 	margin: 30px 0 30px 0;
 	background: rgba(251, 238, 141, .3);
-	border: 1px solid rgba(0, 0, 0, .6);
+	border: 1px solid rgba(0, 0, 0, .4);
 }
 
 
@@ -188,7 +188,7 @@ font-family: 'a_Bremen', arial;
 	width: 100%;
  	margin: 15px 0;
  	height: 80px;
- 	border: 1px solid rgba(0, 0, 0, .6);
+ 	border: 1px solid rgba(0, 0, 0, .4);
 }
 
 .main_form input[placeholder=" Ваше имя"] {
@@ -207,14 +207,14 @@ font-family: 'a_Bremen', arial;
 
 .main_form input {
 margin: 0 auto;
-border: 1px solid rgba(0, 0, 0, .6);
+border: 1px solid rgba(0, 0, 0, .4);
 }
 
 .main_form button {
 	display: block;
 	margin: 15px auto;
 	background: white;
-	border: 1px solid rgba(0, 0, 0, .6);
+	border: 1px solid rgba(0, 0, 0, .4);
 	width: 190px;
 	height: 35px;
 	transition: .3s;
@@ -234,7 +234,7 @@ border: 1px solid rgba(0, 0, 0, .6);
 
 footer {
 	background: rgba(251, 238, 141, .3);
-	border-top: 1px solid rgba(0, 0, 0, .6);
+	border-top: 1px solid rgba(0, 0, 0, .4);
 }
 
 .contacts {
@@ -244,6 +244,7 @@ footer {
 
 .contacts a {
 	color: #000;
+
 }
 
 .contacts p {
