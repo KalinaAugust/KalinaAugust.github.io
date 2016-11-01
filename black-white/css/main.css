@@ -39,6 +39,7 @@ body {
 
 .header_index {
 	position: fixed;
+	top: 0%;
 	width: 100%;
 	background: rgba(251, 238, 141, .3);
 	border-bottom: 1px solid rgba(0, 0, 0, .4);
@@ -163,8 +164,8 @@ input {
 }
 
 .main_form h2 {
-font-family: 'a_Bremen', arial;
- text-align: center;
+	font-family: 'a_Bremen', arial;
+ 	text-align: center;
  
 }
 
@@ -227,7 +228,6 @@ border: 1px solid rgba(0, 0, 0, .4);
 
 
 .main_form input:focus, .main_form textarea:focus {
-	background-color: rgba(232, 232, 232, .8);
 	border: 1px solid black;
 	outline: none;
 }
@@ -257,8 +257,36 @@ footer {
 	font-size:16px;	
 }
 
-article {
-	display: block;
-	padding: 300px;
-	height: 3000px;
+.content_wrapper {
+	background: linear-gradient(to bottom, #fff 0%, Cornsilk 50%); 
 }
+
+.discription {
+	margin: 55px 0 30px 0;
+}
+.main_content {
+	padding: 20px;
+	background: rgba(251, 238, 141, .3);
+	border: 1px solid rgba(0, 0, 0, .4);
+	line-height: 1.6;
+}
+
+.main_content figure {
+	float: left;
+	width: 200px;
+	padding: 0 20px 15px 0;
+	
+}
+
+.main_content img {
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, .4);
+}
+
+.discription h2 {
+	font-family: 'a_Bremen', arial;
+	text-align: center;
+	margin: 0;
+	padding: 10px 0 10px 0;
+}
+
