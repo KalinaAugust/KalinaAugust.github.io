@@ -113,8 +113,8 @@ div.logo {
 	padding: 1.09649123%;
 	background: rgba(251, 238, 141, .3);
 	border: 1px solid rgba(0, 0, 0, .4);
-
 }
+
 
 .gallery a {
 	padding: 1.09649123%;
@@ -127,9 +127,15 @@ div.logo {
 	display: inline-block;
 	width: 100%;
 	border: 1px solid rgba(0, 0, 0, .4);
+	transition: .2s;
+}
+   /* увеличение галереи */
+.gallery figure:hover img {
+	/* border: 1px solid rgba(0, 0, 0, .9); */
+	transform: scale(1.02);
 }
 
-figure {
+.gallery figure {
 	position: relative;
 }
 
@@ -141,14 +147,15 @@ figure {
 	text-align: center;
 	background: rgba(251, 238, 141, .7);
 	font-family: 'a_Bremen', arial;
-	color: #333;
+	color: #222;
 	padding: 15px 0 15px 0;
 	opacity: 0;
 	transition: .3s;
 }
-
-.gallery figure:hover figcaption {
+/* увеличение галереи */
+.gallery figure:hover figcaption {  
 	opacity: 1;
+	transform: scale(1.02);
 }
 
 .logo p {
