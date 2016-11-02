@@ -74,13 +74,37 @@ ul.top_links  {
 .soc_buttons {
 	margin: 7px 0 5px 0;
 	float: right;
+	position: relative;
+}
+
+ /* animation */
+ @keyframes fly {
+	from { right: 2000px; }
+	to { right: 0; }
+ }
+
+.sb_vk {
+	position: relative;
+	animation: fly 1.1s ease-out;
+
+}
+
+.sb_fb {
+	position: relative;
+	animation: fly .9s ease-out;
+
+}
+
+.sb_inst {
+	position: relative;
+	animation: fly .7s ease-out;
 }
 
 .soc_buttons a {
 	padding-right: 10px;
 	color: #555;
 	font-size: 29px;
-	transition: .3s;
+	transition: .3s;	
 }
 
 .soc_buttons a:hover {
@@ -102,7 +126,7 @@ ul.top_links  {
 
 div.logo {
 	width: 70%;
-	margin: 20px auto 35px auto;
+	margin: 66px auto 35px auto;
 }
 
 .logo img {
@@ -131,7 +155,6 @@ div.logo {
 }
    /* увеличение галереи */
 .gallery figure:hover img {
-	/* border: 1px solid rgba(0, 0, 0, .9); */
 	transform: scale(1.02);
 }
 
@@ -162,7 +185,7 @@ div.logo {
 	font-size: 30px;
 	font-family: 'a_Bremen', arial;
 	text-align: center;
-	margin: 0;
+	margin: 15px 0 0 0;
 }
 
 input {
@@ -265,7 +288,8 @@ footer {
 }
 
 .content_wrapper {
-	background: linear-gradient(to bottom, #fff 0%, Cornsilk 50%); 
+	background: url(../images/47-fon-dlya-sayta.png) ;
+	background-repeat: repeat;
 }
 
 .discription {
@@ -296,4 +320,3 @@ footer {
 	margin: 0;
 	padding: 10px 0 10px 0;
 }
-
