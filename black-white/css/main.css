@@ -137,6 +137,7 @@ div.logo {
 	padding: 1.09649123%;
 	background: rgba(251, 238, 141, .3);
 	border: 1px solid rgba(0, 0, 0, .4);
+	border-radius: 3px;
 }
 
 
@@ -204,6 +205,7 @@ input {
 	margin: 30px 0 30px 0;
 	background: rgba(251, 238, 141, .3);
 	border: 1px solid rgba(0, 0, 0, .4);
+	border-radius: 3px;
 }
 
 
@@ -288,7 +290,7 @@ footer {
 }
 
 .content_wrapper {
-	background: url(../images/47-fon-dlya-sayta.png) ;
+	background: url(../images/95-fon-dlya-sayta.png) ;
 	background-repeat: repeat;
 }
 
@@ -299,6 +301,7 @@ footer {
 	padding: 20px;
 	background: rgba(251, 238, 141, .3);
 	border: 1px solid rgba(0, 0, 0, .4);
+	border-radius: 3px;
 	line-height: 1.6;
 }
 
