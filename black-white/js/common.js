@@ -1,5 +1,17 @@
 $(document).ready(function() {
 
+// paralax
+$(window).scroll(function() {
+
+ var st = $(this).scrollTop();
+
+ $(".logo").css({
+ 	"transform" : "translate(0%, " + st /105 + "%"
+ });
+
+});
+
+
 	$(".auth_buttons").click(function() {
 		$(this).next().slideToggle();
 	});
@@ -73,11 +85,11 @@ $(document).ready(function() {
 	
 	//Аякс отправка форм
 	//Документация: http://api.jquery.com/jquery.ajax/
-	$("form").submit(function() {
+	$(".main_form").submit(function() {
 		$.ajax({
 			type: "GET",
 			url: "mail.php",
-			data: $("form").serialize()
+			data: $(".main_form").serialize()
 		}).done(function() {
 			alert("Спасибо за заявку!");
 			setTimeout(function() {
