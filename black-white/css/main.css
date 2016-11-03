@@ -151,7 +151,7 @@ div.logo {
 .gallery img {
 	display: inline-block;
 	width: 100%;
-	border: 1px solid rgba(0, 0, 0, .4);
+	border: 2px solid rgba(0, 0, 0, .3);
 	transition: .2s;
 }
    /* увеличение галереи */
@@ -169,13 +169,14 @@ div.logo {
 	bottom: 20px;
 	left: 1px;
 	text-align: center;
-	background: rgba(251, 238, 141, .6);
+	background: rgba(251, 238, 141, .5);
 	font-family: 'a_Bremen', arial;
 	color: #222;
 	padding: 15px 0 15px 0;
 	opacity: 0;
 	transition: .3s;
-	}
+}
+
 /* увеличение галереи */
 .gallery figure:hover figcaption {  
 	opacity: 1;

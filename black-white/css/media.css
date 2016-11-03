@@ -43,7 +43,11 @@
 	font-size: 15px;
 	opacity: 1;
 	left: 1px;
-	border: 1px solid gray;
+	border-left: 1px solid rgba(0, 0, 0, .3);
+	border-right: 2px solid rgba(0, 0, 0, .3);
+	border-top: 1px solid rgba(0, 0, 0, .3);
+	border-bottom: 1px solid rgba(0, 0, 0, .3);
+
 }
 
 }
