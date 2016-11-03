@@ -79,15 +79,17 @@
 }
 
 .logo p {
-	font-size: 20px;
+	font-size: 24px;
 }
 
 .main_form form {
  	width: 100%;
 	padding: 10px;
-
 }
 
+div.logo {
+	margin-bottom: 10px;
+}
 
 }
 
@@ -104,6 +106,10 @@
 
 .top_links a {
 	font-size: 16px;
+}
+
+.logo p {
+	font-size: 20px;
 }
 
 }
