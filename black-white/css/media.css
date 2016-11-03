@@ -10,7 +10,7 @@
 @media only screen and (max-width : 992px) {
 		div.logo {
 	width: 80%;
-	margin: 45px auto 35px auto;
+	margin: 65px auto 35px auto;
 }
 .main_form form {
  	width: 100%;
@@ -38,6 +38,14 @@
 	display: block;
 	margin: 10px auto 30px auto;
 }
+
+.gallery figcaption {
+	font-size: 15px;
+	opacity: 1;
+	left: 1px;
+	border: 1px solid gray;
+}
+
 }
 
 /* Small Devices, Tablets */
@@ -54,6 +62,7 @@
 
 	div.logo {
 		width: 90%;
+		margin-top: 60px;
 }
 
 .top_links a {
@@ -63,12 +72,6 @@
 
 .gallery a {
 	width: 32.7%;
-}
-
-.gallery figcaption {
-	font-size: 15px;
-	opacity: 1;
-	padding: 10px 0 10px 0;
 }
 
 .logo p {
