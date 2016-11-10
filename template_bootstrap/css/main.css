@@ -23,9 +23,6 @@
 /* overlay at start */
 .mfp-fade.mfp-bg {
   opacity: 0;
-
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
 /* overlay animate in */
@@ -40,9 +37,6 @@
 /* content at start */
 .mfp-fade.mfp-wrap .mfp-content {
   opacity: 0;
-
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
 /* content animate it */
@@ -78,7 +72,8 @@ header {
 	position: absolute;
 	top: 6%;
 	right: 46%;
-	animation: pokeball 2s;
+	-webkit-animation: pokeball 2s;
+	        animation: pokeball 2s;
 }
 
 header nav ul {
@@ -112,9 +107,7 @@ header nav a {
 
 .top_links a:hover, .now { 
 	border-bottom: solid 1px;
-	color: Salmon;
-	font-weight: bold;
-	
+	color: Salmon;	
 	}
 
 
@@ -138,7 +131,9 @@ header nav a {
 }
 
 .auth_buttons:hover {
-	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	    -ms-transform: rotate(180deg);
+	        transform: rotate(180deg);
 }
 
 
@@ -200,6 +195,7 @@ text-shadow: 1px 2px 0px gray;
 	border-radius: 5px;
 	padding: 15px;
 	box-shadow: 0 0 5px gray;
+	min-height: 450px;
 }
 
 .main img {
@@ -215,23 +211,23 @@ text-shadow: 1px 2px 0px gray;
 
 }
 
-@-webkit-keyframes pokeball {
-
+@keyframes pokeball {
   from {top: -100px;}
     to {top: 0px;}
 	}
 
 .big_logo {
 	text-align: center;
-	font-size: 4em;
+	font-size: 4.5em;
 	text-shadow: 2px 2px 2px gray;
 	font-family: "ACLineRegular";
 	margin: 0;
+	letter-spacing: 4px;
 }
 
 .red {
 	color: tomato;
-	font-size: 1.2em;
+	font-size: 1.3em;
 }
 
 hr {
@@ -289,7 +285,7 @@ hr {
 
 .get_poke .button {
 	color: black;
-	font-size: 25px;
+	font-size: 23px;
 	background: linear-gradient( rgba(52, 191, 185, .9), rgba(52, 191, 185, .5) );
 	margin-top: 20px;
 	padding: 13px;
@@ -309,7 +305,9 @@ hr {
 }
 
 .get_poke .button:hover {
-	transform: scale(1.01);
+	-webkit-transform: scale(1.01);
+	    -ms-transform: scale(1.01);
+	        transform: scale(1.01);
 }
 
 .hiden {
@@ -352,7 +350,7 @@ hr {
 	box-shadow: 3px 3px 3px gray;
 	border: 1px solid #006363;
 	text-shadow:  0px -1px 1px dimgray;
-	translate: 0.2s;
+	transition: 0.2s;
 	}
 
 .hiden_button:active {
@@ -360,7 +358,9 @@ hr {
 }
 
 .hiden_button:hover {
-	transform: scale(1.01);
+	-webkit-transform: scale(1.01);
+	    -ms-transform: scale(1.01);
+	        transform: scale(1.01);
 }
 
 .face_form {
@@ -437,7 +437,7 @@ margin-top: 15px;
 	box-shadow: 3px 3px 3px gray;
 	border: 1px solid #006363;
 	text-shadow:  0px -1px 1px dimgray;
-	translate: .2s;
+	transition: .2s;
 }
 
 .face_form input[type="submit"]:active {
@@ -445,7 +445,9 @@ margin-top: 15px;
 }
 
 .face_form input[type="submit"]:hover {
-	transform: scale(1.01);
+	-webkit-transform: scale(1.01);
+	    -ms-transform: scale(1.01);
+	        transform: scale(1.01);
 }
 
 .scrl_scrl {
@@ -498,8 +500,7 @@ footer p {
 
 .library a {
 	display: inline-block;
-	width: 16.03%;
-	/* margin: 0 3px 7px 0; */
+	width: 16.09%;
 	border: 1px solid gray;
 	margin: 0 0.26314789% 0.61403509% 0;
 }
@@ -512,7 +513,7 @@ footer p {
 .library {
 	background-color: rgba(0, 0, 0, .1);
 	border-radius: 5px;
-	padding: 2%;
+	padding: 2% 2% 1.5% 2%;
 	box-shadow: 0 0 5px gray;
 }
 
@@ -538,6 +539,7 @@ footer p {
 	border-radius: 5px;
 	padding: 2%;
 	box-shadow: 0 0 5px gray;
+	min-height: 625px;
 }
 
 .list ul {
