@@ -54,7 +54,7 @@ header {
 	padding-bottom: 7px;
 }
 
-.top a:hover {
+.top a:hover, a.active {
 	color: #ce2f34;
 	border-bottom: 4px solid #ce2f34;
 }
