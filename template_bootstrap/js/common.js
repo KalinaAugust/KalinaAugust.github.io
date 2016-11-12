@@ -1,15 +1,18 @@
 $(document).ready(function() {
 
+	$(".item").magnificPopup({
+		type : "image",
+		gallery : {
+			enabled : true
+		},
+		remivalDelay: 300,
+		mainClass: "mfp-fade"
+	});
+
 	$(".auth_buttons").click(function() {
 		$(this).next().slideToggle();
 	});
 
-
-	//Таймер обратного отсчета
-	//Документация: http://keith-wood.name/countdown.html
-	//<div class="countdown" date-time="2015-01-07"></div>
-	var austDay = new Date($(".countdown").attr("date-time"));
-	$(".countdown").countdown({until: austDay, format: 'yowdHMS'});
 
 	//Попап менеджер FancyBox
 	//Документация: http://fancybox.net/howto

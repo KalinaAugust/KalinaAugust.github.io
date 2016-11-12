@@ -1,3 +1,4 @@
+@import url(http://allfont.ru/allfont.css?fonts=a_bremen);
 /* font-family: "RobotoRegular"; */
 @font-face {
 	font-family: "RobotoRegular";
@@ -135,6 +136,46 @@
     src: url("../fonts/BenderLightItalic/BenderLightItalic.eot?#iefix")format("embedded-opentype"),
     url("../fonts/BenderLightItalic/BenderLightItalic.woff") format("woff"),
     url("../fonts/BenderLightItalic/BenderLightItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "CaviarDreamsRegular"; */
+@font-face {
+    font-family: "CaviarDreamsRegular";
+    src: url("../fonts/CaviarDreamsRegular/CaviarDreamsRegular.eot");
+    src: url("../fonts/CaviarDreamsRegular/CaviarDreamsRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/CaviarDreamsRegular/CaviarDreamsRegular.woff") format("woff"),
+    url("../fonts/CaviarDreamsRegular/CaviarDreamsRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "CaviarDreamsBold"; */
+@font-face {
+    font-family: "CaviarDreamsBold";
+    src: url("../fonts/CaviarDreamsBold/CaviarDreamsBold.eot");
+    src: url("../fonts/CaviarDreamsBold/CaviarDreamsBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/CaviarDreamsBold/CaviarDreamsBold.woff") format("woff"),
+    url("../fonts/CaviarDreamsBold/CaviarDreamsBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "CaviarDreamsItalic"; */
+@font-face {
+    font-family: "CaviarDreamsItalic";
+    src: url("../fonts/CaviarDreamsItalic/CaviarDreamsItalic.eot");
+    src: url("../fonts/CaviarDreamsItalic/CaviarDreamsItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/CaviarDreamsItalic/CaviarDreamsItalic.woff") format("woff"),
+    url("../fonts/CaviarDreamsItalic/CaviarDreamsItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "CaviarDreamsBoldItalic"; */
+@font-face {
+    font-family: "CaviarDreamsBoldItalic";
+    src: url("../fonts/CaviarDreamsBoldItalic/CaviarDreamsBoldItalic.eot");
+    src: url("../fonts/CaviarDreamsBoldItalic/CaviarDreamsBoldItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/CaviarDreamsBoldItalic/CaviarDreamsBoldItalic.woff") format("woff"),
+    url("../fonts/CaviarDreamsBoldItalic/CaviarDreamsBoldItalic.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
