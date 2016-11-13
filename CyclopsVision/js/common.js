@@ -93,7 +93,21 @@ $(window).scroll(function() {
 		"transform" : "translate(0%, " + st /1.4 + "%"
 	});
 
-	$(".sect_two img").css({
-		"transform" : "translate(0%, -" + st /40 + "%"
+		$(".prlx_conten2").css({
+		"transform" : "translate(0%, " + st /16  + "%"
+	});
+
+});
+
+
+jQuery(document).ready(function(){
+	$objWindow = $(window);
+	$('section[data-type="background"]').each(function(){
+		var $bgObj = $(this);
+		$(window).scroll(function() {
+			var yPos = -($objWindow.scrollTop() / $bgObj.data('speed'));
+			var coords = '100% '+ yPos + 'px';
+			$bgObj.css({ backgroundPosition: coords });
+		});
 	});
 });

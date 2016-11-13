@@ -104,21 +104,25 @@ section {
 }
 
 .sect_two {
-
+	position: relative;
+	background: url(../images/6.jpg) center 0 no-repeat fixed; 
+	background-size: cover;
 }
 
-.sect_two img {
-	width: 100%;
-	position: absolute;
-}
 
 
 .sect_three {
-	background-image: url(../images/3.jpg);
+	position: relative;
+	background: url(../images/3.jpg) center 0 no-repeat fixed; 
+	background-size: cover;
+
 }
 
 .sect_four {
-	background-image: url(../images/4.jpg);
+	position: relative;
+	background: url(../images/4.jpg) center 0 no-repeat fixed;
+	background-size: cover;
+
 }
 
 .foot_one {
@@ -138,11 +142,12 @@ section {
 }
 
 .content {
-	height: 100vh;
-	background-color: rgba(0, 0, 0, .1);
-	z-index: 2;
-	
-}
+	color: #000;
+/* 	background-color: rgba(0, 0, 0, .7); */
+	padding: 15px;
+	margin-top: 30px;
+
+	}
 
 .foot_content {
 	padding-top: 8px;
@@ -199,6 +204,11 @@ input:focus {
 #foot_form ::-moz-placeholder          {color:#000;}
 #foot_form :-ms-input-placeholder      {color:#000;}
 
+
+.content {
+	color: #fff;
+}
+
 .content h1 {
 	font-size: 35px;
 	color: #fff;
@@ -220,6 +230,11 @@ input:focus {
 	line-height: 1.1em;
 }
 
-.prlx_conten {
+.prlx_conten2 {
+ position: absolute;
+}
 
+.section_wrapper {
+	background-color: rgba(0, 0, 0, .7);
+	height: 100vh;
 }
