@@ -14,7 +14,7 @@ $.each( navLi, function() {
 }
 });
 }, {
-	offset: '20%'
+	offset: '30%'
 });
 
 
@@ -71,8 +71,26 @@ $.each( navLi, function() {
 
 	//Плавный скролл до блока .div по клику на .scroll
 	//Документация: https://github.com/flesler/jquery.scrollTo
-	$("a.scroll").click(function() {
-		$.scrollTo($(".div"), 800, {
+	$(".scroll_1").click(function() {
+		$.scrollTo($(".sect_one"), 800, {
+			offset: -90
+		});
+	});
+
+		$(".scroll_2").click(function() {
+		$.scrollTo($(".sect_two"), 800, {
+			offset: -90
+		});
+	});
+
+	$(".scroll_3").click(function() {
+		$.scrollTo($(".sect_three"), 800, {
+			offset: -90
+		});
+	});
+
+	$(".scroll_4").click(function() {
+		$.scrollTo($(".sect_four"), 800, {
 			offset: -90
 		});
 	});

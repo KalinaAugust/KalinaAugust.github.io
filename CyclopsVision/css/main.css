@@ -128,11 +128,28 @@ section {
 	min-height: 90px;
 	width: 100%;
 	background-color: #820600;
-	border-top: 1px solid #ffffffb3;
-	border-bottom: 1px solid #ffffffb3;
+	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
 	position: absolute;
 	bottom: 0;
 }
+
+.foot_two {
+	min-height: 20px;
+	width: 100%;
+	background-color: #820600;
+	border-top: 1px solid lightgray;
+}
+
+.foot_two p {
+	color: white;
+	font-size: 13px;
+  text-align: center;
+	margin: 15px 0 0 0;
+}
+
+
+
 
 .black_line {
 	height: 20px;
@@ -236,8 +253,18 @@ input:focus {
 .prlx_conten1, .prlx_conten2, .prlx_conten3 {
  position: absolute;
  opacity: 0;
- transition: .6s;
+ transition: .9s;
 }
+
+@keyframes hide {
+    from {
+    	top: 300px;
+    }
+    to {
+    	top: 0;
+    }
+}
+
 
 .section_wrapper {
 	background-color: rgba(0, 0, 0, .7);
@@ -247,7 +274,8 @@ input:focus {
 }
 
 .animation {
-opacity: 1;
+	opacity: 1;
+animation: hide .5s ease-out;
 
 }
 
