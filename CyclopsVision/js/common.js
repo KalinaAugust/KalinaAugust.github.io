@@ -1,5 +1,30 @@
 $(document).ready(function() {
 
+	
+var navLi = $(".nav li");
+
+$('.tracked').waypoint( function() {
+ var hash = $(this).attr('id');
+
+ navLi.removeClass("active");
+
+$.each( navLi, function() {
+ if ( $(this).children('a').attr('href').slice(1) == hash ) {
+  $(this).addClass("active");
+}
+});
+}, {
+	offset: '20%'
+});
+
+
+
+//  });
+// })
+
+
+
+
 	//Таймер обратного отсчета
 	//Документация: http://keith-wood.name/countdown.html
 	//<div class="countdown" date-time="2015-01-07"></div>
@@ -19,13 +44,30 @@ $(document).ready(function() {
 
 	//Добавляет классы дочерним блокам .block для анимации
 	//Документация: http://imakewebthings.com/jquery-waypoints/
-	$(".block").waypoint(function(direction) {
+	$(".block1").waypoint(function(direction) {
 		if (direction === "down") {
-			$(".class").addClass("active");
+			$(".prlx_conten1").addClass("animation");
 		} else if (direction === "up") {
-			$(".class").removeClass("deactive");
+			$(".prlx_conten1").removeClass("deanimation");
 		};
-	}, {offset: 100});
+	}, {offset: 200});
+
+	$(".block2").waypoint(function(direction) {
+		if (direction === "down") {
+			$(".prlx_conten2").addClass("animation");
+		} else if (direction === "up") {
+			$(".prlx_conten2").removeClass("deanimation");
+		};
+	}, {offset: 300});
+
+	$(".block3").waypoint(function(direction) {
+		if (direction === "down") {
+			$(".prlx_conten3").addClass("animation");
+		} else if (direction === "up") {
+			$(".prlx_conten3").removeClass("deanimation");
+		};
+	}, {offset: 300});
+
 
 	//Плавный скролл до блока .div по клику на .scroll
 	//Документация: https://github.com/flesler/jquery.scrollTo
@@ -91,10 +133,6 @@ $(window).scroll(function() {
 
 	$(".prlx_conten").css({
 		"transform" : "translate(0%, " + st /1.4 + "%"
-	});
-
-		$(".prlx_conten2").css({
-		"transform" : "translate(0%, " + st /16  + "%"
 	});
 
 });
