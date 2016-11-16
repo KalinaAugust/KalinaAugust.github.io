@@ -106,8 +106,6 @@ section {
 	background: url(../images/6.jpg) center 0 no-repeat fixed; 
 }
 
-
-
 .sect_three {
 	background: url(../images/3.jpg) center 0 no-repeat fixed; 
 }
@@ -117,7 +115,7 @@ section {
 }
 
 .sect_two, .sect_three, .sect_four {
-	height: 130vh;
+	height: 1200px;
 	background-size: cover;	
 }
 

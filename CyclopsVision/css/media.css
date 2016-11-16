@@ -8,12 +8,15 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 	.sect_one {
+		height: 600px;
 		background-size: cover;
 		overflow: hidden;
+		position: relative;
+		
 	}
 
 	.sect_one h1 {
-		font-size: 25px;
+		font-size: 27px;
 	}
 
 	.prlx_conten1, .prlx_conten2, .prlx_conten3 {
@@ -21,8 +24,16 @@
 }
 
 .sect_two, .sect_three, .sect_four {
-	height: 170vh;
+	height: 1250px;
 	background-size: cover;	
+	background-attachment: scroll;
+}
+
+.foot_one {
+	min-height: 80px;
+
+	position: absolute;
+ 	bottom: 0;
 }
 
 }
