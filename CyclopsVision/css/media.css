@@ -7,6 +7,23 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+	.sect_one {
+		background-size: cover;
+		overflow: hidden;
+	}
+
+	.sect_one h1 {
+		font-size: 25px;
+	}
+
+	.prlx_conten1, .prlx_conten2, .prlx_conten3 {
+ 		opacity: 1;
+}
+
+.sect_two, .sect_three, .sect_four {
+	height: 170vh;
+	background-size: cover;	
+}
 
 }
 

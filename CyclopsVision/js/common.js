@@ -19,8 +19,7 @@ $.each( navLi, function() {
 
 
 
-//  });
-// })
+
 
 
 
@@ -42,31 +41,6 @@ $.each( navLi, function() {
 	//Ссылки вида <a href="#contacts">Контакты</a>
 	$(".top_mnu").navigation();
 
-	//Добавляет классы дочерним блокам .block для анимации
-	//Документация: http://imakewebthings.com/jquery-waypoints/
-	$(".block1").waypoint(function(direction) {
-		if (direction === "down") {
-			$(".prlx_conten1").addClass("animation");
-		} else if (direction === "up") {
-			$(".prlx_conten1").removeClass("deanimation");
-		};
-	}, {offset: 200});
-
-	$(".block2").waypoint(function(direction) {
-		if (direction === "down") {
-			$(".prlx_conten2").addClass("animation");
-		} else if (direction === "up") {
-			$(".prlx_conten2").removeClass("deanimation");
-		};
-	}, {offset: 300});
-
-	$(".block3").waypoint(function(direction) {
-		if (direction === "down") {
-			$(".prlx_conten3").addClass("animation");
-		} else if (direction === "up") {
-			$(".prlx_conten3").removeClass("deanimation");
-		};
-	}, {offset: 300});
 
 
 	//Плавный скролл до блока .div по клику на .scroll
@@ -145,17 +119,14 @@ $.each( navLi, function() {
 
 });
 
-$(window).scroll(function() {
-
-	var st = $(this).scrollTop();
-
-	$(".prlx_conten").css({
-		"transform" : "translate(0%, " + st /1.4 + "%"
-	});
-
-});
 
 
+
+
+if (window.matchMedia('(min-width: 992px)').matches)
+{
+
+// паралакс секций кроме первой
 jQuery(document).ready(function(){
 	$objWindow = $(window);
 	$('section[data-type="background"]').each(function(){
@@ -167,3 +138,43 @@ jQuery(document).ready(function(){
 		});
 	});
 });
+
+// паралакс заголовка первой секции
+$(window).scroll(function() {
+
+	var st = $(this).scrollTop();
+
+	$(".prlx_conten").css({
+		"transform" : "translate(0%, " + st /1.4 + "%"
+	});
+
+});
+
+	//Добавляет классы дочерним блокам .block для анимации
+	//Документация: http://imakewebthings.com/jquery-waypoints/
+	$(".block1").waypoint(function(direction) {
+		if (direction === "down") {
+			$(".prlx_conten1").addClass("animation");
+		} else if (direction === "up") {
+			$(".prlx_conten1").removeClass("deanimation");
+		};
+	}, {offset: 200});
+
+	$(".block2").waypoint(function(direction) {
+		if (direction === "down") {
+			$(".prlx_conten2").addClass("animation");
+		} else if (direction === "up") {
+			$(".prlx_conten2").removeClass("deanimation");
+		};
+	}, {offset: 300});
+
+	$(".block3").waypoint(function(direction) {
+		if (direction === "down") {
+			$(".prlx_conten3").addClass("animation");
+		} else if (direction === "up") {
+			$(".prlx_conten3").removeClass("deanimation");
+		};
+	}, {offset: 300});
+
+
+}
