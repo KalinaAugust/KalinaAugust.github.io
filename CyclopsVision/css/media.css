@@ -2,6 +2,27 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
+	.tel {
+	text-align: center;
+	font-size: 22px;
+	color: #FFF;
+	border-left: none;
+}
+
+.foot_content {
+	padding-top: 8px;
+	color: #fff;
+	text-align: center;
+	
+}
+
+.foot_form {
+	width: 250px;
+	display: block;
+	margin: 0 auto 12px auto;
+	
+	
+}
 
 }
 

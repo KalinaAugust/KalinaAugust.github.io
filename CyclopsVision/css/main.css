@@ -239,7 +239,7 @@ input:focus {
 	text-align: right;
 	font-size: 32px;
 	color: #FFF;
-	font-family: "DitedRegular";
+	font-family: monospace;
 	line-height: 1.1em;
 	border-left: 3px solid white;
 }
