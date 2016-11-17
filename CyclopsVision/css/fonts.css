@@ -39,13 +39,13 @@
 	font-weight: normal;
 }
 
-/* font-family: "DitedRegular"; */
+/* font-family: "TypewriterRegular"; */
 @font-face {
-    font-family: "DitedRegular";
-    src: url("../fonts/DitedRegular/DitedRegular.eot");
-    src: url("../fonts/DitedRegular/DitedRegular.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/DitedRegular/DitedRegular.woff") format("woff"),
-    url("../fonts/DitedRegular/DitedRegular.ttf") format("truetype");
+    font-family: "TypewriterRegular";
+    src: url("../fonts/TypewriterRegular/TypewriterRegular.eot");
+    src: url("../fonts/TypewriterRegular/TypewriterRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/TypewriterRegular/TypewriterRegular.woff") format("woff"),
+    url("../fonts/TypewriterRegular/TypewriterRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }

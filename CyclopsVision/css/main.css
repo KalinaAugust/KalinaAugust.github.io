@@ -63,7 +63,7 @@ header {
 .top nav {
 	margin: 11px 0 0 0;
 	padding: 0;
-	width: 600px;
+	width: 370px;
 	display: inline-block;
 	
 }
@@ -75,10 +75,11 @@ header {
 }
 
 .logo {	
+	display: inline-block;
+	width: 270px;
 	float: right;
-	text-align: right;
-	font-family: "DitedRegular";
-	font-size: 29px;
+	font-family: "TypewriterRegular";
+	font-size: 26px;
 	color: #e8494e;
 	margin-top: 1px;
 	text-shadow: 1px 1px 0 gray;
@@ -90,21 +91,26 @@ header {
 }
 
 section {
-/* 	position: relative; */
-	height: 100vh;
 	background-position: center top;
 	background-size: cover;
 	overflow: hidden;
 }
 
 .sect_one {
+	color: #fff;
+	height: 100vh;
 	background-size: cover;
 	background-image: url(../images/first.jpg);
 }
 
-.sect_two {
+.sect_two  {
 	background: url(../images/6.jpg) center 0 no-repeat fixed; 
 }
+
+.sect_two .content {
+	color: #000; 
+}
+
 
 .sect_three {
 	background: url(../images/3.jpg) center 0 no-repeat fixed; 
@@ -115,7 +121,8 @@ section {
 }
 
 .sect_two, .sect_three, .sect_four {
-	height: 1200px;
+	color: #fff;
+	height: 1000px;
 	background-size: cover;	
 }
 
@@ -150,7 +157,6 @@ section {
 }
 
 .content {
-	color: #000;
 	padding: 15px;
 	padding-top: 30px;
 	}
@@ -180,6 +186,7 @@ input:focus {
 }
 
 .foot_form button {
+	color: #000;
 	padding: 0;
 	margin: 0;
 	width: 49px;
@@ -235,12 +242,13 @@ input:focus {
 }
 
 .tel {
-	margin: 10px;
+	padding-left: 8px;
+	margin: 10px 0 10px 0;
 	text-align: right;
-	font-size: 32px;
+	font-size: 23px;
 	color: #FFF;
-	font-family: monospace;
-	line-height: 1.1em;
+	font-family: "TypewriterRegular";
+	line-height: 1.5em;
 	border-left: 3px solid white;
 }
 
