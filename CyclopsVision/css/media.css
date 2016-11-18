@@ -25,13 +25,13 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-	.sect_one {
-		height: 800px;
-		background-size: cover;
-		overflow: hidden;
-		position: relative;
-		
-	}
+.sect_one {
+	height: 800px;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+	
+}
 
 .sect_one h1 {
 	font-size: 27px;
@@ -63,7 +63,7 @@
 	position: absolute;
 	width: 90%;
 	top: 50px;
-	text-align: center;
+	text-align: left;
 	background-color: white;
 	border: 1px solid black;
 }
@@ -76,8 +76,11 @@ ul.nav {
 .top nav {
 	width: 40px;
 	margin-top: 10px;
+}
 
-
+.top nav li {
+	display: block;
+	padding: 5px;
 }
 
 .logo {
@@ -90,19 +93,11 @@ ul.nav {
 font-size: 23px;
 }
 
-}
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
  ul.nav {
  	padding: 4px;
-	font-size: 13px;
-	width: 300px;
-}
-
-.slash {
-	font-size: 13px;
-	padding-left: 5px;
+	font-size: 16px;
+	width: 150px;
+	margin-left: -100px;
 }
 
 .nav i {
@@ -112,6 +107,15 @@ font-size: 23px;
 .top a:hover, .active a {
  border: none;
  }
+
+ .slash {
+ 	display: none;
+ }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
 
 }
 
@@ -135,7 +139,7 @@ font-size: 23px;
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-		.nav {
+		.nav li {
 	display: inline-block !important;
 }
 

@@ -50,7 +50,7 @@ header {
 }
 
 .top a {
-	color: black;
+	color: dimgray;
 	padding-bottom: 7px;
 }
 
@@ -60,6 +60,7 @@ header {
 }
 
 .top nav {
+	float: right;
 	margin: 11px 0 0 0;
 	padding: 0;
 	width: 370px;
@@ -84,20 +85,27 @@ header {
 }
 
 .logo {	
-	text-align: right;
+	text-align: left;
 	display: inline-block;
 	width: 270px;
-	float: right;
 	font-family: "TypewriterRegular";
 	font-size: 26px;
 	color: #e8494e;
-	margin-top: 1px;
+	margin-top: 3px;
 	text-shadow: 1px 1px 0 gray;
 }
+
+.logo a:hover {
+	border: none;
+	
+}
+
 
 
 .logo i {
 	font-size: 33px;
+	color: #e8494e;
+	padding: 0px 4px;
 }
 
 section {
