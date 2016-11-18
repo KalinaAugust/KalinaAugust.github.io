@@ -13,15 +13,12 @@
 	padding-top: 8px;
 	color: #fff;
 	text-align: center;
-	
 }
 
 .foot_form {
 	width: 250px;
 	display: block;
 	margin: 0 auto 12px auto;
-	
-	
 }
 
 }
@@ -36,12 +33,12 @@
 		
 	}
 
-	.sect_one h1 {
-		font-size: 27px;
-	}
+.sect_one h1 {
+	font-size: 27px;
+}
 
-	.prlx_conten1, .prlx_conten2, .prlx_conten3 {
- 		opacity: 1;
+.prlx_conten1, .prlx_conten2, .prlx_conten3 {
+	opacity: 1;
 }
 
 .sect_two, .sect_three, .sect_four {
@@ -52,7 +49,6 @@
 
 .foot_one {
 	min-height: 80px;
-
 	position: absolute;
  	bottom: 0;
 }
@@ -62,10 +58,60 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 
+.nav {
+	display: none;
+	position: absolute;
+	width: 90%;
+	top: 50px;
+	text-align: center;
+	background-color: white;
+	border: 1px solid black;
+}
+
+ul.nav {
+	padding: 9px;
+	width: 380px;
+}
+
+.top nav {
+	width: 40px;
+	margin-top: 10px;
+
+
+}
+
+.logo {
+	font-size: 20px;
+	width: 190px;
+	margin-top: 8px;
+}
+
+.logo i {
+font-size: 23px;
+}
+
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+ ul.nav {
+ 	padding: 4px;
+	font-size: 13px;
+	width: 300px;
+}
+
+.slash {
+	font-size: 13px;
+	padding-left: 5px;
+}
+
+.nav i {
+	font-size: 17px;
+}
+
+.top a:hover, .active a {
+ border: none;
+ }
 
 }
 
@@ -89,6 +135,9 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+		.nav {
+	display: inline-block !important;
+}
 
 }
 

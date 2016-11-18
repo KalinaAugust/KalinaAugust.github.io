@@ -59,14 +59,23 @@ header {
 	border-bottom: 4px solid #ce2f34;
 }
 
-
 .top nav {
 	margin: 11px 0 0 0;
 	padding: 0;
 	width: 370px;
 	display: inline-block;
-	
 }
+
+.hidden_menu {
+ border: none;
+ background: none;
+}
+
+.hidden_menu i {
+	color: #ca0400;
+	font-size: 25px;
+}
+
 
 .slash {
 	font-size: 17px;
@@ -75,6 +84,7 @@ header {
 }
 
 .logo {	
+	text-align: right;
 	display: inline-block;
 	width: 270px;
 	float: right;
@@ -105,10 +115,6 @@ section {
 
 .sect_two  {
 	background: url(../images/6.jpg) center 0 no-repeat fixed; 
-}
-
-.sect_two .content {
-	color: #000; 
 }
 
 

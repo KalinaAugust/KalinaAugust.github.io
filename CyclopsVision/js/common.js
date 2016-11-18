@@ -1,5 +1,16 @@
 $(document).ready(function() {
 
+
+
+$(".hidden_menu").click(function() {
+	$(this).next().slideToggle();
+});
+	
+
+
+
+
+
 	
 var navLi = $(".nav li");
 
