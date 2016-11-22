@@ -134,8 +134,7 @@ $.each( navLi, function() {
 
 
 
-if (window.matchMedia('(min-width: 992px)').matches)
-{
+if (window.matchMedia('(min-width: 992px)').matches) {
 
 // паралакс секций кроме первой
 jQuery(document).ready(function(){

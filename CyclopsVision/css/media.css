@@ -33,16 +33,12 @@
 	
 }
 
-.sect_one h1 {
-	font-size: 27px;
-}
-
 .prlx_conten1, .prlx_conten2, .prlx_conten3 {
 	opacity: 1;
 }
 
 .sect_two, .sect_three, .sect_four {
-	height: 1250px;
+	height: auto;
 	background-size: cover;	
 	background-attachment: scroll;
 }
