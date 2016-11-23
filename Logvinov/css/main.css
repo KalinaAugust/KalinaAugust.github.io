@@ -1,0 +1,94 @@
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	
+}
+body input:required:valid,
+body textarea:required:valid {
+	
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "RobotoRegular", sans-serif;
+	font-size: 16px;
+}
+
+.section_one {
+
+
+
+}
+
+.lines span {
+	float: left;
+	height: 4px;
+	width: 33.3333%;
+}
+
+.line1 {
+	background-color: #15b799;
+}
+
+.line2 {
+	background-color: #0082ad;
+}
+
+.line3 {
+	background-color: #133a81;
+}
+
+.logo {
+ margin-top: 29px;
+}
+
+.slogan {
+	font-size: 20px;
+	font-family: "OpenSansRegular";
+	margin-top: 46px;
+}
+
+.slogan span {
+	font-family: "OpenSansSemiBold";
+	color: #0082ad;
+}
+
+.header_contacts {
+ 	margin-top: 40px;
+
+}
+
+.header_phone {
+	padding-left: 33px;
+	background-image: url(../img/phone.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	color: #15b799;
+	font-size: 28px;
+	font-family: "MyriadProRegular";
+}
+
+.header_mail {
+	padding-left: 33px;
+	background-image: url(../img/mail.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
