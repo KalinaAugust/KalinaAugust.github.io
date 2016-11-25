@@ -200,6 +200,10 @@ body {
 	color: #fff;
 }
 
+.slider_content:focus {
+	outline: none;
+}
+
 .slider_content h1 {
 	font-size: 34px;
 	font-family: "OpenSansBold";
@@ -612,11 +616,18 @@ body {
   height: 181px;
 }
 
-.multiple_slider_content_1, .multiple_slider_content_2,
-.multiple_slider_content_3, .multiple_slider_content_4 {
+.multiple_slider p:focus {
+ outline: none;
+}
+
+.multiple_slider_content {
   height: 281px;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.multiple_slider_content:focus {
+outline: none;
 }
 
 .multiple_slider .autor {
