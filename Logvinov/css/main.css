@@ -840,7 +840,6 @@ body {
 	width: 170px;
 	float: right;
 	padding-left: 20px;
-	
 }
 
 .soc_buttons ul {
@@ -860,6 +859,7 @@ body {
 	font-size: 13px;
 	text-decoration: underline;
 	padding-left: 16px;
+	color: #337ab7;
 }
 /* footers end */
 
