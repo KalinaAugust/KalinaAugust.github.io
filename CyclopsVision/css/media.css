@@ -57,7 +57,16 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 .advantages {
+	margin-top: 10px;
 	margin-bottom: 250px;
+}
+
+.prlx_text h1 {
+	font-size: 2em;
+}
+
+.prlx_text h2 {
+	font-size: 1.5em;
 }
 
 .nav {
