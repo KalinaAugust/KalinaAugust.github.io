@@ -261,11 +261,14 @@ input[type="submit"]:hover {
 	padding-left: 8px;
 	margin: 10px 0 10px 0;
 	text-align: right;
+	border-left: 3px solid white;
+}
+
+.tel a {
 	font-size: 23px;
 	color: #FFF;
 	font-family: "TypewriterRegular";
 	line-height: 1.5em;
-	border-left: 3px solid white;
 }
 
 .prlx_conten1, .prlx_conten2, .prlx_conten3 {
