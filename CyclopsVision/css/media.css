@@ -26,11 +26,14 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 .sect_one {
-	height: 800px;
+	height: auto;
 	background-size: cover;
 	overflow: hidden;
 	position: relative;
-	
+}
+
+.advantages {
+	margin-bottom: 230px;
 }
 
 .prlx_conten1, .prlx_conten2, .prlx_conten3 {
@@ -53,6 +56,9 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+.advantages {
+	margin-bottom: 250px;
+}
 
 .nav {
 	display: none;
@@ -112,6 +118,9 @@ font-size: 23px;
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+.advantages {
+	margin-bottom: 310px;
+}
 
 }
 

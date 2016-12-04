@@ -15,14 +15,6 @@
 	opacity: 1;
 }
 
-body input:focus:required:invalid,
-body textarea:focus:required:invalid {
-	
-}
-body input:required:valid,
-body textarea:required:valid {
-	
-}
 body {
 	font-family: "RobotoRegular", sans-serif;
 	font-size: 16px;
@@ -77,7 +69,6 @@ header {
 	font-size: 25px;
 }
 
-
 .slash {
 	font-size: 17px;
 	color: lightgray;
@@ -97,10 +88,7 @@ header {
 
 .logo a:hover {
 	border: none;
-	
 }
-
-
 
 .logo i {
 	font-size: 33px;
@@ -124,7 +112,6 @@ section {
 .sect_two  {
 	background: url(../images/6.jpg) center 0 no-repeat fixed; 
 }
-
 
 .sect_three {
 	background: url(../images/3.jpg) center 0 no-repeat fixed; 
@@ -187,7 +174,7 @@ section {
 }
 
 input[type="text"] {
-	height: auto;
+	height: 35px;
 	color: #000;
 	background-color: #f0f0f0;
 	width: 200px;
@@ -195,23 +182,23 @@ input[type="text"] {
 	border-radius: 5px 0 0 5px;
 }
 
-input:focus {
+input[type="text"]:focus, input[type="text"]:active {
  outline: none; 
 }
 
-.foot_form button {
+input[type="submit"] {
+	position: absolute;
 	color: #000;
 	padding: 0;
-	margin: 0;
 	width: 49px;
-	height: auto;
+	height: 35px;
 	margin-left: -4px;
 	border: 3px solid white;
 	border-radius: 0 5px 5px 0;
 	background-color: #fff;
 }
 
-.foot_form button:hover {
+input[type="submit"]:hover {
 	background-color: #ccc;
 }
 
@@ -237,21 +224,36 @@ input:focus {
 	font-size: 13px;
 }
 
-.content h1 {
+.prlx_text {
 	font-family: "RobotoRegular", sans-serif;
-	font-size: 2.5em;
 	color: #fff;
 	margin-top: 50px;
 	text-shadow: 1px 1px 2px black;
+}
+
+.prlx_text h1 {
+	font-size: 2.5em;
+}
+
+.prlx_text h2 {
+	font-size: 1.9em;
 }
 
 .content h3 {
 	font-size: 2em;
 }
 
-
 .red {
-	color: #CA0400;
+	color: #dd191e;
+	text-shadow: 1px 1px 2px black;
+}
+
+.advantages {
+	margin-top: 70px;
+}
+
+.advantages ul{
+	font-size: 22px;
 	text-shadow: 1px 1px 2px black;
 }
 

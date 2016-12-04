@@ -128,7 +128,7 @@ $.each( navLi, function() {
 		return false;
 	});
 
-});
+
 
 
 
@@ -154,8 +154,12 @@ $(window).scroll(function() {
 
 	var st = $(this).scrollTop();
 
-	$(".prlx_conten").css({
-		"transform" : "translate(0%, " + st /1.4 + "%"
+	$(".prlx_text").css({
+		"transform" : "translate(0%, " + st /3.4 + "%"
+	});
+
+		$(".prlx_text2").css({
+		"transform" : "translate(0%, " + st /4.9 + "%"
 	});
 
 });
@@ -188,3 +192,5 @@ $(window).scroll(function() {
 
 
 }
+
+});
