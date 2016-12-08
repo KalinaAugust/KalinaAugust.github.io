@@ -54,3 +54,20 @@
 	font-style: normal;
 	font-weight: normal;
 }
+
+/* font-family: "HelveticaNeueCyr-Light"; */
+@font-face {
+	font-family: "HelveticaNeueCyr-Light";
+	src:	url("../fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+/* font-family: "HelveticaNeueCyr"; */
+@font-face {
+	font-family: "HelveticaNeueCyr";
+	src:	url("../fonts/HelveticaNeueCyr/HelveticaNeueCyr.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}

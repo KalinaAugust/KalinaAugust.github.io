@@ -83,4 +83,19 @@ $(document).ready(function() {
 		return false;
 	});
 
+		// slider
+
+  $('.slider').slick({
+  	dots: true,
+  	infinite: true,
+  	speed: 300,
+  	slidesToShow: 1,
+  	adaptiveHeight: true,
+  	nextArrow: '<img class="next" src="../Sailex/images/next.png" alt="alt" />',
+  	prevArrow: '<img class="prev" src="../Sailex/images/prev.png" alt="alt" />'
+  });
+
+
+
+
 });
