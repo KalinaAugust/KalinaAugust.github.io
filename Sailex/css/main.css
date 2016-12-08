@@ -35,7 +35,7 @@ body {
 
 .sect_one {
 	position: relative;
-	height: 800px;
+/* 	height: 800px; */
 	background-image: url(../images/sect_one_bg.png);
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -60,7 +60,7 @@ body {
 .top_nav {
 	margin-top: 27px;
 	margin-left: 50px;
- float: left;
+ 	float: left;
 }
 
 .top_nav ul li {
@@ -151,7 +151,6 @@ body {
 
 /* sect two styles */
 .sect_two {
-	height: 2790px;
 	background-color: #fafafa;
 }
 
@@ -163,7 +162,7 @@ body {
 
 .img_right {
 	position: relative;
-  min-width: 467px;
+  max-width: 467px;
   float: right;
   margin-left: 80px;
 }
@@ -252,6 +251,7 @@ body {
 
 
 .section_three {
+	margin-top: 50px;
 	overflow: hidden;
 	height: 690px;
 	background-color: #efefef;
@@ -288,6 +288,22 @@ body {
  	position: relative;
 }
 
+.arrow {
+	position: absolute;
+	top: 50px;
+	left: -20px;
+	width: 15px;
+	height: 15px;
+	background-color: #5dace3; 
+	transform: rotate(45deg);
+}
+
+.hz {
+	width: 10px;
+	height: 10px;
+	background-color: red;
+}
+
 .dark_blue {
 	margin-top: 343px;
 	height: 85px;
@@ -298,18 +314,31 @@ body {
 }
 
 .next {
+	cursor: pointer;
+	opacity: .5;
  	position: absolute;
 	bottom: 20px;
 	z-index: 22;
 	right: 20px;
 }
 
+.next:hover {
+	opacity: 1;
+}
+
 .prev {
+	cursor: pointer;
+	opacity: .5;
 	position: absolute;
 	bottom: 20px;
 	right: 70px;
 	z-index: 22;
 }
+
+.prev:hover {
+	opacity: 1;
+}
+
 
 .nav-foot {
 	position: fixed;
