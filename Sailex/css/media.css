@@ -46,6 +46,13 @@
 	display: none;
 }
 
+.sect_four h2,
+.sect_four p,
+.wanna_it {
+	margin-top: 22px;
+}
+
+
 }
 
 
@@ -130,8 +137,9 @@
 	font-size: 26px;
 }
 
-.get_call {
+.get_call a {
   width: 280px;
+  padding: 5px;
 }
 
 .img_right img,
@@ -149,7 +157,7 @@
 .switch_nav {
 	display: none;
 	position: absolute;
-	background-color: #5DACE3;
+	background-color: rgba(93, 172, 227, .8);
 	margin-top: 20px;
 	margin-left: -30px;
 	padding: 10px;
