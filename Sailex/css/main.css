@@ -35,7 +35,7 @@ body {
 
 .sect_one {
 	position: relative;
-/* 	height: 800px; */
+	height: 800px;
 	background-image: url(../images/sect_one_bg.png);
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -111,7 +111,9 @@ body {
  	font-family: "KhmerUIb";
 }
 
-.sect_one_content h1, .sect_one_content h2, .sect_one_content h3 {
+.sect_one_content h1,
+.sect_one_content h2, 
+.sect_one_content h3 {
 	text-align: center;
 }
 
@@ -165,6 +167,17 @@ body {
   max-width: 467px;
   float: right;
   margin-left: 80px;
+  height: 100%;
+  display: inline-block;
+}
+
+.img_left {
+	position: relative;
+  max-width: 467px;
+  float: left;
+  margin-right: 80px;
+  height: 100%;
+  display: inline-block;
 }
 
 .plus_section_imgright h1 {
@@ -191,7 +204,7 @@ body {
 	text-align: center;
 	padding: 15px;
 	left: -40px;
-	bottom: 20px;
+	bottom: 60px;
 }
 
 .blue_line_right {
@@ -207,13 +220,6 @@ body {
 	margin-left: -90px;
 }
 
-.img_left {
-	position: relative;
-  min-width: 467px;
-  float: left;
-  margin-right: 80px;
-}
-
 .plus_section_imgleft .blue_square {
 	height: 80px;
 	width: 80px;
@@ -224,7 +230,7 @@ body {
 	text-align: center;
 	padding: 15px;
 	right: -40px;
-	bottom: 20px;
+	bottom: 60px;
 }
 
 .blue_line_left {
