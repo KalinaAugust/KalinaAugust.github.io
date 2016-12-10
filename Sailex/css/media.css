@@ -19,11 +19,11 @@
 .slider {
 	max-width: 828px;
 	margin: 0 auto;
-	}
+}
 
 .slider_content {
 	min-height: 550px;
-	}
+}
 
 .left_side {
 	width: 100%;
@@ -52,6 +52,33 @@
 	margin-top: 22px;
 }
 
+.sect_five_wrapper {
+	padding-top: 0;
+}
+
+.h3_one, .h3_two {
+	margin-top: 20px;
+}
+
+.sect_five {
+ height: 500px;
+}
+
+.button_pdf {
+	margin-top: 50px;
+}
+
+.wanna_it {
+	margin-bottom: 30px;
+}
+
+.wanna_it input[type="text"] {
+	border-radius: 7px 0 0 7px;
+}
+
+.sect_six {
+	height: auto;
+}
 
 }
 
@@ -111,6 +138,23 @@
 .plus_section_imgright h1, .plus_section_imgleft h1 {
 	padding: 0;
 	font-size: 27px;
+}
+
+.sect_five_wrapper {
+	padding-top: 0;
+}
+
+.sect_five h1 {
+ font-size: 35px;
+ line-height: 1.3em;
+}
+
+.h3_one, .h3_two {
+	margin-top: 80px;
+}
+
+.button_pdf {
+	margin-top: 60px;
 }
 
 }
@@ -189,30 +233,97 @@
 	font-size: 18px;
 }
 
+.sect_five_wrapper {
+	padding-top: 10px;
+}
+
+.h3_one, .h3_two {
+	margin: 0px;
+	text-align: center;
+}
+
+.button_pdf {
+	margin-top: 160px;
+}
+
+.sect_five h1 {
+ font-size: 32px;
+ line-height: 1.1em;
+}
+
+.how_choice {
+	margin-top: 40px;
+}
+
+.how_choice h1 {
+	font-size: 40px;
+	margin: 0 0 30px 0;
+}
+
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-	.slider_content {
+.slider_content {
 	min-height: 430px;
 	}
 
-	.dark_blue {
+.dark_blue {
 	margin-top: 125%;
 }
 
-	.slick-dots {
- 		bottom: 38px;
-  	left: -70px;
-	}
+.slick-dots {
+ 	bottom: 38px;
+  left: -70px;
+}
 
+.button_pdf {
+	margin-top: 150px;
+}
 
+.sect_five_wrapper {
+	padding-top: 0;
+}
+
+.h3_one {
+	margin-top: -15px;
+	text-align: center;
+}
+.sect_five h1 {
+ font-size: 30px;
+ line-height: 1.1em;
+}
+
+.how_choice h1 {
+	font-size: 30px;
+	margin: 0 0 30px 0;
+}
 
 }
 
 @media only screen and (max-width : 380px) {
-	.dark_blue {
+.dark_blue {
 	margin-top: 144%;
+}
+
+.h3_one {
+	margin-top: 98px;
+	text-align: center;
+}
+
+.button_pdf {
+	padding: 10px;
+	height: 50px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.wanna_it input[type="text"] {
+	width: 185px;
+}
+
+.wanna_it button {
+	width: 100px;
 }
 
 }

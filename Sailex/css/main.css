@@ -421,7 +421,7 @@ body {
 
 /* sect_four */
 .sect_four {
-	min-height: 200px;
+	min-height: 80px;
 	text-align: center;
 }
 
@@ -471,24 +471,151 @@ body {
 }
 
 
+/* sect_five  */
+.sect_five {
+ 	height: 640px;
+	background-image: url(../images/sect_five_bg.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center top;
+}
 
+.sect_five_wrapper {
+	padding-top: 120px;
+}
 
+.sect_five h1 {
+	font-family: "HelveticaNeueCyr-Light";
+	font-size: 44px;
+	color: #fff;
+	text-align: center;
+	font-weight: 100;
+}
 
+.bold {
+	font-weight: bold;
+}
 
+.sect_five h3 {
+	font-family: "HelveticaNeueCyr-Light";
+	color: #fff;
+	font-size: 16px;
+}
 
+.h3_one {
+	text-align: right;
+	margin-right: 70px;
+	margin-top: 30px;
+}
 
+.h3_two {
+	margin-left: 70px;
+	margin-top: 30px;
+}
 
+.button_pdf {
+	font-size: 18px;
+  border-radius: 6px;
+  background-color: rgb(93, 172, 227);
+  width: 242px;
+  height: 62px;
+	display: block;
+	padding: 20px;
+	text-align: center;
+	color: #fff;
+	margin: 75px auto;
+}
 
+.button_pdf:hover {
+	background-color: #4f91bf;
+}
+	
+	/* Video */
+.video_wrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	border: 2px solid rgb(93, 172, 227);
+}
 
+.video_wrapper iframe,.video_wrapper object,.video_wrapper embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/* Video end */
 
+.sect_six {
+	height: 1300px;
+	background-color: #efefef;
+}
 
+.how_choice {
+	margin-top: 90px;
+}
 
+.how_choice h1 {
+	margin: 0 0 60px 0;
+  font-size: 48px;
+  font-family: "HelveticaNeueCyr-Light";
+  color: rgb(93, 93, 93);
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 100;
+}
 
+.how_choice h4 {
+  font-size: 18px;
+  font-family: "HelveticaNeueCyr";
+  color: rgb(93, 172, 227);
+  text-align: center;
+}
 
+.player {
+	position: relative;
+	margin-top: 70px;
+}
 
+.vertical_line {
+	position: absolute;
+	top: -60px;
+	right: 50%;
+}
 
+.vertical_line_2 {
+	position: absolute;
+	bottom: -110px;
+	right: 50%;
+	margin-right: -20px;
+}
 
+.pdf p{
+  font-size: 19px;
+  font-family: "HelveticaNeueCyr";
+  color: rgb(81, 81, 81);
+  text-align: center;
+  margin-top: 130px;
+}
 
+.pdf a {
+	font-size: 18px;
+  border-radius: 6px;
+  background-color: rgb(93, 172, 227);
+  width: 242px;
+  height: 62px;
+	display: block;
+	padding: 20px;
+	text-align: center;
+	color: #fff;
+	margin: 25px auto;
+}
+
+.pdf a:hover {
+	background-color: #4f91bf;	
+}
 
 
 
