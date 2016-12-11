@@ -305,6 +305,9 @@
 	text-align: center;
 }
 
+.sect_nine {
+	min-height: 450px;
+}
 
 }
 
@@ -346,6 +349,15 @@
 }
 .map_wrapper {
 	max-height: 400px;
+}
+
+.sect_nine {
+	min-height: 680px;
+}
+
+.sect_nine h1 {
+	margin-top: 220px;
+	font-size: 30px;
 }
 
 }

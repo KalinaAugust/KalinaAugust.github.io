@@ -700,9 +700,6 @@ body {
 	min-height: 350px;
 }
 
-.footer_form {
-
-}
 
 .footer_form input[type="textarea"] {
 	margin: 35px auto 0 auto;
@@ -763,3 +760,7 @@ footer {
 	text-align: right;
 }
 
+.map_wrapper {
+	height: 600px;
+	display: block;
+}
