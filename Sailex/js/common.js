@@ -36,32 +36,31 @@ $(".hidden_menu").click(function() {
 
 	//Плавный скролл до блока .div по клику на .scroll
 	//Документация: https://github.com/flesler/jquery.scrollTo
-	$("a.scroll").click(function() {
-		$.scrollTo($(".div"), 800, {
+	$("a.to_sect_two").click(function() {
+		$.scrollTo($(".sect_two"), 800, {
 			offset: -90
 		});
 	});
 
-	//Каруселька
-	//Документация: http://owlgraphic.com/owlcarousel/
-	var owl = $(".carousel");
-	owl.owlCarousel({
-		items : 4
+	$("a.to_section_three").click(function() {
+		$.scrollTo($(".section_three"), 800, {
+			offset: -90
+		});
 	});
-	owl.on("mousewheel", ".owl-wrapper", function (e) {
-		if (e.deltaY > 0) {
-			owl.trigger("owl.prev");
-		} else {
-			owl.trigger("owl.next");
-		}
-		e.preventDefault();
+
+		$("a.to_sect_five").click(function() {
+		$.scrollTo($(".sect_five"), 800, {
+			offset: -90
+		});
 	});
-	$(".next_button").click(function(){
-		owl.trigger("owl.next");
+
+			$("a.to_sect_eight").click(function() {
+		$.scrollTo($(".sect_eight"), 800, {
+			offset: -90
+		});
 	});
-	$(".prev_button").click(function(){
-		owl.trigger("owl.prev");
-	});
+
+
 
 	//Кнопка "Наверх"
 	//Документация:

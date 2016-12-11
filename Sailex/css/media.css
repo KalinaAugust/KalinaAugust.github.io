@@ -157,6 +157,32 @@
 	margin-top: 60px;
 }
 
+.svg_wrapper {
+	margin-bottom: 65px;
+}
+
+.arrow_right {
+	display: none;
+}
+
+.arrow_bottom {
+	display: block;
+}
+
+.button_how_to {
+	margin-top: 0;
+	margin-bottom: 55px;
+}
+
+.sect_eight h1 {
+	font-size: 30px;
+	margin: 30px auto 30px auto;
+}
+
+.sect_eight p {
+	margin-top: 15px;
+}
+
 }
 
 /* Small Devices, Tablets */
@@ -260,6 +286,26 @@
 	margin: 0 0 30px 0;
 }
 
+.about_content {
+	margin-top: 24px;
+}
+
+.about_content h1 {
+	font-size: 35px;
+}
+
+.about_content p {
+	font-size: 18px;
+	line-height: 1.6em;
+}
+
+.footer_p_one, .footer_p_two {
+	padding: 15px;
+	float: none;
+	text-align: center;
+}
+
+
 }
 
 /* Extra Small Devices, Phones */
@@ -297,6 +343,9 @@
 .how_choice h1 {
 	font-size: 30px;
 	margin: 0 0 30px 0;
+}
+.map_wrapper {
+	max-height: 400px;
 }
 
 }
