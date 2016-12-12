@@ -95,7 +95,7 @@ body {
 }
 
 .logo_sect_one {
-	margin-top: 30px;
+	margin-top: 25px;
 	margin-left: 60px;
 	float: left;
 }
@@ -127,9 +127,14 @@ body {
 	margin-right: 30px;
 	width: 200px;
 	float: right;
-	color: #fff;
-	font-size: 22px;
 }
+
+.tel_top a {
+	color: #fff;
+	font-size: 22px;	
+}
+
+
 
 .sect_one_content {
 	margin-top: 230px;
