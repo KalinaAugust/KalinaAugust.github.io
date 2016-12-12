@@ -73,12 +73,6 @@ $(".hidden_menu").click(function() {
 		return false;
 	});
 
-
-
-
-
-
-
 		// slider
   $('.slider').slick({
   	dots: true,

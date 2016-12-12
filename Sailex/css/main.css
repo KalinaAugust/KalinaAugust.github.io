@@ -15,14 +15,6 @@
 	opacity: 1;
 }
 
-body input:focus:required:invalid,
-body textarea:focus:required:invalid {
-	
-}
-body input:required:valid,
-body textarea:required:valid {
-	
-}
 body {
 	font-family: "RobotoRegular", sans-serif;
 	font-size: 16px;
@@ -80,7 +72,6 @@ body {
 	position: relative;
 	height: 800px;
 	background-image: url(../images/sect_one_bg.png);
-	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: center top;
 }
@@ -133,8 +124,6 @@ body {
 	color: #fff;
 	font-size: 22px;	
 }
-
-
 
 .sect_one_content {
 	margin-top: 230px;
@@ -352,7 +341,9 @@ body {
 	width: 15px;
 	height: 15px;
 	background-color: #5dace3; 
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg); 
+	    -ms-transform: rotate(45deg); 
+	        transform: rotate(45deg);
 }
 
 .hz {
@@ -396,7 +387,6 @@ body {
 	opacity: 1;
 }
 
-
 .nav-foot {
 	position: fixed;
 	height: 50px;
@@ -421,8 +411,6 @@ body {
 .slider p {
 	font-family: "HelveticaNeueCyr";
 }
-
-
 
 /* sect_four */
 .sect_four {
@@ -475,12 +463,10 @@ body {
 	background-color: rgba(80, 153, 203, .7);	
 }
 
-
 /* sect_five  */
 .sect_five {
  	height: 640px;
 	background-image: url(../images/sect_five_bg.png);
-	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: center top;
 }
@@ -705,8 +691,7 @@ body {
 	min-height: 350px;
 }
 
-
-.footer_form input[type="textarea"] {
+.footer_form input[type="text"] {
 	margin: 35px auto 0 auto;
 	display: block;
 	width: 260px;
