@@ -27,7 +27,8 @@ $('.multiple_slider').slick({
 			url: "mail.php",
 			data: $("form").serialize()
 		}).done(function() {
-			alert("Спасибо за заявку!");
+			var url = "http://profhelp.com.ua";
+			$(location).attr('href',url);
 			setTimeout(function() {
 				$.fancybox.close();
 			}, 1000);
