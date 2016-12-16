@@ -191,6 +191,10 @@
 	margin-top: 15px;
 }
 
+.sect_thank_you {
+	height: auto;
+}
+
 }
 
 /* Small Devices, Tablets */
@@ -326,6 +330,9 @@
 	overflow: hidden;
 }
 
+.sect_thank_you h1 {
+	margin-top: 120px;
+
 }
 
 /* Extra Small Devices, Phones */
@@ -400,6 +407,10 @@
 
 .wanna_it button {
 	width: 100px;
+}
+
+.sect_thank_you {
+	min-height: 750px;
 }
 
 }

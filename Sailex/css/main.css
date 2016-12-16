@@ -758,3 +758,54 @@ footer {
 	height: 600px;
 	display: block;
 }
+
+
+.sect_thank_you {
+	background-color: #5DACE3;
+	position: relative;
+ 	min-height: 100vh;
+}
+
+footer.thank_you  {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.sect_thank_you h1 {
+	margin-top: 220px;
+	font-family: "HelveticaNeueCyr-Light";
+	font-weight: 100;
+	text-align: center;
+	font-size: 54px;
+	color: #fff;
+}
+
+.sect_thank_you h3 {
+	font-family: "HelveticaNeueCyr-Light";
+	font-weight: 100;
+	text-align: center;
+	font-size: 20px;
+	color: #fff;
+}
+
+.thank_you_button {
+	border: 1px solid white;
+	position: relative;
+	font-size: 20px;
+  border-radius: 6px;
+  background-color: #fff;
+  width: 242px;
+  height: 62px;
+	display: block;
+	padding: 15px;
+	text-align: center;
+	color: #5DACE3;
+	margin: 75px auto;
+	transition-duration: .5s;
+}
+
+.thank_you_button:hover {
+	background-color: #5DACE3;
+	color: #fff;
+}
