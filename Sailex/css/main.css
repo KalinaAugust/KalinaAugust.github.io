@@ -29,17 +29,9 @@ body {
 	display: none;
 }
 
-.hidden_form h3 {
-	font-family: "HelveticaNeueCyr-Light";
-	font-size: 27px;
-	color: #5C5C5C;
-	text-align: center;
-	margin: 15px;
-}
-
 .hidden_form p {
 	font-family: "HelveticaNeueCyr-Light";
-	font-size: 18px;
+	font-size: 21px;
 	color: #5C5C5C;
 	text-align: center;
 	margin: 15px;
@@ -763,7 +755,7 @@ footer {
 
 
 .sect_thank_you {
-	background-color: #5DACE3;
+	background-color: #77C5F3;
 	position: relative;
  	min-height: 100vh;
 }
@@ -802,12 +794,12 @@ footer.thank_you  {
 	display: block;
 	padding: 15px;
 	text-align: center;
-	color: #5DACE3;
+	color: #77C5F3;
 	margin: 75px auto;
 	transition-duration: .5s;
 }
 
 .thank_you_button:hover {
-	background-color: #5DACE3;
+	background-color: #77C5F3;
 	color: #fff;
 }
