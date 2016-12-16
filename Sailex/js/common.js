@@ -43,6 +43,12 @@ $(".hidden_menu").click(function() {
 		});
 	});
 
+			$("a.to_sect_seven").click(function() {
+		$.scrollTo($(".sect_seven"), 800, {
+			offset: -90
+		});
+	});
+
 	//Аякс отправка форм
 	//Документация: http://api.jquery.com/jquery.ajax/
 	$(".main_form").submit(function() {
@@ -51,7 +57,7 @@ $(".hidden_menu").click(function() {
 			url: "mail_pop.php",
 			data: $(".main_form").serialize()
 		}).done(function() {
-			var url = "price.html";
+			var url = "thank_you_page.html";
 			$(location).attr('href',url);
 			setTimeout(function() {
 				$.fancybox.close();
@@ -66,7 +72,7 @@ $(".hidden_menu").click(function() {
 			url: "mail_footer.php",
 			data: $(".footer_form").serialize()
 		}).done(function() {
-			var url = "price.html";
+			var url = "thank_you_page.html";
 			$(location).attr('href',url);
 			setTimeout(function() {
 				$.fancybox.close();

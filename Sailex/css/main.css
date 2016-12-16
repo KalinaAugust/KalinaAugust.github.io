@@ -99,7 +99,7 @@ body {
 
 .top_nav ul li {
 	display: inline;
-	margin-right: 25px;
+	margin-right: 22px;
 }
 
 .top_nav a {
@@ -299,7 +299,7 @@ body {
 .section_three {
 	margin-top: 50px;
 	overflow: hidden;
-	height: 690px;
+	height: 610px;
 	background-color: #efefef;
 }
 
@@ -485,6 +485,10 @@ body {
 
 .bold {
 	font-weight: bold;
+}
+
+.small_text.small_text {
+ font-size: 15px;
 }
 
 .sect_five h3 {

@@ -80,6 +80,14 @@
 	height: auto;
 }
 
+.tel_top {
+	margin-right: -15px;
+}
+
+.tel_top a {
+	font-size: 18px;	
+}
+
 }
 
 
@@ -91,7 +99,7 @@
 }
 
 .tel_top a {
-	font-size: 20px;	
+	font-size: 18px;	
 }
 
 .logo_sect_one {
