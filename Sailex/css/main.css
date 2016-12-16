@@ -47,6 +47,7 @@ body {
 
 .hidden_form input[type="tel"] {
 	border: 1px solid #5dace3;
+	padding-left: 10px;
 	height: 41px;
 	width: 250px;
 	display: block;
@@ -65,7 +66,8 @@ body {
 }
 
 .hidden_button:hover {
-	background-color: rgba(93, 172, 227, .6);
+	background-color: #247ab7;
+	border: 1px solid #247ab7;
 }
 
 .sect_one {
