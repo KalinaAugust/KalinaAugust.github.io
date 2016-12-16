@@ -51,8 +51,8 @@ $(".hidden_menu").click(function() {
 			url: "mail_pop.php",
 			data: $(".main_form").serialize()
 		}).done(function() {
-			var url = "http://profhelp.com.ua";
-$(location).attr('href',url);
+			var url = "price.html";
+			$(location).attr('href',url);
 			setTimeout(function() {
 				$.fancybox.close();
 			}, 1000);
@@ -66,8 +66,8 @@ $(location).attr('href',url);
 			url: "mail_footer.php",
 			data: $(".footer_form").serialize()
 		}).done(function() {
-			var url = "http://profhelp.com.ua";
-$(location).attr('href',url);
+			var url = "price.html";
+			$(location).attr('href',url);
 			setTimeout(function() {
 				$.fancybox.close();
 			}, 1000);
