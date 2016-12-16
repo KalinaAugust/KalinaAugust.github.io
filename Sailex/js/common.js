@@ -51,7 +51,8 @@ $(".hidden_menu").click(function() {
 			url: "mail_pop.php",
 			data: $(".main_form").serialize()
 		}).done(function() {
-			alert("Спасибо за заявку!");
+			var url = "http://profhelp.com.ua";
+$(location).attr('href',url);
 			setTimeout(function() {
 				$.fancybox.close();
 			}, 1000);
@@ -65,7 +66,8 @@ $(".hidden_menu").click(function() {
 			url: "mail_footer.php",
 			data: $(".footer_form").serialize()
 		}).done(function() {
-			alert("Спасибо за Вашу заявку!");
+			var url = "http://profhelp.com.ua";
+$(location).attr('href',url);
 			setTimeout(function() {
 				$.fancybox.close();
 			}, 1000);
