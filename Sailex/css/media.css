@@ -88,6 +88,10 @@
 	font-size: 18px;	
 }
 
+.sect_thank_you {
+	min-height: 950px;
+}
+
 }
 
 
@@ -194,6 +198,7 @@
 .sect_thank_you {
 	height: auto;
 }
+
 
 }
 
@@ -332,6 +337,7 @@
 
 .sect_thank_you h1 {
 	margin-top: 120px;
+}
 
 }
 
@@ -382,6 +388,10 @@
 	font-size: 30px;
 }
 
+.thank_you_button {
+ margin-bottom: 250px;
+}
+
 }
 
 @media only screen and (max-width : 380px) {
@@ -407,10 +417,6 @@
 
 .wanna_it button {
 	width: 100px;
-}
-
-.sect_thank_you {
-	min-height: 750px;
 }
 
 }

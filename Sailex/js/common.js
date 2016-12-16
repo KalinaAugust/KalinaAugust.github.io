@@ -57,7 +57,7 @@ $(".hidden_menu").click(function() {
 			url: "mail_pop.php",
 			data: $(".main_form").serialize()
 		}).done(function() {
-			var url = "thank_you_page.html";
+			var url = "thanks.html";
 			$(location).attr('href',url);
 			setTimeout(function() {
 				$.fancybox.close();
@@ -72,7 +72,7 @@ $(".hidden_menu").click(function() {
 			url: "mail_footer.php",
 			data: $(".footer_form").serialize()
 		}).done(function() {
-			var url = "thank_you_page.html";
+			var url = "thanks.html";
 			$(location).attr('href',url);
 			setTimeout(function() {
 				$.fancybox.close();
