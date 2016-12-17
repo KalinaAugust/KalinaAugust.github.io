@@ -307,7 +307,7 @@
 				</div>
 				<div class="col-lg-4">
 					<form class="wanna_it main_form">
-						<input type="tel" name="phone" required placeholder=" Введите ваш номер">
+						<input type="tel" name="phone" required placeholder=" Введите ваш номер" pattern="[0-9\s\+\-\(\)]{7,25}" value="+375 ">
 						<button>Узнать цену</button>	
 					</form>
 				</div>
@@ -450,7 +450,7 @@
 			<div class="col-lg-6">
 				<form class="footer_form">
 					<input type="text" name="text" required placeholder=" Напишите свой вопрос">
-					<input type="tel" name="phone" required placeholder=" Введите номер телефона">
+					<input type="tel" name="phone" required placeholder=" Введите номер телефона" pattern="[0-9\s\+\-\(\)]{7,25}" value="+375 ">
 					<button class="footer_button">Получить ответ</button>	
 				</form>
 			</div>
@@ -471,7 +471,7 @@
 <div class="hidden_box" id="callback">
 	<form id="form" class="hidden_form main_form">
 		<p>Оставтье Ваш номер телефона и мы проконсультируем Вас в течении 15 минут.</p>
-		<input type="tel" name="phone" required placeholder=" Ваш телефон...">
+		<input type="tel" name="phone" required placeholder=" Ваш телефон..." pattern="[0-9\s\+\-\(\)]{7,25}" value="+375 ">
 		<button class="hidden_button">Получить консультацию</button>
 		<p class="small_text">Заполнение заявки Вас ни к чему не обязывает, Вы можете отказаться в любой момент.</p>	
 	</form>
