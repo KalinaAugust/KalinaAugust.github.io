@@ -392,6 +392,17 @@
  margin-bottom: 250px;
 }
 
+.sect_thank_you h1 {
+	margin-bottom: 20px;
+	line-height: 1em;
+	font-size: 40px;
+}
+
+.ok {
+	margin-top: 20px;
+	width: 50%;
+}
+
 }
 
 @media only screen and (max-width : 380px) {
