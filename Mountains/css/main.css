@@ -1,17 +1,17 @@
 *::-webkit-input-placeholder {
-	color: #666;
+	color: #999;
 	opacity: 1;
 }
 *:-moz-placeholder {
-	color: #666;
+	color: #999;
 	opacity: 1;
 }
 *::-moz-placeholder {
-	color: #666;
+	color: #999;
 	opacity: 1;
 }
 *:-ms-input-placeholder {
-	color: #666;
+	color: #999;
 	opacity: 1;
 }
 
@@ -56,7 +56,6 @@ body {
 	width: 120px;
 	letter-spacing: -1px;
 	display: inline-block;
-	float: left;
 }
 
 .logo a {
@@ -68,10 +67,10 @@ body {
 }
 
 .sect_one nav {
-	width: 610px;
 	display: block;
 	height: 20px;
 	margin-top: 32px;
+	width: 610px;
 }
 
 .navigation li{
@@ -213,6 +212,10 @@ body {
   font-size: 11px;
   letter-spacing: 2px;
   padding: 12px;
+}
+
+.img_block {
+	position: relative;
 }
 
 .img_block img {
@@ -401,21 +404,87 @@ body {
 .line-through {
 	text-decoration: line-through;
 }
+/* section three END */
 
 
+.sect_four {
+	height: 650px;
+	background-image: url(../img/bg_sect_four.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: top center;
+}
 
+.sect_four_content {
+	margin-top: 130px;
+}
 
+.sect_four_content h3 {
+	margin-top: 30px;
+	text-transform: uppercase;
+	font-family: "OpenSansBold";
+	font-size: 20px;
+	letter-spacing: 2px;
+}
 
+.sect_four_content p {
+	margin-top: 15px;
+	line-height: 1.6;
+	letter-spacing: .1px;
+	font-family: "OpenSansRegular";
+	font-size: 16px;
+	color: #949494;
+}
 
+.sect_four_form {
+	margin-top: 25px;
+	height: 62px;
+	background-color: #fff;
+	width: 855px;
+	border-radius: 5px;
+}
 
+.sect_four_form input {
+	border: none;
+}
 
+.sect_four_form input[type="text"] {
+	height: 35px;
+	margin-top: 13px;
+	padding-left: 20px;
+	width: 310px;
+}
 
+.sect_four_form input[type="tel"] {
+	border-left: 1px solid #ebebeb;
+	height: 35px;
+	margin-top: 13px;
+	padding-left: 20px;
+	width: 310px;
+}
 
+.sect_four_form input[type="submit"] {
+	display: inline-block;
+  width: 225px;
+  height: 56px;
+	margin-top: 3px;
+	letter-spacing: 2px;
+	padding-top: 5px;
+}
 
+.sect_four_form input[type="tel"]:focus,
+.sect_four_form input[type="text"]:focus {
+	outline: none;
+}
 
+.note.note {
+	font-size: 14px;
+	color: #36aeea;
+}
 
-
-
+.note i {
+	font-size: 20px;
+}
 
 
 
