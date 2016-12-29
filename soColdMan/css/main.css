@@ -33,7 +33,7 @@ body {
 .sect_one {
 	position: relative;
 	height: 1000px;
-	background-image: url(../img/bg_sect_one.png);
+	background-image: url(../img/bg_sect_one.jpg);
 	background-size: cover;
 	background-position: center top;
 }
@@ -110,9 +110,8 @@ body {
 }
 
 .sect_one_content {
-	margin-top: 100px;
 	text-align: center;
-	color: #fff;
+	color: #666;
 /* 	text-shadow: 1px 1px 2px #444; */
 }
 
@@ -122,13 +121,13 @@ body {
 }
 
 .sect_one_content ul {
-	margin-top: 80px;
+	margin-top: 30px;
 	text-align: left;
 	list-style-type: none;
 	font-size: 20px;
-	background-color: rgba(255, 255,255, .6);
+	background-color: rgba(255, 255,255, .5);
 	color: #333;
-	padding: 45px;
+	padding: 65px;
 	padding-right: 0px;
 }
 
@@ -150,7 +149,7 @@ body {
 .sect_one_content form .bold {
 	font-size: 18px;
 	font-weight: bold;
-	color: #555;
+	color: #666;
 }
 
 .sect_one_content form input[type="tel"] {
@@ -173,6 +172,7 @@ body {
 	border-radius: 4px;
 	border: none;
 	background-color: #5DACE3;
+	color: #fff;
 }
 
 .sect_one_content form input[type="submit"]:hover {
@@ -185,9 +185,10 @@ body {
 }
 
 .sect_one_content form {
-	margin-top: 40px;
+	margin-top: 30px;
 	background-color: rgba(255, 255,255, .4);
-	padding: 15px;
+	padding: 5px;
+	padding-bottom: 5px;
 }
 
 .sect_one_content form p {
@@ -195,7 +196,12 @@ body {
 	color: #333;
 }
 
-
+.heading_wrapper {
+	margin-top: 140px;
+	background-color: rgba(255, 255,255, .4);
+	padding: 15px;
+	padding-top: 1px;
+}
 
 
 
