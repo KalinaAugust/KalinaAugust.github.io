@@ -173,6 +173,8 @@ body {
 }
 /* sect_one END */
 
+
+/* sect_two */
 .sect_two {
 	position: relative;
 	height: 670px;
@@ -232,7 +234,10 @@ body {
 	top: -38px;
 	left: 170px;
 }
+/* sect_two end*/
 
+
+/* .sect_three */
 .sect_three {
 	height: 1065px;
 }
@@ -243,7 +248,7 @@ body {
 	margin-top: 60px;
 }
 
-.sect_three h2 {
+.sect_three h2, .sect_five h2 {
 	margin-top: 20px;
 	font-size: 30px;
 	font-family: "OpenSansBold";
@@ -407,6 +412,7 @@ body {
 /* section three END */
 
 
+/* sect_four */
 .sect_four {
 	height: 650px;
 	background-image: url(../img/bg_sect_four.png);
@@ -485,6 +491,102 @@ body {
 .note i {
 	font-size: 20px;
 }
+/* sect_four end  */
+
+
+/* sect_five  */
+.sect_five {
+	height: 690px;
+}
+
+.sect_five h4 {
+  font-size: 18px;
+	font-family: "OpenSansBold";
+  color: rgb(44, 46, 55);
+  line-height: 1.333;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.sect_five p {
+  font-size: 14px;
+	font-family: "OpenSansLight";
+  color: gray;
+  line-height: 1.333;
+  text-align: center;
+  margin-top: 5px;
+}
+
+
+
+.blue_circle {
+	height: 50px;
+	width: 50px;
+	border: 3px solid #36aeea;
+	border-radius: 50%;
+	margin: 0 auto;
+	margin-top: 61px;
+	color: #36aeea;
+	padding-left: 17px;
+	padding-top: 7px;
+	font-family: "RalewayBold";
+	font-size: 18px;
+	z-index: 3;
+	background-color: #fff;
+}
+
+.gray_circle {
+	height: 180px;
+	width: 180px;
+	border-radius: 50%;
+	background-color: #f0f3f6;
+	margin: 0 auto;
+	margin-top: 61px;
+}
+
+.polygon {
+	padding-top: 25px;
+	padding-left: 27px;
+}
+
+.polygon img[alt="ico"] {
+	padding-left: 47px;
+	margin-top: -160px;
+}
+
+.how_block_2 .polygon img[alt="ico"] {
+	padding-left: 43px;
+}
+
+.how_block_3 .polygon img[alt="ico"] {
+	padding-left: 43px;
+}
+
+.how_block_4 .polygon img[alt="ico"] {
+	padding-left: 43px;
+}
+
+.how_block_1,
+.how_block_2,
+.how_block_3,
+.how_block_4 {
+	position: relative;
+}
+
+
+.how_block_1 .dashed,
+.how_block_2 .dashed,
+.how_block_3 .dashed,
+.how_block_4 .dashed {
+	position: absolute;
+	left: 130px;
+	bottom: 250px;
+	z-index: -1;
+}
+
+
+
 
 
 
