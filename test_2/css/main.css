@@ -43,6 +43,7 @@ body {
 
 .left_section {
 	margin-right: 360px;
+	min-height: 100vh;
 }
 
 .left_section header {

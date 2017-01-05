@@ -8,9 +8,6 @@ $(document).ready(function() {
 			data: $(".main_form").serialize()
 		}).done(function() {
 			alert("Спасибо за заявку!");
-			setTimeout(function() {
-				$.fancybox.close();
-			}, 1000);
 		});
 		return false;
 	});
