@@ -105,30 +105,50 @@
 /* font-family: "Geometria"; */
 @font-face {
     font-family: Geometria;
-    src: url("../fonts/Geometria/Geometria.otf") format("opentype");
+    src: url("../fonts/Geometria/Geometria.eot");
+    src: url("../fonts/Geometria/Geometria.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Geometria/Geometria.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
 }
 
 /* font-family: "Geometria-Light"; */
 @font-face {
     font-family: Geometria-Light;
-    src: url("../fonts/Geometria/Geometria-Light.otf") format("opentype");
+    src: url("../fonts/Geometria/Geometria-Light.eot");
+    src: url("../fonts/Geometria/Geometria-Light.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Geometria/Geometria-Light.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
 }
 
 
 /* font-family: "Geometria-ExtraLight"; */
 @font-face {
     font-family: Geometria-ExtraLight;
-    src: url("../fonts/Geometria/Geometria-ExtraLight.otf") format("opentype");
+    src: url("../fonts/Geometria/Geometria-ExtraLight.eot");
+    src: url("../fonts/Geometria/Geometria-ExtraLight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Geometria/Geometria-ExtraLight.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
 }
 
 /* font-family: "Geometria-BoldItalic"; */
 @font-face {
     font-family: Geometria-BoldItalic;
-    src: url("../fonts/Geometria/Geometria-BoldItalic.otf") format("opentype");
+    src: url("../fonts/Geometria/Geometria-BoldItalic.eot");
+    src: url("../fonts/Geometria/Geometria-BoldItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Geometria/Geometria-BoldItalic.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
 }
 
 /* font-family: "Geometria-Bold"; */
 @font-face {
     font-family: Geometria-Bold;
-    src: url("../fonts/Geometria/Geometria-Bold.otf") format("opentype");
+    src: url("../fonts/Geometria/Geometria-Bold.eot");
+    src: url("../fonts/Geometria/Geometria-Bold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Geometria/Geometria-Bold.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
 }
