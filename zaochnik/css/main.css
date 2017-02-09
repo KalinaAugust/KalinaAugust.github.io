@@ -126,6 +126,7 @@ body {
 	margin: 90px auto 0 auto;
 	opacity: .6;
 	transition: .2s;
+	cursor: pointer;
 }
 
 .arrow_to_footer:hover {
