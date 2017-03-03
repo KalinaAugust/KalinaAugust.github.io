@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<title>Заголовок</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+	<div class="wrapper">
+	<!-- 		{% for i in gifts %} -->
+		<h1 class="second_headig">Дорогая {Баба}!</h1>
+
+	<form action="#" class="second_form">
+		<h3 class="second_form_heading">Чего бы тебе сейчас хотелось? :)</h3>
+
+		<div class="input_block">
+			<input class="radio" id="input-1"	name="gifts" type="radio" value="{{ i.id }}">
+			<label for="input-1">Бутылка вина</label>
+			<p class="form_par">Lorem ipsum dolor sit amet, consectetur.</p>
+		</div>
+
+		<div class="input_block">
+			<input class="radio" id="input-2"	name="gifts" type="radio" value="{{ i.id }}">
+			<label for="input-2">Бутылка вина</label>
+			<p class="form_par">Lorem ipsum dolor sit amet, consectetur.</p>
+		</div>
+
+		<div class="input_block">
+			<input class="radio" id="input-3"	name="gifts" type="radio" value="{{ i.id }}">
+			<label for="input-3">Бутылка вина</label>
+			<p class="form_par">Lorem ipsum dolor sit amet, consectetur.</p>
+		</div>
+
+		<div class="input_block">
+			<input class="radio" id="input-4"	name="gifts" type="radio" value="{{ i.id }}">
+			<label for="input-4">Бутылка вина</label>
+			<p class="form_par">Lorem ipsum dolor sit amet, consectetur.</p>
+		</div>
+		
+		<input type="submit" value="Заказать" class="second_button">
+
+	</form>
+<!--     {% endfor %} -->
+
+	</div>
+
+</body>
+</html>
