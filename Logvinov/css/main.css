@@ -762,6 +762,7 @@ outline: none;
   width: 348px;
   height: 49px;
   border: none;
+padding-left: 15px;
 }
 
 .question_form form input[type="submit"] {
