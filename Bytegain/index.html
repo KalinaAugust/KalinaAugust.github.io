@@ -6,7 +6,7 @@
 	<meta name="description" content="" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<!--<link rel="shortcut icon" href="favicon.png" />-->
+	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="stylesheet" href="css/fonts.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
@@ -19,7 +19,7 @@
     <div class="logo"></div>
     <h1 class="heading">Predict What Your Users&nbsp;Will&nbsp;Do</h1>
     <p class="text">Bytegain uses deep learning to help companies predict user&nbsp;actions.</p>
-    <div class="button button-first">talk to us</div>
+    <a href="#hidden-form" class="button button-first">talk to us</a>
   </div>
   <div class="right-side">
     <div class="big-pic">
@@ -89,7 +89,6 @@
   </div>
 </div>
 
-
 <div class="six-section">
   <div class="six-section__heading">CEOs L<span class="love"></span>ve Bytegain</div>
   <div class="six-section__wrapper">
@@ -118,42 +117,29 @@
   <div class="six-section__par">Bytegain is a group of scientists, engineers, and operators, from startups to Fortune 500 companies, set out to make deep learning available to the world.</div>
 </div>
 
-
 <footer class="footer">
   <div class="pre-footer">
-    <div class="footer-partner-1"></div>
-    <div class="footer-partner-2"></div>
-    <div class="footer-partner-3"></div>
+    <div class="footer-partner-1 partner"></div>
+    <div class="footer-partner-2 partner"></div>
+    <div class="footer-partner-3 partner"></div>
   </div>
-  <div class="copywrite">Bytegain &emsp; | &emsp; Los Altos, CA &emsp; | &emsp; hello@bytegain.com</div>
+  <div class="copywrite">Bytegain &emsp; | &emsp; Los Altos, CA &emsp; | &emsp; <a href="mailto:hello@bytegain.com" class="mailto">hello@bytegain.com</a></div>
 </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="hidden">
+  <form class="hidden-form" id="hidden-form">
+    <div class="hidden-form__heading">Leave your email address and our business
+      consultant will contact you soon.</div>
+    <div class="hidden-form__text">We’ll use this to get back to you. No spam or unexpected newsletters here.</div>
+    <label class="label-name" for="hidden-form__name">Name</label>
+    <label class="label-email" for="hidden-form__email">E-mail</label>
+    <input type="text" class="hidden-form__input hidden-form__name" id="hidden-form__name" placeholder="Joe" name="pop-name">
+    <input type="email" class="hidden-form__input hidden-form__email" id="hidden-form__email" placeholder="yourcompany@gmail.com" required name="pop-email">
+    <label class="label-textarea" for="textarea">Message</label>
+    <textarea name="textarea" class="textarea" id="textarea" placeholder="Type your message here ..."></textarea>
+    <input type="submit" class="hidden-form__submit button" value="send">
+  </form>
+</div>
 
 	<script src="libs/jquery-3.1.1.min.js"></script>
   <script src="libs/jquery.magnific-popup.min.js"></script>
