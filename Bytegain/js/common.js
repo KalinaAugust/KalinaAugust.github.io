@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('.button-first').magnificPopup( {easing: 'ease-in-out'});
+    $('.button-first').magnificPopup();
 
     $(".main-form").submit(function() {
         $.ajax({
@@ -18,7 +18,6 @@ $(document).ready(function() {
         return false;
     });
 
-
 	$(".hidden-form").submit(function() {
 		$.ajax({
 			type: "GET",
@@ -34,6 +33,5 @@ $(document).ready(function() {
 		});
 		return false;
 	});
-
 
 });
