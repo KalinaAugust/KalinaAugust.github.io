@@ -43,7 +43,7 @@ body {
   font-family: "GothamProLight", sans-serif;
   font-size: 20px;
   line-height: 30px;
-  max-width: 505px;
+  max-width: 750px;
   margin: 0 auto;
   margin-top: 25px;
   text-align: center; }
@@ -104,7 +104,7 @@ body {
   background: #fff;
   position: relative;
   margin: 0 auto;
-  margin-top: 110px; }
+  margin-top: 141px; }
   .button-to-bot:hover {
     -webkit-box-shadow: 6px 2px 15px 0 rgba(56, 146, 220, 0.35);
             box-shadow: 6px 2px 15px 0 rgba(56, 146, 220, 0.35); }
@@ -305,7 +305,7 @@ body {
   padding-top: 1px;
   margin-top: 329px;
   height: 990px;
-  background: url("../img/5-bg.png") no-repeat top left; }
+  background: url("../img/5-bg.png") no-repeat top left -61px; }
 
 .five-section__heading {
   font-family: "GothamProBold", sans-serif;
@@ -354,7 +354,7 @@ body {
   padding-top: 1px;
   height: 730px;
   background: url("../img/six-bg.png") no-repeat top center;
-  margin-top: 730px; }
+  margin-top: 810px; }
 
 .six-section__heading {
   width: 720px;
