@@ -479,3 +479,42 @@ body {
 
 .inst {
   background: url("../img/inst.png") no-repeat center; }
+
+.hidden {
+  display: none; }
+
+.pop-up-one {
+  border-radius: 15px;
+  position: relative;
+  margin: auto;
+  width: 400px;
+  height: 600px;
+  overflow-Y: auto; }
+
+.pop-up-two {
+  border-radius: 15px;
+  position: relative;
+  margin: auto;
+  width: 400px;
+  height: 600px;
+  overflow-Y: auto; }
+
+.pop-up__content {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px; }
+
+.pop-up__title {
+  font-family: "GothamProLight", sans-serif;
+  font-size: 32px;
+  line-height: 45px;
+  color: #333;
+  text-align: center;
+  margin: 5px 0 25px 0; }
+
+.pop-up__text {
+  font-family: "GothamProRegular", sans-serif;
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333; }
