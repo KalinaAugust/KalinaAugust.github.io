@@ -43,26 +43,18 @@ $(document).ready(function () {
 
 
 
-    // (function addActive() {
-    //     var myURL = window.location.pathname;
-    //     var splitedURL = myURL.split("/");
-    //     var lastURLItem = splitedURL[splitedURL.length - 1];
+    (function addActive() {
+        var myURL = window.location.pathname;
+        var splitedURL = myURL.split("/");
+        var lastURLItem = splitedURL[splitedURL.length - 1];
 
-    //     if ( lastURLItem == "about-us.html") {
+        var starHref = 'a[href="';
+        var endHref = '"]';
+        var activePage = $('.nav ' + starHref + lastURLItem + endHref);
 
-    //         $('.header a[href="about-us.html"]').addClass('active');
+        activePage.addClass('active');
 
-    //     } else if (lastURLItem == "our-team.html") {
-
-    //         $('.header a[href="our-team.html"]').addClass('active');
-
-    //     } else if (lastURLItem == "examples.html") {
-
-    //         $('.header a[href="examples.html"]').addClass('active');
-    //     }
-
-
-    // })();
+    })();
 
 
 });

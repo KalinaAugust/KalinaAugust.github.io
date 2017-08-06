@@ -361,3 +361,132 @@ body {
   width: 100%; }
   .main-page .actions-slider__item_1 {
     background: url("../img/action.png") no-repeat top center; }
+
+.contacts .contacts__heading {
+  font-family: "PosterizerRough", sans-serif;
+  font-size: 34px;
+  color: #333;
+  margin-top: 60px;
+  text-align: center; }
+
+.contacts .contacts__block {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.contacts .contacts__block-item {
+  border-radius: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  width: 32%;
+  height: 130px; }
+
+.contacts .contacts__block-address {
+  font-family: "PosterizerRough", sans-serif;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  padding-top: 65px;
+  background: url("../img/big-point.png") no-repeat top 25px center; }
+
+.contacts .contacts__block-tel {
+  font-family: "PosterizerRough", sans-serif;
+  font-size: 24px;
+  color: #e35e16;
+  text-align: center;
+  padding-top: 65px;
+  display: block;
+  text-decoration: none;
+  background: url("../img/orange-phone.png") no-repeat top 25px center; }
+
+.contacts .contacts__block-email {
+  font-family: "PosterizerRough", sans-serif;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  padding-top: 65px;
+  display: block;
+  text-decoration: none;
+  background: url("../img/big-mail.png") no-repeat top 25px center; }
+
+.contacts .map__section {
+  margin: 70px 25px 0;
+  height: 600px; }
+
+.content__heading {
+  font-family: "PosterizerRough", sans-serif;
+  font-size: 34px;
+  color: #333;
+  margin-top: 50px;
+  text-align: center; }
+
+.content-block {
+  margin: 50px 0 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.content-item {
+  position: relative;
+  width: 265px;
+  max-width: 400px;
+  height: 400px;
+  margin: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  padding: 0 15px 50px; }
+
+.content-item__preview {
+  width: 175px;
+  height: 175px;
+  margin: 0 auto;
+  display: block; }
+
+.content-item__title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+  color: #333; }
+
+.content-item__text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  margin-top: 15px;
+  color: #333; }
+
+.content-item__price {
+  position: absolute;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #e35e16;
+  bottom: 15px;
+  left: 50px; }
+
+.content-item__weight {
+  position: absolute;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #333;
+  bottom: 15px;
+  right: 50px; }
