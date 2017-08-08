@@ -14,9 +14,24 @@ $(document).ready(function () {
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3,
-        centerMode: true,
         nextArrow: '<div class="main-page__next-arrow"></div>',
-        prevArrow: '<div class="main-page__prev-arrow"></div>'
+        prevArrow: '<div class="main-page__prev-arrow"></div>',
+        responsive: [
+            {
+                breakpoint: 880,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('.main-page .cafe-slider').slick({
@@ -24,7 +39,47 @@ $(document).ready(function () {
         centerMode: true,
         centerPadding: '80px',
         nextArrow: '<div class="main-page__next-arrow"></div>',
-        prevArrow: '<div class="main-page__prev-arrow"></div>'
+        prevArrow: '<div class="main-page__prev-arrow"></div>',
+        responsive: [
+            {
+                breakpoint: 1680,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: false
+                }
+            },
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    centerMode: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 560,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: false
+                }
+            }
+        ]
     });
 
     $('.main-page .actions-slider').slick({
@@ -35,11 +90,24 @@ $(document).ready(function () {
     });
 
 
+    // mobile menu button
+    var menu = $('.mobile-nav');
+    var burger = $('.header__burger');
+    burger.click(function () {
+        menu.toggleClass('open');
+        $(this).toggleClass('open');
 
-    // // pop up activator
-    // $('.button__pop-up').magnificPopup({
-    //     fixedContentPos: true
-    // }); //pop-up
+    });
+
+
+
+
+
+
+    // pop up activator
+    $('.content-item').magnificPopup({
+        fixedContentPos: true
+    });
 
 
 
@@ -55,6 +123,8 @@ $(document).ready(function () {
         activePage.addClass('active');
 
     })();
+
+
 
 
 });
