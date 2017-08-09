@@ -233,6 +233,8 @@ body {
   font-size: 16px;
   display: inline;
   text-decoration: none; }
+  .mobile-nav__link.mobile-active {
+    color: #e35e16; }
 
 .footer {
   background: url("../img/footer-bg.png") no-repeat top center;
@@ -648,7 +650,8 @@ body {
       margin-top: 20px;
       font-size: 24px;
       width: 100%;
-      max-width: 340px; } }
+      max-width: 340px;
+      height: 90px; } }
 
 .contacts .contacts__block-address {
   font-family: "PosterizerRough", sans-serif;
@@ -656,6 +659,10 @@ body {
   text-align: center;
   padding-top: 65px;
   background: url("../img/big-point.png") no-repeat top 25px center; }
+  @media (max-width: 768px) {
+    .contacts .contacts__block-address {
+      padding-top: 40px;
+      background-position: top 15px center; } }
 
 .contacts .contacts__block-tel {
   font-family: "PosterizerRough", sans-serif;
@@ -665,6 +672,10 @@ body {
   display: block;
   text-decoration: none;
   background: url("../img/orange-phone.png") no-repeat top 25px center; }
+  @media (max-width: 768px) {
+    .contacts .contacts__block-tel {
+      padding-top: 40px;
+      background-position: top 15px center; } }
 
 .contacts .contacts__block-email {
   font-family: "PosterizerRough", sans-serif;
@@ -674,6 +685,10 @@ body {
   display: block;
   text-decoration: none;
   background: url("../img/big-mail.png") no-repeat top 25px center; }
+  @media (max-width: 768px) {
+    .contacts .contacts__block-email {
+      padding-top: 40px;
+      background-position: top 15px center; } }
 
 .contacts .map__section {
   margin: 70px 25px 0;
@@ -838,7 +853,8 @@ body {
 .pop-up {
   margin: auto;
   height: 400px;
-  max-width: 400px;
+  max-width: 600px;
   background-color: #fff;
-  border-radius: 10px;
-  position: relative; }
+  border: 2px solid #e35e16;
+  position: relative;
+  border-radius: 5px; }

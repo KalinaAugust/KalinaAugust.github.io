@@ -101,13 +101,23 @@ $(document).ready(function () {
 
 
 
+    // поп-ап по айдишнику в href, сам поп-ап лежит в pop-up.handlebars подлючен инклюдом внизу страниц с контентом
+    // $('.content-item').magnificPopup({
+    //     fixedContentPos: true
+    // });
 
 
 
-    // pop up activator
-    $('.content-item').magnificPopup({
-        fixedContentPos: true
+    // поп-ап из шаблона
+    $('.content-item').click(function() {
+        $.magnificPopup.open({
+            items: {
+                src: '<div class="pop-up"><div class="pop-up__heading">Поп ап из common.js.</div></div>',
+                type: 'inline'
+            }
+        });
     });
+
 
 
 
@@ -119,8 +129,10 @@ $(document).ready(function () {
         var starHref = 'a[href="';
         var endHref = '"]';
         var activePage = $('.nav ' + starHref + lastURLItem + endHref);
+        var activePageMobileNav = $('.mobile-nav ' + starHref + lastURLItem + endHref);
 
         activePage.addClass('active');
+        activePageMobileNav.addClass('mobile-active');
 
     })();
 
