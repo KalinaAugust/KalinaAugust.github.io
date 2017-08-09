@@ -101,23 +101,18 @@ $(document).ready(function () {
 
 
 
-    // поп-ап по айдишнику в href, сам поп-ап лежит в pop-up.handlebars подлючен инклюдом внизу страниц с контентом
-    // $('.content-item').magnificPopup({
-    //     fixedContentPos: true
-    // });
+    //поп-ап из шаблона. На мобиле поп-ап не нужон
 
-
-
-    // поп-ап из шаблона
-    $('.content-item').click(function() {
-        $.magnificPopup.open({
-            items: {
-                src: '<div class="pop-up"><div class="pop-up__heading">Поп ап из common.js.</div></div>',
-                type: 'inline'
-            }
+    if (document.body.clientWidth > 768) {
+        $('.content-item').click(function() {
+            $.magnificPopup.open({
+                items: {
+                    src: '<div class="pop-up"><div class="pop-up__heading">Поп ап из common.js.</div></div>',
+                    type: 'inline'
+                }
+            });
         });
-    });
-
+    }
 
 
 
@@ -125,16 +120,36 @@ $(document).ready(function () {
         var myURL = window.location.pathname;
         var splitedURL = myURL.split("/");
         var lastURLItem = splitedURL[splitedURL.length - 1];
-
         var starHref = 'a[href="';
         var endHref = '"]';
+
         var activePage = $('.nav ' + starHref + lastURLItem + endHref);
         var activePageMobileNav = $('.mobile-nav ' + starHref + lastURLItem + endHref);
 
         activePage.addClass('active');
         activePageMobileNav.addClass('mobile-active');
-
     })();
+
+
+
+
+
+    $( window ).scroll(function() {
+        var distantToTop = $(".scroll-top").offset().top;
+
+        if (distantToTop > 1300) {
+            $(".scroll-top").removeClass('shifted');
+        } else {
+            $(".scroll-top").addClass('shifted');
+        }
+    });
+
+    $(".scroll-top").click(function() {
+        $('html, body').animate({
+            scrollTop: $("html").offset().top
+        }, 600);
+    });
+
 
 
 

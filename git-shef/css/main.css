@@ -729,6 +729,7 @@ body {
           justify-content: center; }
 
 .content-item {
+  cursor: pointer;
   position: relative;
   width: 265px;
   max-width: 400px;
@@ -858,3 +859,29 @@ body {
   border: 2px solid #e35e16;
   position: relative;
   border-radius: 5px; }
+
+.scroll-top {
+  border: 2px solid #e35e16;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  z-index: 5;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin-top: -21px;
+  background: url("../img/orange-next.png") no-repeat center rgba(238, 238, 238, 0.6);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
+  .scroll-top:hover {
+    background-color: rgba(238, 238, 238, 0.8); }
+  @media (max-width: 768px) {
+    .scroll-top {
+      right: 20px;
+      bottom: 20px; } }
+
+.scroll-top.shifted {
+  right: -130px; }
