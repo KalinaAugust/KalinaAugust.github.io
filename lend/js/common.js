@@ -1,4 +1,4 @@
-
+screen.orientation.lock('landscape')
 
 //stars
 paper.install(window);
