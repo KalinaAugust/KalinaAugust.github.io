@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<title>landing</title>
+	<meta name="description" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="libs/selectize/selectize.css" />
+  <link rel="stylesheet" href="libs/fullPage/jquery.fullPage.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+</head>
+<body>
+
+<div id="fullpage">
+
+  <section class="first-screen section">
+      <video class="bg-video" id="myVideo" loop muted  data-autoplay>
+        <source src="video/bg-1.mp4" type="video/mp4">
+        <source src="video/bg-1.ogv" type="video/ogv">
+        <source src="video/bg-1.webm" type="video/webm">
+      </video>
+    <div class="first-screen-wrap">
+      <div class="inner-wrap">
+      <a href="https://www.zaochnik.com" target="_blank" class="logo"></a>
+      <div class="big-heading">
+        Открой свою<br>
+        свободу!
+      </div>
+      <div class="par">
+        ОСВОБОДИ ВРЕМЯ ДЛЯ СЕБЯ,
+        А&nbspоб&nbspУЧЕБе подумает
+        ЗАОЧНИК
+      </div>
+
+      <form class="interactive-block">
+        <div class="interactive-select">
+          <select id="select" name="type" required class="demo-default" placeholder="Какой вид работы вам нужен?">
+            <option value="">Какой вид работы вам нужен?</option>
+          </select>
+        </div>
+        <div class="desc-button">
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters">
+            <defs>
+              <filter id="filter-goo-1">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" />
+              </filter>
+            </defs>
+          </svg>
+          <button id="component-1" class="button go-next button--1">
+            Узнать стоимость
+            <span class="button__container">
+                  <span class="circle top-left"></span>
+                  <span class="circle top-left"></span>
+                  <span class="circle top-left"></span>
+                  <span class="button__bg"></span>
+                  <span class="circle bottom-right"></span>
+                  <span class="circle bottom-right"></span>
+                  <span class="circle bottom-right"></span>
+                </span>
+          </button>
+        </div>
+        <div class="mob-button go-next">Узнать стоимость</div>
+      </form>
+    </div>
+    </div>
+  </section>
+
+  <section class="second-screen section">
+    <div class="second-screen__content">
+      <header class="second-screen__header">
+        <a href="https://www.zaochnik.com" target="_blank" class="logo-black"></a>
+        <div class="second-screen__wrapper">
+          <div class="line line-start"></div>
+          <div class="second-screen__item go-back">
+            <div class="second-section__number">1</div>
+            <div class="second-section__text work-type"></div>
+            <div class="second-section__icon second-section__icon-1"></div>
+          </div>
+          <div class="line"></div>
+          <div class="second-screen__item">
+            <div class="second-section__number">2</div>
+            <div class="second-section__text">Контактные данные</div>
+            <div class="second-section__icon second-section__icon-2">
+              <div class="ball"></div>
+              <div class="ball big-ball"></div>
+              <div class="ball"></div>
+            </div>
+          </div>
+          <div class="line"></div>
+          <div class="second-screen__item">
+            <div class="second-section__icon-3"></div>
+            <div class="second-section__text">Готово!</div>
+          </div>
+          <div class="line line-end"></div>
+        </div>
+      </header>
+      <div class="calc-wrapper">
+        <div class="copyright-top">
+          Заочник помог <span class="bold">12</span> млн. студентов сэкономить  <span class="bold">167</span> млн. часов
+          на написание студенческих работ
+        </div>
+        <div class="main-form__wrapper">
+          <form class="main-form">
+            <div class="main-form__title">Осталось совсем немного</div>
+            <div class="main-form__input-wrapper">
+              <label for="email" class="main-form__label">E-mail</label>
+              <input id="email" name="email" type="email" class="main-form__input" placeholder="yandex@yandex.ru">
+              <div class="main-form__invalid-info">Введите пожалуйста корректный e-mail</div>
+            </div>
+            <div class="main-form__input-wrapper">
+              <label for="theme" class="main-form__label">Тема</label>
+              <input id="theme" name="theme" type="text" class="main-form__input" placeholder="Основы гуманитарных наук">
+              <div class="main-form__invalid-info">Введите пожалуйста тему</div>
+            </div>
+            <input type="submit" class="main-form__submit" value="Перейти в личный кабинет">
+          </form>
+        </div>
+      </div>
+
+      <div class="second-screen__wrapper_bot">
+        <div class="second-screen__item_bot go-back">
+          <div class="second-section__number_bot">1</div>
+          <div class="second-section__text_bot work-type">на написание студенческих работ</div>
+          <div class="second-section__icon_bot second-section__icon-1"></div>
+        </div>
+        <div class="line_bot"></div>
+        <div class="second-screen__item_bot">
+          <div class="second-section__number_bot">2</div>
+          <div class="second-section__text_bot">Контактные<br> данные</div>
+          <div class="second-section__icon_bot second-section__icon-2">
+            <div class="ball"></div>
+            <div class="ball big-ball"></div>
+            <div class="ball"></div>
+          </div>
+        </div>
+        <div class="line_bot"></div>
+        <div class="second-screen__item_bot">
+          <div class="second-section__icon-3_bot"></div>
+          <div class="second-section__text_bot">Готово!</div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        Заочник помог <span class="bold">12</span> млн. студентов сэкономить  <span class="bold">167</span> млн. часов <br>
+        на написание студенческих работ
+      </div>
+      <canvas id="triangle-lost-in-space" resize="true"></canvas>
+    </div>
+  </section>
+</div>
+
+
+  <script src="libs/jquery-3.1.1.min.js"></script>
+  <script src="libs/fullPage/jquery.fullPage.min.js"></script>
+  <script src="js/TweenMax.min.js"></script>
+  <script src="libs/paper.js"></script>
+  <script src="libs/selectize/selectize.min.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>
