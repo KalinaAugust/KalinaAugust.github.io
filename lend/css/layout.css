@@ -140,7 +140,7 @@ body {
   @media (max-width: 1366px) {
     .logo {
       margin-left: 25px;
-      margin-top: 35px; } }
+      margin-top: 25px; } }
 
 .logo-black {
   height: 42px;
@@ -227,8 +227,8 @@ body {
       margin-left: 25px; } }
   @media (max-width: 640px) {
     .big-heading {
-      margin-top: 40px;
-      font-size: 40px; } }
+      margin-top: 30px;
+      font-size: 35px; } }
 
 .par {
   color: #fff;
@@ -349,7 +349,8 @@ body {
 .second-screen {
   width: 100%;
   height: 100vh;
-  position: relative; }
+  position: relative;
+  background-color: #133453; }
 
 #triangle-lost-in-space {
   height: 100%;
@@ -360,6 +361,9 @@ body {
   overflow: hidden;
   color: rgba(255, 255, 255, 0.5);
   z-index: -9999; }
+  @media (max-width: 768px) {
+    #triangle-lost-in-space {
+      display: none; } }
 
 .second-screen__header {
   background-color: #fff;
@@ -509,7 +513,7 @@ body {
 .main-form {
   max-width: 1000px;
   background-color: #fff;
-  margin: 90px auto 20px;
+  margin: 90px auto 0;
   padding: 80px 25px; }
   @media (max-width: 1366px) {
     .main-form {
@@ -518,7 +522,8 @@ body {
       max-width: 700px; } }
   @media (max-width: 768px) {
     .main-form {
-      margin-top: 20px; } }
+      margin-top: 20px;
+      padding-top: 20px; } }
 
 .main-form__wrapper {
   padding: 0 15px; }
@@ -547,6 +552,9 @@ body {
   @media (max-width: 1366px) {
     .main-form__input-wrapper {
       height: 60px; } }
+  @media (max-width: 768px) {
+    .main-form__input-wrapper {
+      height: 40px; } }
 
 .main-form__label {
   position: absolute;
@@ -618,9 +626,15 @@ body {
     .main-form__invalid-info {
       font-size: 10px;
       top: 44px; } }
+  @media (max-width: 768px) {
+    .main-form__invalid-info {
+      display: none; } }
 
 .main-form__input.invalid + .main-form__invalid-info {
   display: block; }
+  @media (max-width: 768px) {
+    .main-form__input.invalid + .main-form__invalid-info {
+      display: none; } }
 
 .main-form__input.invalid {
   background: url("../img/error.svg") no-repeat top 40px right 30px;
