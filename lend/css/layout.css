@@ -509,7 +509,7 @@ body {
 .main-form {
   max-width: 1000px;
   background-color: #fff;
-  margin: 90px auto 0;
+  margin: 90px auto 20px;
   padding: 80px 25px; }
   @media (max-width: 1366px) {
     .main-form {
