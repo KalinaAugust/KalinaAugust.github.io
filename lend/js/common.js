@@ -195,7 +195,7 @@ var moveStars = function(vector) {
 $(document).ready(function() {
 
     $('#fullpage').fullpage({
-        // autoScrolling: false,
+        autoScrolling: false,
     });
 
     $(".go-next").click(function() {
