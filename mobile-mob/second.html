@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<title>landing</title>
+	<meta name="description" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+</head>
+<body>
+
+  <section class="second-screen">
+    <div class="second-screen__content">
+      <header class="second-screen__header">
+        <a href="https://www.zaochnik.com" target="_blank" class="logo-black"></a>
+      </header>
+      <div class="calc-wrapper">
+        <div class="copyright-top">
+          Заочник помог <span class="bold">12</span> млн. студентов сэкономить  <span class="bold">167</span> млн. часов
+          на написание студенческих работ
+        </div>
+        <div class="main-form__wrapper">
+          <form class="main-form">
+            <div class="main-form__title">Осталось совсем немного</div>
+            <div class="main-form__input-wrapper">
+              <input id="email" name="email" type="email" class="main-form__input" placeholder="yandex@yandex.ru">
+              <div class="main-form__invalid-info">Введите пожалуйста корректный e-mail</div>
+            </div>
+            <div class="main-form__input-wrapper">
+              <input id="theme" name="theme" type="text" class="main-form__input" placeholder="Основы гуманитарных наук">
+              <div class="main-form__invalid-info">Введите пожалуйста тему</div>
+            </div>
+            <input type="submit" class="main-form__submit" value="Перейти в личный кабинет">
+          </form>
+        </div>
+      </div>
+
+      <div class="second-screen__wrapper_bot">
+        <a href="index.html" class="second-screen__item_bot go-back">
+          <div class="second-section__number_bot">1</div>
+          <div class="second-section__text_bot work-type"></div>
+          <div class="second-section__icon_bot second-section__icon-1"></div>
+        </a>
+        <div class="line_bot"></div>
+        <div class="second-screen__item_bot">
+          <div class="second-section__number_bot">2</div>
+          <div class="second-section__text_bot">Контактные<br> данные</div>
+          <div class="second-section__icon_bot second-section__icon-2">
+            <div class="ball"></div>
+            <div class="ball big-ball"></div>
+            <div class="ball"></div>
+          </div>
+        </div>
+        <div class="line_bot"></div>
+        <div class="second-screen__item_bot">
+          <div class="second-section__icon-3_bot"></div>
+          <div class="second-section__text_bot">Готово!</div>
+        </div>
+      </div>
+      <canvas id="triangle-lost-in-space" resize="true"></canvas>
+    </div>
+  </section>
+
+  <script src="libs/jquery-3.1.1.min.js"></script>
+  <script src="libs/paper.js"></script>
+  <script src="js/second.js"></script>
+</body>
+</html>
