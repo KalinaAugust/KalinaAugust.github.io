@@ -666,6 +666,10 @@ body {
       border: 2px solid #0f5cea;
       -webkit-box-shadow: 0 0 0 #fff;
               box-shadow: 0 0 0 #fff; }
+    @media (max-width: 768px) {
+      .light-off .button {
+        -webkit-box-shadow: none;
+                box-shadow: none; } }
   .light-off .small-text {
     color: #fff; }
   .light-off .big-text {
@@ -679,6 +683,10 @@ body {
   color: #2e2e2e;
   display: inline-block;
   font-size: 400px; }
+  @media (max-width: 840px) {
+    .text-holder span {
+      font-size: 130px;
+      margin-top: 100px; } }
 
 .bulb {
   padding: 5px 100px;
@@ -687,10 +695,19 @@ body {
   position: relative;
   top: 0;
   background: none; }
+  @media (max-width: 840px) {
+    .bulb {
+      padding: 5px 20px;
+      margin-left: -5px;
+      margin-right: -5px;
+      background-size: 155px !important; } }
 
 .lines {
   position: absolute;
   display: none; }
+  @media (max-width: 840px) {
+    .lines {
+      display: none !important; } }
 
 .line-1 {
   left: 40px;
@@ -723,6 +740,9 @@ body {
 .change-img {
   z-index: -2;
   position: relative; }
+  @media (max-width: 840px) {
+    .change-img {
+      width: 70px; } }
 
 p {
   color: #fff;
@@ -737,10 +757,17 @@ p:nth-of-type(2) {
 .big-text {
   font-family: "GothamProMedium", sans-serif;
   color: #333; }
+  @media (max-width: 840px) {
+    .big-text {
+      font-size: 20px; } }
 
 .small-text {
   font-family: "GothamProMedium", sans-serif;
   color: #333; }
+  @media (max-width: 840px) {
+    .small-text {
+      font-size: 14px !important;
+      font-family: "GothamProRegular", sans-serif; } }
 
 .small-text a {
   color: #06255e;
