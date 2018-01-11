@@ -202,32 +202,56 @@
         <div class="card-block">
             <div class="add-review__form-wrapper">
                 <div class="add-review__form-title">Ваш отзыв</div>
-                <form class="comment-block__form">
+                <form id="review-form" class="comment-block__form">
                     <div class="form__input-wrapper">
-                        <input id="id_1" name="name" type="text" class="form__input input" required>
-                        <label for="id_1" class="form__label">Ваше имя</label>
+                        <input id="id_1" name="name" type="text" class="form__input input">
+                        <div class="input-message">
+                            <div class="input-message__error"><i class="fa fa-times" aria-hidden="true"></i></div>
+                            <div class="input-message__ok"><i class="fa fa-check" aria-hidden="true"></i></div>
+                        </div>
+                        <label for="id_1" class="form__label">Ваше имя*</label>
                     </div>
                     <div class="form__input-wrapper">
-                        <input id="id_2" name="email" type="email" class="form__input input" required>
-                        <label for="id_2" class="form__label">Ваш email</label>
+                        <input id="id_2" name="email" type="email" class="form__input input">
+                        <div class="input-message">
+                            <div class="input-message__error"><i class="fa fa-times" aria-hidden="true"></i></div>
+                            <div class="input-message__ok"><i class="fa fa-check" aria-hidden="true"></i></div>
+                        </div>
+                        <label for="id_2" class="form__label">Ваш email*</label>
                     </div>
                     <div class="form__input-wrapper">
-                        <input id="id_3" name="manager" type="text" class="form__input input" required>
-                        <label for="id_3" class="form__label">Имя менеджера</label>
+                        <input id="id_3" name="manager" type="text" class="form__input input">
+                        <div class="input-message">
+                            <div class="input-message__error"><i class="fa fa-times" aria-hidden="true"></i></div>
+                            <div class="input-message__ok"><i class="fa fa-check" aria-hidden="true"></i></div>
+                        </div>
+                        <label for="id_3" class="form__label">Имя менеджера*</label>
                     </div>
                     <div class="form__input-wrapper">
-                        <input id="id_4" name="order" type="text" class="form__input input" required>
-                        <label for="id_4" class="form__label">Номер заказа</label>
+                        <input id="id_4" name="order" type="text" class="form__input input">
+                        <div class="input-message">
+                            <div class="input-message__error"><i class="fa fa-times" aria-hidden="true"></i></div>
+                            <div class="input-message__ok"><i class="fa fa-check" aria-hidden="true"></i></div>
+                        </div>
+                        <label for="id_4" class="form__label">Номер заказа*</label>
                     </div>
                     <div class="form__input-wrapper">
-                        <input id="id_5" name="worktype" type="text" class="form__input input" required>
-                        <label for="id_5" class="form__label">Вид работы</label>
+                        <input id="id_5" name="worktype" type="text" class="form__input input">
+                        <div class="input-message">
+                            <div class="input-message__error"><i class="fa fa-times" aria-hidden="true"></i></div>
+                            <div class="input-message__ok"><i class="fa fa-check" aria-hidden="true"></i></div>
+                        </div>
+                        <label for="id_5" class="form__label">Вид работы*</label>
                     </div>
                     <div class="form__input-wrapper">
-                        <input id="id_6" name="title" type="text" class="form__input input" required>
-                        <label for="id_6" class="form__label">Заголовок заказа</label>
+                        <input id="id_6" name="title" type="text" class="form__input input">
+                        <div class="input-message">
+                            <div class="input-message__error"><i class="fa fa-times" aria-hidden="true"></i></div>
+                            <div class="input-message__ok"><i class="fa fa-check" aria-hidden="true"></i></div>
+                        </div>
+                        <label for="id_6" class="form__label">Заголовок заказа*</label>
                     </div>
-                    <textarea name="comment" placeholder="Текст комментария" class="comment-block__textarea input" required></textarea>
+                    <textarea name="comment" placeholder="Текст комментария*" class="comment-block__textarea input"></textarea>
                     <div class="comment-block__submit-wrapper">
                         <div class="form__star-block">
                             <div class="form__star-text">Оцените работу компании:</div>

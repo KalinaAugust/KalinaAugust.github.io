@@ -128,14 +128,79 @@ function openPopup(messageType) {
     }
 }
 
-
-
     // openPopup('success'); инициализация поп-апа успешного отправления
     // openPopup('error');  инициализация поп-апа ошибки
 
-    
+
+// validation
+var reviewForm  = document.querySelector('#review-form');
+var commentForm = document.querySelector('#comment-form');
+var emailRega   = /^\w+@\w+\.\w{2,4}$/i;
+var textRega    = /^[\wа-я\sА-Я]{2,300}/;
+var orderRega   = /^[0-9]{3,15}/;
 
 
+    reviewForm.addEventListener('submit', function () {
+        event.preventDefault();
+
+        var isValid = true;
+
+
+        function textValid(elem) {
+            if ( textRega.test(elem.value) ) {
+                elem.classList.add('ok');
+                elem.classList.remove('error');
+            } else {
+                elem.classList.add('error');
+                elem.classList.remove('ok');
+                isValid = false;
+            }
+        }
+
+        // name validation
+        textValid(this.name);
+
+        // manager validation
+        textValid(this.manager);
+
+        // worktype validation
+        textValid(this.worktype);
+
+        // worktype validation
+        textValid(this.title);
+
+        // worktype validation
+        textValid(this.comment);
+
+
+        // order number validation
+        if ( orderRega.test(this.order.value) ) {
+            this.order.classList.add('ok');
+            this.order.classList.remove('error');
+        } else {
+            this.order.classList.add('error');
+            this.order.classList.remove('ok');
+            isValid = false;
+        }
+
+
+        // email validation
+        if ( emailRega.test(this.email.value) ) {
+            this.email.classList.add('ok');
+            this.email.classList.remove('error');
+        } else {
+            this.email.classList.add('error');
+            this.email.classList.remove('ok');
+            isValid = false;
+        }
+
+
+        if ( isValid === false ) {
+            openPopup('error');
+        } else {
+            openPopup('success');
+        }
+    });
 
 
 }());

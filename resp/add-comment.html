@@ -264,16 +264,24 @@
                 </div>
                 <div class="comment-block__title">Комментировать отзыв</div>
 
-                <form class="comment-block__form">
+                <form id="comment-form" class="comment-block__form">
                     <div class="form__input-wrapper">
-                        <input name="name" id="name" type="text" class="form__input input" required>
-                        <label for="name" class="form__label">Ваше имя</label>
+                        <input name="name" id="name" type="text" class="form__input input">
+                        <div class="input-message">
+                            <div class="input-message__error"><i class="fa fa-times" aria-hidden="true"></i></div>
+                            <div class="input-message__ok"><i class="fa fa-check" aria-hidden="true"></i></div>
+                        </div>
+                        <label for="name" class="form__label">Ваше имя*</label>
                     </div>
                     <div class="form__input-wrapper">
-                        <input name="email" id="email" type="email" class="form__input input" required>
-                        <label for="email" class="form__label">Ваш email</label>
+                        <input name="email" id="email" type="email" class="form__input input">
+                        <div class="input-message">
+                            <div class="input-message__error"><i class="fa fa-times" aria-hidden="true"></i></div>
+                            <div class="input-message__ok"><i class="fa fa-check" aria-hidden="true"></i></div>
+                        </div>
+                        <label for="email" class="form__label">Ваш email*</label>
                     </div>
-                    <textarea name="comment" placeholder="Текст комментария" class="comment-block__textarea input" required></textarea>
+                    <textarea name="comment" placeholder="Текст комментария*" class="comment-block__textarea input"></textarea>
                     <div class="comment-block__submit-wrapper">
                         <button class="comment-block__submit button">Отправить</button>
                     </div>
