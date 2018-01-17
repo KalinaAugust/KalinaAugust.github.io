@@ -203,7 +203,7 @@
     var bigText    = document.querySelector(".big-text");
     var smallText  = document.querySelector(".small-text");
     var lines      = document.querySelectorAll(".lines");
-    var bulbStyles = "background: url('/img/light.png');" +
+    var bulbStyles = "background: url('./img/light.png');" +
         "background-repeat: no-repeat;" +
         "background-position: center center;" +
         "background-position-y: 20px;";
@@ -212,7 +212,7 @@
         if ( this.checked ) {
             body.classList.add("whiteBackground");
             body.classList.remove("light-off");
-            changeImg.setAttribute('src', '/img/bulb-on.png');
+            changeImg.setAttribute('src', './img/bulb-on.png');
             bulb.style = bulbStyles;
 
             setTimeout(function() {
@@ -242,7 +242,7 @@
             }, 0);
 
             setTimeout(function() {
-                changeImg.setAttribute('src', '/img/bulb-off.png');
+                changeImg.setAttribute('src', './img/bulb-off.png');
                 bulb.style = 'background: none';
             }, 100);
             lines.forEach(function(item) {
