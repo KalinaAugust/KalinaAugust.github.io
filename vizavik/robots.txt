@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /$
+Disallow: /
+
+User-agent: Yandex
+Allow: /$
+Disallow: /
+Host: http://vizavik.by/
