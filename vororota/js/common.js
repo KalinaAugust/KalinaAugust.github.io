@@ -65,6 +65,13 @@
     });
 
 
+    $(".header__logo-block").click(function() {
+        $('html,body').animate({
+            scrollTop: $(".first-section").offset().top
+        }, 800);
+    });
+
+
     $(".nav__item").click(function() {
 
         var thisAtr = this.getAttribute('data-block');
@@ -81,16 +88,34 @@
     });
 
 
+    $('.catalog__item-button').magnificPopup({
+        type:'inline'
+    });
+
     $('.open-popup').magnificPopup({
         type:'inline'
     });
 
-    // $.magnificPopup.open({
-    //     items: {
-    //         src: '#vorota-spring'
-    //     },
-    //     type: 'inline'
-    // });
+
+    // ajax mailer callback
+    $(".php-mail").submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "GET",
+            url: "mailer/mail.php",
+            data: $(this).serialize()
+        }).done(function () {
+            $.magnificPopup.open({
+                items: {
+                    src: $('<div class="pop-success">Ваша заявка отправлена.</div>'),
+                    type: 'inline'
+                }
+            });
+        });
+        return false;
+    });
+
+
 
 
 }(jQuery));
