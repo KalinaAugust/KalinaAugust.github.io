@@ -11,47 +11,68 @@
 <body>
 
 <div class="wrapper">
+    <ol>
+        <li>
+            <a class="button-pay-pal spinner" href="#">
+                Checkout with <span class="btn-checkout-paypal__logo"></span>
+            </a>
+        </li>
 
-    <a class="button-pay-pal spinner"  href="#">
-        Checkout with <span class="btn-checkout-paypal__logo"></span>
-    </a>
-
-    <a class="button-pay-pal"  href="#" style="opacity: .3">
-        Checkout with <span class="btn-checkout-paypal__logo"></span>
-    </a>
-
-    <a class="button-pay-pal spinner spinner-white"  href="#">
-        Checkout with <span class="btn-checkout-paypal__logo"></span>
-    </a>
-
-    <a class="button-pay-pal spinner"  href="#">
-        Loading... <span class="btn-checkout-paypal__logo"></span>
-    </a>
-
-    <a class="button-pay-pal blink"  href="#">
-        Loading... <span class="btn-checkout-paypal__logo"></span>
-    </a>
-
-    <a class="button-pay-pal" href="#">
-        Loading <span class="blink">...</span> <span class="btn-checkout-paypal__logo"></span>
-    </a>
-
-    <a class="button-pay-pal blink"  href="#">
-        Loading...
-    </a>
-
-    <a class="button-pay-pal"  href="#">
-       <span class="btn-checkout-paypal__logo_short blink-block"></span>
-    </a>
-
-    <a class="button-pay-pal"  href="#">
-        <div class="lds-ripple"><div></div><div></div></div>
-        <span class="btn-checkout-paypal__logo"></span>
-    </a>
-
-    <a class="button-pay-pal"  href="#" style="background-color:#f3f3f3;">
-        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-    </a>
+        <li>
+            <a class="button-pay-pal" href="#" style="opacity: .3">
+                Checkout with <span class="btn-checkout-paypal__logo"></span>
+            </a>
+        </li>
+        <li>
+            <a class="button-pay-pal spinner spinner-white" href="#">
+                Checkout with <span class="btn-checkout-paypal__logo"></span>
+            </a>
+        </li>
+        <li>
+            <a class="button-pay-pal spinner" href="#">
+                Loading... <span class="btn-checkout-paypal__logo"></span>
+            </a>
+        </li>
+        <li>
+            <a class="button-pay-pal blink" href="#">
+                Loading... <span class="btn-checkout-paypal__logo"></span>
+            </a>
+        </li>
+        <li>
+            <a class="button-pay-pal" href="#">
+                Loading <span class="blink">...</span> <span class="btn-checkout-paypal__logo"></span>
+            </a>
+        </li>
+        <li>
+            <a class="button-pay-pal blink" href="#">
+                Loading...
+            </a>
+        </li>
+        <li>
+            <a class="button-pay-pal" href="#">
+                <span class="btn-checkout-paypal__logo_short blink-block"></span>
+            </a>
+        </li>
+        <li>
+            <a class="button-pay-pal" href="#">
+                <div class="lds-ripple">
+                    <div></div>
+                    <div></div>
+                </div>
+                <span class="btn-checkout-paypal__logo"></span>
+            </a>
+        </li>
+        <li>
+            <a class="button-pay-pal" href="#" style="background-color:#f3f3f3;">
+                <div class="lds-ellipsis">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </a>
+        </li>
+    </ol>
 </div>
 
 
@@ -61,6 +82,10 @@
 
     .wrapper {
         padding: 70px;
+    }
+
+    ol li {
+        list-style-type: decimal;
     }
 
     .button-pay-pal {
