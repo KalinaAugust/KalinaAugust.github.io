@@ -19,6 +19,18 @@
         </li>
 
         <li>
+            <a class="button-pay-pal spinner spinner-no-bg" href="#"  style="border: 1px solid #dadada">
+                <span style="opacity: .3">Checkout with</span> <span class="btn-checkout-paypal__logo" style="opacity: .3"></span>
+            </a>
+        </li>
+
+        <li>
+            <a class="button-pay-pal spinner spinner-white-bg" href="#" style="opacity: .3">
+                Checkout with <span class="btn-checkout-paypal__logo"></span>
+            </a>
+        </li>
+
+        <li>
             <a class="button-pay-pal" href="#" style="opacity: .3">
                 Checkout with <span class="btn-checkout-paypal__logo"></span>
             </a>
@@ -132,6 +144,18 @@
 
     .spinner-white:before {
         background: rgba(0, 0, 0, 0.1);
+    }
+
+    .spinner-white-bg:before {
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+    .spinner-white-bg:after {
+        border-color: #b7b7b7 #b7b7b7 #000000 #000000;
+    }
+
+    .spinner-no-bg:before {
+        background: none;
     }
 
     .blink {
