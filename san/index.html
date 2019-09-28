@@ -9,8 +9,9 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+    <link rel="stylesheet" href="css/hamburgers.min.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="alternate" hreflang="ru" href="response" />
 </head>
@@ -23,10 +24,20 @@
       <div class="header__nav-item" data-target="about">О компании</div>
       <div class="header__nav-item" data-target="utp">Диллерам</div>
       <div class="header__nav-item" data-target="callback">Контакты</div>
+      <div class="header__phones-mobile">
+        <a href="tel:666" class="header__phones-mobile-item">+375 29 555 44 33</a>
+        <a href="tel:666" class="header__phones-mobile-item">+375 29 555 44 33</a>
+      </div>
     </nav>
     <div class="header__phones">
       <a href="tel:666" class="header__phones-item">+375 29 555 44 33</a>
       <a href="tel:666" class="header__phones-item">+375 29 555 44 33</a>
+    </div>
+    <div class="hamburger hamburger--collapse" tabindex="0"
+         aria-label="Menu" role="button" aria-controls="navigation">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
     </div>
   </div>
 </header>
@@ -127,7 +138,6 @@
         </div>
       </div>
 
-
     </div>
   </div>
 </section>
@@ -144,7 +154,7 @@
         <img src="img/brand-melana.png" alt="brand">
       </div>
 
-      <div class="about__brandstarget-item">
+      <div class="about__brands-item">
         <img src="img/brand-dpall.png" alt="brand">
       </div>
 
@@ -214,9 +224,9 @@
       </div>
       <form class="callback__form">
         <div class="callback__form-title">Свяжитесь с нами</div>
-        <input name="name" class="callback__form-name" type="text" placeholder="Введите ваше имя">
-        <input name="org" class="callback__form-org" type="text" placeholder="Введите название организации">
-        <input name="phone" class="callback__form-phone" type="text" placeholder="Введите номер телефона" required>
+        <input name="name" class="callback__form-name" type="text" placeholder="Ваше имя">
+        <input name="org" class="callback__form-org" type="text" placeholder="Название организации">
+        <input name="phone" class="callback__form-phone" type="text" placeholder="Номер телефона" required>
         <button class="callback__form-submit">отправить</button>
       </form>
     </div>
@@ -248,31 +258,244 @@
   Мы Вам перезвоним в ближайшее время.
 </div>
 
+<!--popup-mixer-->
 <div id="popup-mixer" class="catalog-popup mfp-hide">
   <div class="catalog-popup__slider slick-slider">
     <div class="catalog-popup__slider-item item-1"></div>
     <div class="catalog-popup__slider-item item-2"></div>
     <div class="catalog-popup__slider-item item-3"></div>
     <div class="catalog-popup__slider-item item-4"></div>
+    <div class="catalog-popup__slider-item item-5"></div>
+  </div>
+  <div class="catalog-popup__content">
+    <div>
+      <div class="catalog-popup__title">Смесители</div>
+      <div class="catalog-popup__text">
+        Широкий выбор смесителей. В продаже имеются смесители для ванных комнат, так и для кухонь. Осуществляется доставка на ваш склад или торговый объект.
+        <br>
+        Для уточнения наличия и цены заполните форму обратной связи.
+      </div>
+    </div>
+    <form class="catalog-popup__form" data-from="Смесители">
+      <input type="text" name="phone" class="catalog-popup__input" placeholder="Введите номер телефона" required>
+      <button class="catalog-popup__submit">Узнать цену</button>
+    </form>
+  </div>
+</div>
+
+<!--popup-sink-->
+<div id="popup-sink" class="catalog-popup mfp-hide">
+  <div class="catalog-popup__slider slick-slider">
+    <div class="catalog-popup__slider-item item-1"></div>
+    <div class="catalog-popup__slider-item item-2"></div>
+    <div class="catalog-popup__slider-item item-3"></div>
+    <div class="catalog-popup__slider-item item-4"></div>
+    <div class="catalog-popup__slider-item item-5"></div>
+  </div>
+  <div class="catalog-popup__content">
+    <div>
+      <div class="catalog-popup__title">Раковины</div>
+      <div class="catalog-popup__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis esse minima provident quasi repellendus reprehenderit! Assumenda est, libero maxime nemo, numquam perferendis quisquam ratione reiciendis reprehenderit temporibus velit veniam?
+      </div>
+    </div>
+    <form class="catalog-popup__form" data-from="">
+      <input type="text" name="phone" class="catalog-popup__input" placeholder="Введите номер телефона" required>
+      <button class="catalog-popup__submit">Узнать цену</button>
+    </form>
+  </div>
+</div>
+
+<!--popup-kitchen-sink-->
+<div id="popup-kitchen-sink" class="catalog-popup mfp-hide">
+  <div class="catalog-popup__slider slick-slider">
+    <div class="catalog-popup__slider-item item-1"></div>
+    <div class="catalog-popup__slider-item item-2"></div>
+    <div class="catalog-popup__slider-item item-3"></div>
+    <div class="catalog-popup__slider-item item-4"></div>
+    <div class="catalog-popup__slider-item item-5"></div>
+  </div>
+  <div class="catalog-popup__content">
+    <div>
+      <div class="catalog-popup__title">Кухонные мойки</div>
+      <div class="catalog-popup__text">
+        В продаже имеются кухонные мойки из нержавеющей стли, а также же мойки премиум класса. Осуществляется доставка на ваш склад или торговый объект.
+        <br>
+        Для уточнения наличия и цены заполните форму обратной связи.
+      </div>
+    </div>
+    <form class="catalog-popup__form" data-from="">
+      <input type="text" name="phone"  class="catalog-popup__input" placeholder="Введите номер телефона" required>
+      <button class="catalog-popup__submit">Узнать цену</button>
+    </form>
+  </div>
+</div>
+
+<!--popup-toilet-->
+<div id="popup-toilet" class="catalog-popup mfp-hide">
+  <div class="catalog-popup__slider slick-slider">
+    <div class="catalog-popup__slider-item item-1"></div>
+    <div class="catalog-popup__slider-item item-2"></div>
+    <div class="catalog-popup__slider-item item-3"></div>
+    <div class="catalog-popup__slider-item item-4"></div>
+    <div class="catalog-popup__slider-item item-5"></div>
   </div>
   <div class="catalog-popup__content">
     <div>
       <div class="catalog-popup__title">Унитазы</div>
       <div class="catalog-popup__text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis esse minima provident quasi repellendus reprehenderit! Assumenda est, libero maxime nemo, numquam perferendis quisquam ratione reiciendis reprehenderit temporibus velit veniam?
+        Широкий выбор унитазов. В продаже имеются как подвесные, так и напольные модели унитазов. Осуществляется доставка на ваш склад или торговый объект.
+        <br>
+        Для уточнения наличия и цены заполните форму обратной связи.
       </div>
     </div>
-    <form class="catalog-popup__form">
-      <input type="text" class="catalog-popup__input" placeholder="Введите номер телефона" required>
+    <form class="catalog-popup__form" data-from="Унитазы">
+      <input type="text" name="phone"  class="catalog-popup__input" placeholder="Введите номер телефона" required>
       <button class="catalog-popup__submit">Узнать цену</button>
     </form>
   </div>
+</div>
 
-</div><script
-    src="//code.jquery.com/jquery-3.2.1.min.js"
+<!--popup-bathroom-stuff-->
+<div id="popup-bathroom-stuff" class="catalog-popup mfp-hide">
+  <div class="catalog-popup__slider slick-slider">
+    <div class="catalog-popup__slider-item item-1"></div>
+    <div class="catalog-popup__slider-item item-2"></div>
+    <div class="catalog-popup__slider-item item-3"></div>
+    <div class="catalog-popup__slider-item item-4"></div>
+    <div class="catalog-popup__slider-item item-5"></div>
+  </div>
+  <div class="catalog-popup__content">
+    <div>
+      <div class="catalog-popup__title">
+        Аксессуары для
+        ванной комнаты
+      </div>
+      <div class="catalog-popup__text">
+        Широкий выбор аксессуаров для ванной комнаты. В продаже имеются различные полки, держатели для туалетной бумаги, подвесные стаканы и прочее. Осуществляется доставка на ваш склад или торговый объект.
+        <br>
+        Для уточнения наличия и цены заполните форму обратной связи.
+      </div>
+    </div>
+    <form class="catalog-popup__form" data-from="Аксессуары для ванной комнаты">
+      <input type="text" name="phone"  class="catalog-popup__input" placeholder="Введите номер телефона" required>
+      <button class="catalog-popup__submit">Узнать цену</button>
+    </form>
+  </div>
+</div>
+
+<!--popup-kitchen-stuff-->
+<div id="popup-kitchen-stuff" class="catalog-popup mfp-hide">
+  <div class="catalog-popup__slider slick-slider">
+    <div class="catalog-popup__slider-item item-1"></div>
+    <div class="catalog-popup__slider-item item-2"></div>
+    <div class="catalog-popup__slider-item item-3"></div>
+    <div class="catalog-popup__slider-item item-4"></div>
+    <div class="catalog-popup__slider-item item-5"></div>
+  </div>
+  <div class="catalog-popup__content">
+    <div>
+      <div class="catalog-popup__title">
+        Кухонные
+        аксессуары
+      </div>
+      <div class="catalog-popup__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis esse minima provident quasi repellendus reprehenderit! Assumenda est, libero maxime nemo, numquam perferendis quisquam ratione reiciendis reprehenderit temporibus velit veniam?
+      </div>
+    </div>
+    <form class="catalog-popup__form" data-from="Кухонные аксессуары">
+      <input type="text" name="phone"  class="catalog-popup__input" placeholder="Введите номер телефона" required>
+      <button class="catalog-popup__submit">Узнать цену</button>
+    </form>
+  </div>
+</div>
+
+<!--popup-child-safety-->
+<div id="popup-child-safety" class="catalog-popup mfp-hide">
+  <div class="catalog-popup__slider slick-slider">
+    <div class="catalog-popup__slider-item item-1"></div>
+    <div class="catalog-popup__slider-item item-2"></div>
+    <div class="catalog-popup__slider-item item-3"></div>
+    <div class="catalog-popup__slider-item item-4"></div>
+    <div class="catalog-popup__slider-item item-5"></div>
+  </div>
+  <div class="catalog-popup__content">
+    <div>
+      <div class="catalog-popup__title">Детская безопастность</div>
+      <div class="catalog-popup__text">
+        Важно обезопасить дом при появлении детей. В продаже имеются: различные блокираторы, насадки для дверных ручек, защитные уголки и другое. Осуществляется доставка на ваш склад или торговый объект.
+        <br>
+        Для уточнения наличия и цены заполните форму обратной связи.
+      </div>
+    </div>
+    <form class="catalog-popup__form" data-from="Детская безопастность">
+      <input type="text" name="phone"  class="catalog-popup__input" placeholder="Введите номер телефона" required>
+      <button class="catalog-popup__submit">Узнать цену</button>
+    </form>
+  </div>
+</div>
+
+<!--popup-door-->
+<div id="popup-door" class="catalog-popup mfp-hide">
+  <div class="catalog-popup__slider slick-slider">
+    <div class="catalog-popup__slider-item item-1"></div>
+    <div class="catalog-popup__slider-item item-2"></div>
+    <div class="catalog-popup__slider-item item-3"></div>
+    <div class="catalog-popup__slider-item item-4"></div>
+    <div class="catalog-popup__slider-item item-5"></div>
+  </div>
+  <div class="catalog-popup__content">
+    <div>
+      <div class="catalog-popup__title">
+        Дверная
+        фурнитура
+      </div>
+      <div class="catalog-popup__text">
+        Широкий ассортимент дверной фурнитуры.
+        Осуществляется доставка на ваш склад или торговый объект.
+        <br>
+        Для уточнения наличия и цены заполните форму обратной связи.
+      </div>
+    </div>
+    <form class="catalog-popup__form" data-from="Дверная фурнитура">
+      <input type="text" name="phone"  class="catalog-popup__input" placeholder="Введите номер телефона" required>
+      <button class="catalog-popup__submit">Узнать цену</button>
+    </form>
+  </div>
+</div>
+
+
+<div id="popup-road" class="catalog-popup mfp-hide">
+  <div class="catalog-popup__slider slick-slider">
+    <div class="catalog-popup__slider-item item-1"></div>
+    <div class="catalog-popup__slider-item item-2"></div>
+    <div class="catalog-popup__slider-item item-3"></div>
+    <div class="catalog-popup__slider-item item-4"></div>
+    <div class="catalog-popup__slider-item item-5"></div>
+  </div>
+  <div class="catalog-popup__content">
+    <div>
+      <div class="catalog-popup__title">
+        Дорожная
+        безопастность
+      </div>
+      <div class="catalog-popup__text">
+        Широкий выбор унитазов. В продаже имеются как подвесные, так и напольные модели унитазов. Осуществляется доставка на ваш склад или торговый объект.
+        <br>
+        Для уточнения наличия и цены заполните форму обратной связи.
+      </div>
+    </div>
+    <form class="catalog-popup__form" data-from="Дорожная безопастность">
+      <input type="text" name="phone" class="catalog-popup__input" placeholder="Введите номер телефона" required>
+      <button class="catalog-popup__submit">Узнать цену</button>
+    </form>
+  </div>
+</div>
+<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
     crossorigin="anonymous"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 <script src="js/common.js"></script>
 </body>
 </html>
