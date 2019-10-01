@@ -1,6 +1,6 @@
 <?php
 
-$recepient = "kalininaugust@gmil.com";
+$recepient = "kalininaugust@gmail.com";
 $sitename = 'afktorg.by';
 $pagetitle = "Заявка от клиента с сайта \"$sitename\"";
 
