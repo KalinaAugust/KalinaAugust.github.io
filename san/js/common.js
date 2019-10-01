@@ -33,6 +33,7 @@
       url: "mailer/mail.php",
       data:  $(this).serialize()
     }).done(function () {
+      $(".callback__form").find("input[type=text], textarea").val("");
       $.magnificPopup.open({
         items: {
           src: '#form-popup',
@@ -50,7 +51,7 @@
 
     $.ajax({
       type: "GET",
-      url: "mailer/mail.php",
+      url: "mailer/popup-mail.php",
       data:  $(this).serialize() + '&type=' + from
     }).done(function () {
       $.magnificPopup.open({
