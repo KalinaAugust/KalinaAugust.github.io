@@ -85,7 +85,6 @@
     $('#popup-' + id + ' .slick-slider').slick('setPosition');
   });
 
-
   $('.slick-slider').slick({
     infinite: true,
     arrows: false,
