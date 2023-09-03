@@ -1,23 +1,18 @@
-var gulp         = require('gulp');
-var sass         = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var concat       = require('gulp-concat');
-var hb           = require('gulp-hb');
-var rename       = require('gulp-rename');
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const autoprefixer = require('gulp-autoprefixer');
+const concat = require('gulp-concat');
+const hb = require('gulp-hb');
+const rename = require('gulp-rename');
 
 
-var browserSync  = require('browser-sync').create();
-var reload       = browserSync.reload;
-
+const browserSync = require('browser-sync').create();
+const reload = browserSync.reload;
 
 
 gulp.task('default', function () {
     console.log('Demo task.');
 });
-
-
-
-
 
 gulp.task('build:scss', function () {
     return gulp
@@ -34,7 +29,6 @@ gulp.task('build:scss', function () {
         .pipe(gulp.dest('./css'))
 });
 
-
 gulp.task('build:handlebars', function () {
     return gulp
         .src('./src/templates/*.handlebars')
@@ -47,7 +41,6 @@ gulp.task('build:handlebars', function () {
         .pipe(gulp.dest('./'));
 });
 
-
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
@@ -56,14 +49,10 @@ gulp.task('browser-sync', function() {
     });
 });
 
-
 gulp.task('server-reload', function (done) {
     browserSync.reload();
     done();
 });
-
-
-
 
 gulp.task('watch:html', function () {
     gulp.watch('./src/**/*.handlebars', gulp.series( 'build:handlebars','server-reload'));

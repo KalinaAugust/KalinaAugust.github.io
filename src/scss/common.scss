@@ -26,5 +26,71 @@ body {
     max-width: 1170px;
     padding: 0 15px;
     margin: 0 auto;
+
+    @media screen and (max-width: 500px) {
+       padding: 0;
+    }
 }
+
+#bg-zombie {
+  background-color: bisque;
+}
+
+.dice-wrapper {
+  padding-top: 50px;
+
+  @media screen and (max-width: 500px) {
+    padding-top: 20px;
+  }
+}
+
+.dice {
+  margin-top: 50px;
+
+  @media screen and (max-width: 500px) {
+    margin-top: 20px;
+  }
+}
+
+.dice-number {
+  font-size: 245px;
+  text-align: center;
+  user-select: none;
+
+  @media screen and (max-width: 500px) {
+    font-size: 200px;
+  }
+}
+
+.dice-img {
+  margin: 20px auto;
+  height: 100%;
+  min-height: 500px;
+  width: 100%;
+  max-width: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &.run {
+    background-image: url("../img/run.png");
+  }
+
+  &.bite {
+    background-image: url("../img/bite.png");
+  }
+
+  &.hit {
+    background-image: url("../img/hit.png");
+  }
+
+  &.shoot {
+    background-image: url("../img/shoot.png");
+  }
+
+  @media screen and (max-width: 500px) {
+    min-height: 400px;
+  }
+}
+
 
