@@ -20,7 +20,7 @@ body {
   color: $black;
   font-size: 16px;
   font-weight: 400;
-  background-color: burlywood;
+  background-color: $blue;
 }
 
 .wrapper {
@@ -102,6 +102,131 @@ body {
   min-height: 100vh;
   background-image: url("../img/hero.png");
   background-size: cover;
+  padding-top: 25vh;
+}
+
+.hero-header {
+  margin: 0;
+  color: $blue;
+  font-size: 64px;
+  font-weight: 700;
+  text-transform: uppercase;
+  max-width: 800px;
+  line-height: 1.4;
+}
+
+.hero-subheader {
+  color: $blue;
+  max-width: 360px;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-top: 24px;
+}
+
+.hero-button {
+  margin-top: 50px;
+}
+
+.button {
+  display: inline-block;
+  color: white;
+  background-color: #D72324;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  font-weight: 700;
+  padding: 18px 60px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover {
+    background-color: #991819;
+  }
+}
+
+.section {
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-content {
+  max-width: 720px;
+}
+
+.heading-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: $black;
+  position: relative;
+  text-transform: uppercase;
+  margin: 0 auto;
+
+  &::after {
+    display: block;
+    content: "";
+    background-color: #D72324;
+    width: 140px;
+    height: 5px;
+    position: absolute;
+    left: -40px;
+    bottom: 0;
+  }
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+p.par {
+  margin-top: 15px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.face-photo {
+  position: absolute;
+  right: 0;
+  top: 120px;
+
+  .photo-block {
+    width: 466px;
+    height: 598px;
+    background-image: url("../img/face.png");
+    background-size: cover;
+  }
+
+  .red-block {
+    position: absolute;
+    bottom: -70px;
+    right: -330px;
+    width: 455px;
+    height: 500px;
+    background-color: #D72324;
+    border-radius: 226px 226px 0 0;
+  }
+}
+
+.section-logo {
+  margin-top: 300px;
+
+  &-img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 
