@@ -7,4 +7,21 @@ $(document).ready(function (){
             scrollTop: $("#" + to).offset().top
         }, 1000);
     });
+
+    // slider
+    $('.utp-slider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: true
+    });
+
+    //popup
+    $('.gallery-container').magnificPopup({
+        type:'image',
+        delegate: 'a',
+        gallery: {enabled:true},
+    });
 });
+
+
