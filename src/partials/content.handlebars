@@ -1,15 +1,15 @@
-<header class="header">
+<header class="header" data-language="pl">
     <div class="wrapper header-wrapper">
         <div class="header-logo">
             <img class="header-logo-img" src="../img/logo.png" alt="">
         </div>
         <div class="right-header-block">
             <nav class="header-navbar">
-                <div class="header-navbar-item">O nas</div>
-                <div class="header-navbar-item">Certyfikaty</div>
-                <div class="header-navbar-item">Usługi</div>
-                <div class="header-navbar-item">Skontaktuj się z nami</div>
-                <div class="header-navbar-item">Kariery</div>
+                <div class="header-navbar-item click-to-scroll" data-scroll="about-us">O nas</div>
+                <div class="header-navbar-item click-to-scroll" data-scroll="certificates">Certyfikaty</div>
+                <div class="header-navbar-item click-to-scroll" data-scroll="offer">Usługi</div>
+                <div class="header-navbar-item click-to-scroll" data-scroll="form">Skontaktuj się z nami</div>
+                <div class="header-navbar-item click-to-scroll" data-scroll="careers">Kariery</div>
                 <div class="header-navbar-item language-switcher">EN</div>
             </nav>
             <a
@@ -22,7 +22,7 @@
     </div>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
     <div class="wrapper">
         <h1 class="hero-header">Napędzamy Twój sukces</h1>
         <div class="hero-subheader">
@@ -35,7 +35,7 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section" id="about-us">
     <div class="wrapper">
         <div class="section-content">
             <div class="heading-wrapper">
@@ -136,7 +136,7 @@
 </section>
 
 
-<section class="section">
+<section class="section" id="certificates">
     <div class="wrapper">
         <div class="heading-wrapper">
             <h2 class="heading">Certyfikaty</h2>
@@ -156,7 +156,7 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section" id="offer">
     <div class="wrapper">
         <div class="heading-wrapper">
             <h2 class="heading">Nasze Usługi</h2>
@@ -243,7 +243,7 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section" id="careers">
     <div class="wrapper">
         <div class="heading-wrapper">
             <h2 class="heading">Kariery</h2>
@@ -367,6 +367,9 @@
                 <div class="input-field">
                     <label for="fast-phone" class="form-label">Numer Telefonu</label>
                     <input id="fast-phone" name="phone" required type="tel" class="form-input" placeholder="Jaki jest twój numer telefonu?">
+                    <div class="validation-message">
+                        Wiadomość musi zawierać treść.
+                    </div>
                 </div>
                 <div class="input-send-button">
                     <div class="submit-form-button button full-width" data-form-type="fast-form">Skontaktuj się z nami</div>

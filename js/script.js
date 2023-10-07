@@ -1,11 +1,13 @@
 'use strict';
 
 $(document).ready(function (){
+    const language = $('header.header').attr('data-language');
+
     $(".click-to-scroll").click(function (){
         const to = $(this).attr('data-scroll');
         $('html, body').animate({
             scrollTop: $("#" + to).offset().top - 100
-        }, 1000);
+        }, 500);
     });
 
     // slider
@@ -41,6 +43,8 @@ $(document).ready(function (){
         $("#cv-phone").val('');
         $("#cv-message").val('');
         $("#cv-profession").val('');
+
+        $("#fast-phone").val('');
     }
 
     // send email from contact form
@@ -97,14 +101,22 @@ $(document).ready(function (){
                 $("#cv-email").removeClass('invalid');
             }
         } else {
+            phone = $("#fast-phone").val().trim();
+            form = 'Call Order Form';
 
+            if (phone.length < 2) {
+                $("#fast-phone").addClass('invalid');
+                hasErrors = true;
+            } else {
+                $("#fast-phone").removeClass('invalid');
+            }
         }
 
         if (hasErrors) return;
         formsReset();
 
         $.notify(
-            "Już wysłane",
+            language === 'pl' ? "Już wysłane" : 'Form successfully sent',
             { position: "bottom", className: "success", }
         );
 
