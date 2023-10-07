@@ -24,6 +24,11 @@ body {
   background-color: #EEF1F4;
 }
 
+.red {
+  color: #D72324;
+  font-weight: bold;
+}
+
 .wrapper {
   max-width: 1170px;
   padding: 0 15px;
@@ -152,6 +157,9 @@ body {
   transition: 0.3s;
   -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
           box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+.button.full-width {
+  width: 100%;
 }
 .button:hover {
   background-color: #991819;
@@ -566,13 +574,30 @@ p.par {
   font-size: 14px;
 }
 
+.footer-content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .footer-content {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(255, 255, 255);
   border-radius: 16px;
   padding: 24px;
-  max-width: 500px;
+  width: 49%;
   -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
           box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.footer-content-title {
+  font-size: 36px;
+  color: #0D3745;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0 30px 0;
 }
 
 .footer-logo-img {

@@ -23,6 +23,11 @@ body {
   background-color: $blue;
 }
 
+.red {
+  color: #D72324;
+  font-weight: bold;
+}
+
 .wrapper {
   max-width: 1170px;
   padding: 0 15px;
@@ -141,6 +146,10 @@ body {
   cursor: pointer;
   transition: .3s;
   box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+
+  &.full-width {
+    width: 100%;
+  }
 
   &:hover {
     background-color: #991819;
@@ -502,12 +511,25 @@ p.par {
   font-size: 14px;
 }
 
+.footer-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer-content {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 1);
   border-radius: 16px;
   padding: 24px;
-  max-width: 500px;
+  width: 49%;
   box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.footer-content-title {
+  font-size: 36px;
+  color: $black;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0 30px 0;
 }
 
 .footer-logo-img {
