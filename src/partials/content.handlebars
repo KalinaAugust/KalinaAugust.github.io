@@ -6,7 +6,7 @@
             sukces jest naszą misją.
         </div>
         <div class="hero-button">
-            <div id="click" class="button" data-scroll="form">Skontaktuj się z nami</div>
+            <div class="button click-to-scroll" data-scroll="form">Skontaktuj się z nami</div>
         </div>
     </div>
 </section>
@@ -169,7 +169,7 @@
             </div>
             <div class="our-services__item">
                 <img src="../img/icons/confirmation.png" alt="alt" class="our-services__item-img">
-                <div id="click" class="button" data-scroll="scroller">Skontaktuj się z nami</div>
+                <div class="button click-to-scroll" data-scroll="form">Skontaktuj się z nami</div>
             </div>
         </div>
     </div>
@@ -180,12 +180,18 @@
         <div class="form-wrapper">
             <div class="form" id="form">
                 <div class="input-field">
-                    <label for="name" class="form-label">Imię i nazwisko</label>
+                    <label for="name" class="form-label">Imię i nazwisko*</label>
                     <input id="name" type="text" class="form-input" placeholder="Jak masz na imię?">
+                    <div class="validation-message">
+                        Wiadomość musi zawierać treść.
+                    </div>
                 </div>
                 <div class="input-field">
-                    <label for="email" class="form-label">Adres Email</label>
-                    <input id="email" type="email" class="form-input" placeholder="Jaki jest Twój email?">
+                    <label for="email" class="form-label">Adres Email*</label>
+                    <input id="email" type="email" class="form-input" minlength="3" placeholder="Jaki jest Twój email?">
+                    <div class="validation-message">
+                        Wiadomość musi zawierać treść.
+                    </div>
                 </div>
                 <div class="input-field">
                     <label for="phone" class="form-label">Numer Telefonu</label>
@@ -196,7 +202,7 @@
                     <textarea id="message" class="form-input textarea" placeholder="Zostaw wiadomość..."></textarea>
                 </div>
                 <div class="input-send-button">
-                    <div id="submit-contact-form" class="button">Skontaktuj się z nami</div>
+                    <div class="submit-form-button button" data-form-type="main-form">Skontaktuj się z nami</div>
                 </div>
             </div>
             <div class="form-right">
@@ -225,9 +231,8 @@
                     <div class="careers__item-img first"></div>
                     <div class="careers__item-title">Międzynarodowy Spedytor</div>
                 </div>
-
                 <div class="careers__item-button">
-                    <div id="click" class="button">Wyślij CV</div>
+                    <a href="#cv-popup" id="click" class="button open-popup-link">Wyślij CV</a>
                 </div>
             </div>
             <div class="careers__item">
@@ -237,7 +242,7 @@
                 </div>
 
                 <div class="careers__item-button">
-                    <div id="click" class="button">Wyślij CV</div>
+                    <a href="#cv-popup" id="click" class="button open-popup-link">Wyślij CV</a>
                 </div>
             </div>
             <div class="careers__item">
@@ -247,9 +252,43 @@
                 </div>
 
                 <div class="careers__item-button">
-                    <div id="click" class="button">Wyślij CV</div>
+                    <a href="#cv-popup" id="click" class="button open-popup-link">Wyślij CV</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<div id="cv-popup" class="white-popup mfp-hide">
+    <div class="form" id="cv-form">
+        <div class="input-field">
+            <label for="cv-name" class="form-label">Imię i nazwisko*</label>
+            <input id="cv-name" name="name" type="text" class="form-input" placeholder="Jak masz na imię?">
+            <div class="validation-message">
+                Wiadomość musi zawierać treść.
+            </div>
+        </div>
+        <div class="input-field">
+            <label for="cv-email" class="form-label">Adres Email*</label>
+            <input id="cv-email" name="email" type="email" class="form-input" placeholder="Jaki jest Twój email?">
+            <div class="validation-message">
+                Wiadomość musi zawierać treść.
+            </div>
+        </div>
+        <div class="input-field">
+            <label for="cv-phone" class="form-label">Numer Telefonu</label>
+            <input id="cv-phone" name="phone" required type="tel" class="form-input" placeholder="Jaki jest twój numer telefonu?">
+        </div>
+        <div class="input-field">
+            <label for="cv-profession" class="form-label">Zawód</label>
+            <input id="cv-profession" name="profession" required type="tel" class="form-input" placeholder="Proszę podać zawód.">
+        </div>
+        <div class="input-field">
+            <label for="cv-message" class="form-label">Wiadomość</label>
+            <textarea id="cv-message" name="message" class="form-input textarea" placeholder="Zostaw wiadomość..."></textarea>
+        </div>
+        <div class="input-send-button">
+            <div class="submit-form-button button" data-form-type="cv-form">Wyślij dane</div>
+        </div>
+    </div>
+</div>
