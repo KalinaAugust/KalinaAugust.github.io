@@ -407,7 +407,7 @@ svg.active #middle-line {
 }
 @media screen and (max-width: 768px) {
   .section {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 }
 
@@ -645,7 +645,7 @@ p.par {
 }
 @media screen and (max-width: 768px) {
   .gallery-container {
-    margin: 80px auto 0 auto;
+    margin: 60px auto 0 auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -673,6 +673,7 @@ p.par {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-top: 60px;
   }
 }
 

@@ -13,6 +13,7 @@ $(document).ready(function (){
         const to = $(this).attr('data-scroll');
 
         $('.right-header-block').removeClass('active');
+        $("#hamburger").removeClass('active');
 
         $('html, body').animate({
             scrollTop: $("#" + to).offset().top - 100
