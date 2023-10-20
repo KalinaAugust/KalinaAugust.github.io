@@ -3,8 +3,17 @@
 $(document).ready(function (){
     const language = $('header.header').attr('data-language');
 
+    $("#hamburger").click(function () {
+        $(this).toggleClass('active');
+        $('.right-header-block').toggleClass('active');
+    });
+
+    // scroll to
     $(".click-to-scroll").click(function (){
         const to = $(this).attr('data-scroll');
+
+        $('.right-header-block').removeClass('active');
+
         $('html, body').animate({
             scrollTop: $("#" + to).offset().top - 100
         }, 500);
@@ -15,7 +24,16 @@ $(document).ready(function (){
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
-        dots: true
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 763,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
     });
 
     //popup

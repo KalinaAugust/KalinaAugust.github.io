@@ -3,6 +3,15 @@
         <div class="header-logo">
             <img class="header-logo-img" src="../img/logo.png" alt="">
         </div>
+        <div class="burger">
+            <svg id="hamburger" class="Header__toggle-svg" viewbox="0 0 60 40">
+                <g stroke="#D72324" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                    <path id="top-line" d="M10,10 L50,10 Z"></path>
+                    <path id="middle-line" d="M10,20 L50,20 Z"></path>
+                    <path id="bottom-line" d="M10,30 L50,30 Z"></path>
+                </g>
+            </svg>
+        </div>
         <div class="right-header-block">
             <nav class="header-navbar">
                 <div class="header-navbar-item click-to-scroll" data-scroll="about-us">O nas</div>
@@ -10,7 +19,7 @@
                 <div class="header-navbar-item click-to-scroll" data-scroll="offer">Usługi</div>
                 <div class="header-navbar-item click-to-scroll" data-scroll="form">Skontaktuj się z nami</div>
                 <div class="header-navbar-item click-to-scroll" data-scroll="careers">Kariery</div>
-                <div class="header-navbar-item language-switcher">EN</div>
+                <a href="/index_en.html" class="header-navbar-item language-switcher">EN</a>
             </nav>
             <a
                 href="https://www.linkedin.com/in/mikita-mamonka/"
@@ -43,15 +52,15 @@
             </div>
             <div class="subtitle">O nas</div>
             <p class="par">
-                <span class="red">M&A EXPRESS</span> specjalizuje się w międzynarodowych usługach spedycyjnych i transportowych na terenie Unii
-                Europejskiej.
-                Realizujemy transport ładunków całopojazdowych oraz drobnicowych.
-                Jesteśmy dumni z dostarczania szybkich, skutecznych i niezawodnych usług, które przekraczają oczekiwania
-                naszych klientów.
+                <span class="red">M&A Express</span> to dynamiczna firma transportowo-spedycyjna, która specjalizuje się w świadczeniu
+                kompleksowych usług transportowych dla swoich klientów. Nasza firma została założona z pasją do
+                efektywnego i niezawodnego przemieszczania towarów, i od tego czasu zyskaliśmy reputację zaufanego
+                partnera w dziedzinie transportu.
             </p>
 
             <p class="par">
-                W <span class="red">M&A Express</span> jesteśmy dumni z naszej rosnącej roli w branży transportowej i logistycznej.
+                W <span class="red">M&A Express</span> jesteśmy dumni z naszej rosnącej roli w branży transportowej i
+                logistycznej.
                 Nasza firma jest synonimem niezawodności, profesjonalizmu i innowacyjności.
                 Od początku naszej działalności naszą pasją jest dostarczanie kompleksowych rozwiązań transportowych,
                 które spełniają, a nawet przekraczają oczekiwania naszych klientów.
@@ -219,7 +228,8 @@
                 </div>
                 <div class="input-field">
                     <label for="phone" class="form-label">Numer Telefonu</label>
-                    <input id="phone" required type="tel" class="form-input" placeholder="Jaki jest twój numer telefonu?">
+                    <input id="phone" required type="tel" class="form-input"
+                           placeholder="Jaki jest twój numer telefonu?">
                 </div>
                 <div class="input-field">
                     <label for="message" class="form-label">Wiadomość</label>
@@ -301,15 +311,18 @@
         </div>
         <div class="input-field">
             <label for="cv-phone" class="form-label">Numer Telefonu</label>
-            <input id="cv-phone" name="phone" required type="tel" class="form-input" placeholder="Jaki jest twój numer telefonu?">
+            <input id="cv-phone" name="phone" required type="tel" class="form-input"
+                   placeholder="Jaki jest twój numer telefonu?">
         </div>
         <div class="input-field">
             <label for="cv-profession" class="form-label">Zawód</label>
-            <input id="cv-profession" name="profession" required type="tel" class="form-input" placeholder="Proszę podać zawód.">
+            <input id="cv-profession" name="profession" required type="tel" class="form-input"
+                   placeholder="Proszę podać zawód.">
         </div>
         <div class="input-field">
             <label for="cv-message" class="form-label">Wiadomość</label>
-            <textarea id="cv-message" name="message" class="form-input textarea" placeholder="Zostaw wiadomość..."></textarea>
+            <textarea id="cv-message" name="message" class="form-input textarea"
+                      placeholder="Zostaw wiadomość..."></textarea>
         </div>
         <div class="input-send-button">
             <div class="submit-form-button button" data-form-type="cv-form">Wyślij dane</div>
@@ -366,13 +379,15 @@
                 <div class="footer-content-title">Poproś o telefon</div>
                 <div class="input-field">
                     <label for="fast-phone" class="form-label">Numer Telefonu</label>
-                    <input id="fast-phone" name="phone" required type="tel" class="form-input" placeholder="Jaki jest twój numer telefonu?">
+                    <input id="fast-phone" name="phone" required type="tel" class="form-input"
+                           placeholder="Jaki jest twój numer telefonu?">
                     <div class="validation-message">
                         Wiadomość musi zawierać treść.
                     </div>
                 </div>
                 <div class="input-send-button">
-                    <div class="submit-form-button button full-width" data-form-type="fast-form">Skontaktuj się z nami</div>
+                    <div class="submit-form-button button full-width" data-form-type="fast-form">Skontaktuj się z nami
+                    </div>
                 </div>
             </div>
         </div>
