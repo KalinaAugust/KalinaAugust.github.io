@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90" width="90" height="90">
+  <!-- Flores wallpaper · geometric diamond trellis with a tiny flower. Tone-on-tone lavender, seamless. -->
+  <g fill="none" stroke="#6f5f9a" stroke-opacity="0.15" stroke-width="1.05" stroke-linecap="round">
+    <!-- diamond net (edges meet across tile seams) -->
+    <path d="M0,45 L45,0 L90,45 L45,90 Z"/>
+    <!-- four-petal flower at the diamond centre -->
+    <g stroke-opacity="0.42" stroke="#6f5f9a">
+      <circle cx="45" cy="40.5" r="3"/>
+      <circle cx="45" cy="49.5" r="3"/>
+      <circle cx="40.5" cy="45" r="3"/>
+      <circle cx="49.5" cy="45" r="3"/>
+      <circle cx="45" cy="45" r="1.1"/>
+    </g>
+  </g>
+  <!-- small buds where diamonds meet (tile corners → seamless) -->
+  <g fill="#6f5f9a" fill-opacity="0.15">
+    <circle cx="0" cy="0" r="1.6"/>
+    <circle cx="90" cy="0" r="1.6"/>
+    <circle cx="0" cy="90" r="1.6"/>
+    <circle cx="90" cy="90" r="1.6"/>
+  </g>
+</svg>

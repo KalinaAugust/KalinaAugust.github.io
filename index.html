@@ -1,1 +1,619 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/manifest.json"/><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"><title>CleanHub</title><script defer="defer" src="/static/js/main.4ee1f517.js"></script><link href="/static/css/main.5e2c66c6.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flores — цветочная мастерская</title>
+    <meta
+      name="description"
+      content="Flores — авторские букеты и флористика. Мягкие пастельные композиции из свежих цветов на каждый день и особый случай."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Jost:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Marck+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Design tokens & components -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="index.html">Flores</a>
+        <button class="burger-btn" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header-right">
+          <nav class="site-nav" aria-label="Основная навигация">
+            <a href="experiments/heroes.html">Hero Photo</a>
+            <a href="experiments/heroes-solid.html">Hero Color</a>
+          </nav>
+          <div class="nav-separator"></div>
+          <div class="social-links">
+            <a class="social-link" href="tel:+375291234567" aria-label="Позвонить">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </a>
+            <a class="social-link" href="https://www.instagram.com/flores_rechitsa/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero__grid">
+            <div class="hero__content reveal">
+              <span class="hero__eyebrow">Цветочная мастерская</span>
+              <h1 class="gradient-title">Нежность, собранная<br />вручную</h1>
+              <p class="hero__lead">
+                Собираем авторские композиции из свежих цветов в мягких
+                пастельных тонах. Для дома, подарка и тех самых особенных дней.
+              </p>
+              <div class="hero__actions">
+                <a class="btn btn--primary" href="#bouquets">Смотреть букеты</a>
+                <a class="btn btn--ghost" href="#order">Заказать</a>
+              </div>
+              <div class="hero__trust">
+                <span class="hero-trust">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 9.8l6.5-.9z"/></svg>
+                  <b>4.9</b>&nbsp;рейтинг
+                </span>
+                <span class="hero-trust">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6"/></svg>
+                  Свежесть каждый день
+                </span>
+                <span class="hero-trust">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v8H3z"/><path d="M14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>
+                  Доставка за 2 часа
+                </span>
+              </div>
+            </div>
+
+            <div class="hero__visual reveal">
+              <svg class="hero__sprig hero__sprig--tr" viewBox="0 0 110 130" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
+                <path d="M55,122 C51,100 59,80 55,58 C52,42 56,30 55,18"/>
+                <ellipse cx="43" cy="100" rx="8.5" ry="4.6" transform="rotate(-32 43 100)"/>
+                <ellipse cx="67" cy="100" rx="8.5" ry="4.6" transform="rotate(32 67 100)"/>
+                <ellipse cx="45" cy="80" rx="8" ry="4.3" transform="rotate(-30 45 80)"/>
+                <ellipse cx="65" cy="80" rx="8" ry="4.3" transform="rotate(30 65 80)"/>
+                <ellipse cx="44" cy="60" rx="7.5" ry="4" transform="rotate(-30 44 60)"/>
+                <ellipse cx="66" cy="60" rx="7.5" ry="4" transform="rotate(30 66 60)"/>
+              </svg>
+              <div class="hero__frame">
+                <img src="assets/images/morning_light.jpg" alt="Пастельный букет из роз и эвкалипта" />
+              </div>
+              <div class="hero__badge">
+                <span class="hero__badge-ico">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z"/></svg>
+                </span>
+                <span>
+                  <span class="lbl">Букет дня</span>
+                  <span class="val">от 95 Br</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bouquets -->
+      <section class="section" id="bouquets">
+        <div class="container">
+          <div class="section__head reveal">
+            <span class="eyebrow">Коллекция</span>
+            <h2 class="gradient-title">Наши букеты</h2>
+          </div>
+
+          <div class="card-grid">
+            <article class="bouquet-card reveal">
+              <div class="bouquet-card__media" style="background-image: url('assets/images/morning_light.jpg');"></div>
+              <div class="bouquet-card__body">
+                <h3>Утренний свет</h3>
+                <p>Пионовидные розы, эвкалипт, мягкая пастель.</p>
+                <span class="bouquet-card__price">120 Br</span>
+              </div>
+            </article>
+
+            <article class="bouquet-card reveal">
+              <div class="bouquet-card__media" style="background-image: url('assets/images/peach_silk.jpg');"></div>
+              <div class="bouquet-card__body">
+                <h3>Персиковый шёлк</h3>
+                <p>Ранункулюсы, фрезия, лёгкая зелень.</p>
+                <span class="bouquet-card__price">140 Br</span>
+              </div>
+            </article>
+
+            <article class="bouquet-card reveal">
+              <div class="bouquet-card__media" style="background-image: url('assets/images/warm_beige.jpg');"></div>
+              <div class="bouquet-card__body">
+                <h3>Тёплый беж</h3>
+                <p>Сухоцветы и пампасная трава, монохром.</p>
+                <span class="bouquet-card__price">95 Br</span>
+              </div>
+            </article>
+
+            <article class="bouquet-card reveal">
+              <div class="bouquet-card__media" style="background-image: url('assets/images/peach_silk.jpg');"></div>
+              <div class="bouquet-card__body">
+                <h3>Весенний бриз</h3>
+                <p>Тюльпаны, гортензия, лёгкая прохлада и свежесть.</p>
+                <span class="bouquet-card__price">110 Br</span>
+              </div>
+            </article>
+
+            <article class="bouquet-card reveal">
+              <div class="bouquet-card__media" style="background-image: url('assets/images/morning_light.jpg');"></div>
+              <div class="bouquet-card__body">
+                <h3>Малиновый закат</h3>
+                <p>Красные розы, диантусы, яркий и сочный акцент.</p>
+                <span class="bouquet-card__price">160 Br</span>
+              </div>
+            </article>
+
+            <article class="bouquet-card reveal">
+              <div class="bouquet-card__media" style="background-image: url('assets/images/warm_beige.jpg');"></div>
+              <div class="bouquet-card__body">
+                <h3>Снежная королева</h3>
+                <p>Белоснежные лилии, гипсофила, строгая элегантность.</p>
+                <span class="bouquet-card__price">135 Br</span>
+              </div>
+            </article>
+          </div>
+
+          <div style="text-align: center; margin-top: var(--space-12);" class="reveal">
+            <a class="btn btn--primary" href="#order">Заказать букет</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="glass-panel panel--pad reveal about-craft">
+            <div class="about-craft__deco">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22C12 22 17 18 17 13C17 8 12 4 12 4C12 4 7 8 7 13C7 18 12 22 12 22Z"/>
+                <path d="M12 22V13"/>
+                <path d="M12 13C12 13 15 10 17 8"/>
+                <path d="M12 13C12 13 9 10 7 8"/>
+              </svg>
+            </div>
+            <div class="section__head section__head--tight" style="text-align: center;">
+              <span class="eyebrow">О мастерской</span>
+              <h2 class="gradient-title">Искусство в каждом букете</h2>
+            </div>
+            <p class="lead" style="text-align: center; margin-bottom: var(--space-10);">
+              Flores — небольшая семейная мастерская. Мы работаем только со свежими сезонными цветами, собираем каждый букет вручную и верим, что красота должна быть тёплой и неброской.
+            </p>
+            
+            <div class="craft-features">
+              <div class="craft-feature">
+                <div class="craft-feature__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"/><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
+                  </svg>
+                </div>
+                <h3 class="craft-feature__title">Ручная работа</h3>
+                <p class="craft-feature__desc">Собираем индивидуально, с особым вниманием к каждой детали.</p>
+              </div>
+              <div class="craft-feature">
+                <div class="craft-feature__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+                  </svg>
+                </div>
+                <h3 class="craft-feature__title">Свежесть</h3>
+                <p class="craft-feature__desc">Прямые поставки от фермеров каждое утро для долгой жизни цветов.</p>
+              </div>
+              <div class="craft-feature">
+                <div class="craft-feature__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/>
+                  </svg>
+                </div>
+                <h3 class="craft-feature__title">Доставка</h3>
+                <p class="craft-feature__desc">Бережно привезем в специальных аквабоксах точно в день заказа.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mosaic sections -->
+      <section class="section section-mosaic section-mosaic--b1">
+        <div class="container">
+          <div class="feature reveal">
+            <span class="eyebrow">Особый день</span>
+            <h2 class="gradient-title">Свадебная флористика</h2>
+            <p class="lead">
+              Нежные эвкалиптовые веточки и классические пастельные тона —
+              собираем флористику дня под вашу палитру и настроение.
+            </p>
+
+            <div class="feature-cards">
+              <article class="feature-card">
+                <span class="feature-card__icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z"/></svg>
+                </span>
+                <h3>Букет невесты</h3>
+                <p>Каскадный, круглый или композиция в технике спираль.</p>
+              </article>
+              <article class="feature-card">
+                <span class="feature-card__icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V11a7 7 0 0 1 14 0v10"/><path d="M3 21h18"/></svg>
+                </span>
+                <h3>Цветочная арка</h3>
+                <p>Оформление церемонии, президиума и фотозоны.</p>
+              </article>
+              <article class="feature-card">
+                <span class="feature-card__icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20c0-6 3-11 9-12-1 7-4 11-9 12Z"/><path d="M11 20c0-4-2-7-6-8 1 5 3 7 6 8Z"/><path d="M11 20v2"/></svg>
+                </span>
+                <h3>Бутоньерки и венки</h3>
+                <p>Аксессуары для жениха, подружек и гостей.</p>
+              </article>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-mosaic section-mosaic--b2">
+        <div class="container">
+          <div class="feature reveal">
+            <span class="eyebrow">Праздники</span>
+            <h2 class="gradient-title">Оформление мероприятий</h2>
+            <p class="lead">
+              Создаём сказочную атмосферу воздушными розами и деликатными
+              оттенками — от камерного ужина до большого банкета.
+            </p>
+
+            <div class="feature-stats">
+              <div class="stat">
+                <span class="stat__num">200+</span>
+                <span class="stat__label">оформленных мероприятий</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">4.9★</span>
+                <span class="stat__label">средняя оценка гостей</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">24 ч</span>
+                <span class="stat__label">сборка под ключ</span>
+              </div>
+            </div>
+
+            <ul class="feature-points">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                Фотозоны, президиумы и подвесные композиции
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                Арки, колонны и цветочные инсталляции
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                Подбор палитры под дресс-код и стиль площадки
+              </li>
+            </ul>
+
+
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-mosaic section-mosaic--b3">
+        <div class="container">
+          <div class="feature reveal">
+            <span class="eyebrow">Учимся вместе</span>
+            <h2 class="gradient-title">Мастер-классы</h2>
+            <p class="lead">
+              Отдохните душой и научитесь собирать изысканные букеты с нотками
+              лаванды. Небольшие группы, всё в уютной атмосфере мастерской.
+            </p>
+
+            <div class="schedule">
+              <article class="schedule-row">
+                <div class="schedule-row__date">5<small>июл</small></div>
+                <div class="schedule-row__body">
+                  <h4>Весенний венок</h4>
+                  <p>Каркас, зелень и сухоцветы · 12:00–14:00</p>
+                </div>
+                <div class="schedule-row__price">85 Br</div>
+              </article>
+              <article class="schedule-row">
+                <div class="schedule-row__date">12<small>июл</small></div>
+                <div class="schedule-row__body">
+                  <h4>Букет в технике спираль</h4>
+                  <p>Базовый навык флориста · 17:00–19:00</p>
+                </div>
+                <div class="schedule-row__price">100 Br</div>
+              </article>
+              <article class="schedule-row">
+                <div class="schedule-row__date">19<small>июл</small></div>
+                <div class="schedule-row__body">
+                  <h4>Композиция с лавандой</h4>
+                  <p>Ароматная настольная композиция · 12:00–14:00</p>
+                </div>
+                <div class="schedule-row__price">90 Br</div>
+              </article>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Order Form -->
+      <section class="section" id="order">
+        <div class="container">
+          <div class="section__head reveal">
+            <span class="eyebrow">Заказ</span>
+            <h2 class="gradient-title">Заказать букет</h2>
+            <p class="lead">Оставьте заявку, и менеджер свяжется с вами в ближайшее время</p>
+          </div>
+          
+          <div class="glass-panel order-card reveal">
+            <form class="order-form" onsubmit="event.preventDefault(); alert('Ваш заказ отправлен!');">
+              <div class="order-form__row">
+                <div class="input-wrapper">
+                  <label for="order-name" class="input-label">Ваше имя</label>
+                  <input type="text" id="order-name" class="input-cutout" placeholder="Например, Анна" required />
+                </div>
+                <div class="input-wrapper">
+                  <label for="order-phone" class="input-label">Телефон</label>
+                  <input type="tel" id="order-phone" class="input-cutout" placeholder="+375 (29) 000-00-00" required />
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label for="order-bouquet" class="input-label">Что будем собирать?</label>
+                <select id="order-bouquet" class="input-cutout" required>
+                  <option value="" disabled selected>Выберите букет из коллекции</option>
+                  <option>Утренний свет</option>
+                  <option>Персиковый шёлк</option>
+                  <option>Тёплый беж</option>
+                  <option>Весенний бриз</option>
+                  <option>Малиновый закат</option>
+                  <option>Снежная королева</option>
+                  <option>Хочу индивидуальный заказ</option>
+                </select>
+              </div>
+              <div class="input-wrapper">
+                <label for="order-comment" class="input-label">Дополнительные пожелания</label>
+                <textarea id="order-comment" class="input-cutout" rows="3" placeholder="Любимые цветы, предпочтения по гамме, дата доставки..."></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary">Отправить заявку</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section__head reveal">
+            <span class="eyebrow">Контакты</span>
+            <h2 class="gradient-title">Загляните к нам</h2>
+          </div>
+          <div class="contact reveal">
+            <div class="glass-panel contact__info">
+              <ul class="contact-list">
+                <li>
+                  <span class="contact-ico">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </span>
+                  <span>
+                    <span class="lbl">Адрес</span>
+                    <span class="val">Москва, ул. Цветочная, 12</span>
+                  </span>
+                </li>
+                <li>
+                  <span class="contact-ico">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                  </span>
+                  <span>
+                    <span class="lbl">Часы работы</span>
+                    <span class="val">Ежедневно · 9:00–21:00</span>
+                  </span>
+                </li>
+                <li>
+                  <span class="contact-ico">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
+                  </span>
+                  <span>
+                    <span class="lbl">Телефон</span>
+                    <a class="val" href="tel:+70000000000">+7 (000) 000-00-00</a>
+                  </span>
+                </li>
+                <li>
+                  <span class="contact-ico">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                  </span>
+                  <span>
+                    <span class="lbl">Почта</span>
+                    <a class="val" href="mailto:hello@flores.shop">hello@flores.shop</a>
+                  </span>
+                </li>
+              </ul>
+
+              <div class="contact-socials">
+                <span class="lbl">Мы в соцсетях</span>
+                <a class="social" href="https://www.instagram.com/flores_rechitsa/" target="_blank" rel="noopener" aria-label="Instagram">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+                </a>
+                <a class="social" href="https://t.me/flores" target="_blank" rel="noopener" aria-label="Telegram">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 19 19.1c-.2 1-.8 1.2-1.6.8l-4.4-3.3-2.1 2c-.2.2-.4.4-.8.4l.3-4.5 8.1-7.3c.3-.3-.1-.5-.5-.2L7.8 13 3.5 11.6c-.9-.3-.9-.9.2-1.4l16.9-6.5c.8-.3 1.5.2 1.3 1.6Z"/></svg>
+                </a>
+              </div>
+
+            </div>
+
+            <a class="contact__map" href="https://maps.google.com/?q=Москва,+Цветочная+12" target="_blank" rel="noopener" aria-label="Открыть карту до мастерской Flores">
+              <svg class="map-bg" viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="320" fill="#f1e1cd"/>
+                <rect x="248" y="26" width="138" height="96" rx="16" fill="#dde6cd"/>
+                <path d="M-20 248c100-18 140 52 240 22s140-20 200 8v62H-20Z" fill="#d6e2da"/>
+                <g stroke="#fbf2e7" stroke-width="16" stroke-linecap="round" fill="none">
+                  <path d="M-10 120H410"/>
+                  <path d="M150-10V330"/>
+                </g>
+                <g stroke="#fbf2e7" stroke-width="10" stroke-linecap="round" fill="none">
+                  <path d="M-10 214H410"/>
+                  <path d="M300-10V330"/>
+                </g>
+                <g stroke="#e6d2b9" stroke-width="2" stroke-dasharray="9 9" fill="none">
+                  <path d="M-10 120H410"/>
+                  <path d="M150-10V330"/>
+                </g>
+                <g fill="#ead6bd">
+                  <rect x="18" y="18" width="96" height="74" rx="12"/>
+                  <rect x="18" y="150" width="96" height="46" rx="12"/>
+                  <rect x="196" y="150" width="74" height="46" rx="12"/>
+                  <rect x="332" y="150" width="58" height="46" rx="12"/>
+                </g>
+              </svg>
+              <span class="map-marker">
+                <span class="map-marker__pulse"></span>
+                <svg class="map-marker__pin" viewBox="0 0 24 32" width="30" height="40" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="pinGrad" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#cf9a73"/>
+                      <stop offset="1" stop-color="#bd855e"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M12 1.5C6.2 1.5 1.8 6 1.8 11.8 1.8 19.6 12 31 12 31S22.2 19.6 22.2 11.8C22.2 6 17.8 1.5 12 1.5Z" fill="url(#pinGrad)"/>
+                  <circle cx="12" cy="11.8" r="4.2" fill="#fff"/>
+                </svg>
+              </span>
+              <span class="map-chip">
+                <span>
+                  <strong>Мастерская Flores</strong>
+                  <span>ул. Цветочная, 12</span>
+                </span>
+                <span class="map-chip__go">
+                  Маршрут
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 Flores · Цветочная мастерская</p>
+        <p>ИП Калинина А.В. · УНП 192837465</p>
+        <p>Юридический адрес: г. Москва, ул. Цветочная, д. 12, оф. 4</p>
+        <p>Свидетельство о государственной регистрации №192837465 от 15.03.2023</p>
+      </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+      <div class="lightbox__overlay"></div>
+      <button class="lightbox__close" aria-label="Закрыть">&times;</button>
+      <div class="lightbox__content">
+        <img src="" alt="Увеличенное фото букета" id="lightbox-img" />
+      </div>
+    </div>
+
+    <!-- Scroll reveal (the page's only JS — design-system.md §12) -->
+    <script>
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const items = document.querySelectorAll(".reveal");
+      if (prefersReduced || !("IntersectionObserver" in window)) {
+        items.forEach((el) => el.classList.add("is-visible"));
+      } else {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+        items.forEach((el) => io.observe(el));
+      }
+
+      // Delayed smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            e.preventDefault();
+            setTimeout(() => {
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+              history.pushState(null, null, targetId);
+            }, 150);
+          }
+        });
+      });
+
+      // Lightbox Logic
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const closeBtn = document.querySelector('.lightbox__close');
+      const overlay = document.querySelector('.lightbox__overlay');
+
+      document.querySelectorAll('.bouquet-card__media').forEach(media => {
+        media.addEventListener('click', function() {
+          const bgImg = this.style.backgroundImage;
+          const urlMatch = bgImg.match(/url\(['"]?(.*?)['"]?\)/);
+          if (urlMatch && urlMatch[1]) {
+            lightboxImg.src = urlMatch[1];
+            lightbox.classList.add('is-open');
+          }
+        });
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+      }
+
+      closeBtn.addEventListener('click', closeLightbox);
+      overlay.addEventListener('click', closeLightbox);
+
+      // Mobile Menu Logic
+      const burgerBtn = document.querySelector('.burger-btn');
+      const headerRight = document.querySelector('.header-right');
+      
+      if (burgerBtn && headerRight) {
+        burgerBtn.addEventListener('click', () => {
+          document.body.classList.toggle('menu-open');
+          burgerBtn.classList.toggle('is-active');
+          headerRight.classList.toggle('is-active');
+        });
+      }
+    </script>
+  </body>
+</html>
