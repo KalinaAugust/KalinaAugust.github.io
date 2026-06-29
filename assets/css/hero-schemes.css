@@ -1,0 +1,364 @@
+/* Flores — Hero Schemes (design exploration, NOT production)
+   The real homepage hero block rendered in swappable color schemes.
+   Each .scheme wrapper redefines the design tokens from main.css, so the
+   fully token-driven hero recolors entirely — its markup & styles are untouched.
+   See docs/design-system.md for the token contract. */
+
+/* Remake header for dark blocks so it remains readable when scrolling */
+.site-header {
+  --text-primary: #f2ede1;
+  --text-secondary: rgba(242, 237, 225, 0.74);
+  --text-highlight: #e3c98a;
+  --glass-bg-light: rgba(27, 47, 36, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --accent-hover: #e3c98a;
+}
+
+.lab-head {
+  text-align: center;
+  padding: var(--space-12) var(--space-6) var(--space-6);
+}
+
+.lab-head h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+}
+
+.lab-head p {
+  color: var(--text-secondary);
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+/* ---- Scheme wrapper: paints its own background, scopes token overrides ----- */
+.scheme {
+  background: var(--bg-gradient);
+  padding-block: clamp(var(--space-8), 6vw, var(--space-16));
+}
+
+/* the hero floats a badge below the photo frame; give it room (homepage hero
+   bleeds into the next section, here each scheme is self-contained) */
+.scheme .hero {
+  padding-bottom: var(--space-12);
+}
+
+.scheme__label {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto var(--space-6);
+  padding-inline: var(--space-6);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-hover);
+}
+
+/* ---- Scheme: Soft Beige Bloom (current site) ------------------------------ */
+/* uses :root tokens as-is — nothing to override */
+
+/* ---- Scheme: Dark Green Botanical ----------------------------------------- */
+.scheme--green {
+  --bg-gradient:
+    radial-gradient(circle at 0% 0%, rgba(120, 155, 111, 0.18) 0%, transparent 42%),
+    radial-gradient(circle at 100% 100%, rgba(0, 0, 0, 0.28) 0%, transparent 55%),
+    linear-gradient(135deg, #1b2f24 0%, #20382a 50%, #16271d 100%);
+  --surface-solid: #20382a;
+
+  /* warm gold accents pop against deep green */
+  --accent-primary: #cdab68;
+  --accent-hover: #e3c98a;
+  --accent-secondary: #7d9b6f;
+  --accent-glow: rgba(220, 190, 130, 0.22);
+
+  /* light cream type on dark ground */
+  --text-primary: #f2ede1;
+  --text-secondary: rgba(242, 237, 225, 0.74);
+  --text-muted: rgba(242, 237, 225, 0.55);
+
+  /* dark-glass: a faint light film instead of a frosted-cream tint */
+  --glass-bg: rgba(255, 255, 255, 0.10);
+  --glass-bg-light: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.22);
+  --glass-cutout: rgba(255, 255, 255, 0.07);
+  --shadow-glass:
+    0 20px 40px -15px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.22);
+
+  /* button variant vars (main.css .btn--* read these) */
+  --v-accent: #cdab68;
+  --v-accent-strong: #b8924c;
+  --v-text: #f2ede1;
+}
+
+/* .hero__lead hardcodes near-black in main.css — restore legibility on dark */
+.scheme--green .hero__lead,
+.scheme--sage .hero__lead {
+  color: var(--text-secondary);
+}
+
+/* the inner photo-frame border is hardcoded light in main.css — darken it
+   so it reads against the bright bouquet on the dark schemes */
+.scheme--green .hero__frame::after,
+.scheme--sage .hero__frame::after {
+  border-color: rgba(0, 0, 0, 0.45);
+}
+
+/* scheme 3: trust-row text white, icons stay gold (svg keeps --accent-hover) */
+.scheme--sage .hero-trust,
+.scheme--sage .hero-trust b {
+  color: #ffffff;
+}
+
+/* scheme 3: the badge floats over the light photo, where the faint glass tint
+   lets the gold text wash out — give it a dark green fill so the type reads */
+.scheme--sage .hero__badge {
+  background: rgba(20, 34, 25, 0.66);
+}
+
+/* ---- Scheme: Dark Green · Gold type --------------------------------------- */
+/* same deep-green ground as .scheme--green, but the typography is fully gold
+   (headings + body) instead of cream */
+.scheme--sage {
+  --bg-gradient:
+    radial-gradient(circle at 0% 0%, rgba(120, 155, 111, 0.18) 0%, transparent 42%),
+    radial-gradient(circle at 100% 100%, rgba(0, 0, 0, 0.28) 0%, transparent 55%),
+    linear-gradient(135deg, #1b2f24 0%, #20382a 50%, #16271d 100%);
+  --surface-solid: #20382a;
+
+  --accent-primary: #cdab68;
+  --accent-hover: #e3c98a;
+  --accent-secondary: #c9b277;
+  --accent-glow: rgba(220, 190, 130, 0.22);
+
+  /* gold type: gold headings/emphasis + soft light-gold body */
+  --text-primary: #e7c987;
+  --text-secondary: rgba(231, 210, 158, 0.82);
+  --text-muted: rgba(231, 210, 158, 0.6);
+
+  --glass-bg: rgba(255, 255, 255, 0.10);
+  --glass-bg-light: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.22);
+  --glass-cutout: rgba(255, 255, 255, 0.07);
+  --shadow-glass:
+    0 20px 40px -15px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.22);
+
+  /* button variant vars */
+  --v-accent: #cdab68;
+  --v-accent-strong: #b8924c;
+  --v-text: #e7c987;
+}
+
+/* =========================================================================
+   Cover hero — a different layout in the green/gold house style.
+   Full-bleed photo + deep-green wash, centred gold editorial type inside a
+   thin gold frame, with a row of glass stat tiles. Self-contained literals
+   (exploration block), palette matches .scheme--green / .scheme--sage.
+   ========================================================================= */
+.cover {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(34rem, 72vh, 46rem);
+  padding: clamp(var(--space-12), 8vw, var(--space-16)) var(--space-6);
+  background: url('../images/morning_light.jpg') center / cover no-repeat;
+  overflow: hidden;
+}
+
+.cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(32, 56, 42, 0.55) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(20, 34, 25, 0.78) 0%, rgba(16, 27, 20, 0.92) 100%);
+}
+
+.cover__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 48rem;
+  text-align: center;
+  padding: clamp(var(--space-8), 6vw, var(--space-12));
+  border: 1px solid rgba(227, 201, 138, 0.45);
+  border-radius: var(--radius-xl);
+  background: rgba(20, 34, 25, 0.28);
+  -webkit-backdrop-filter: blur(6px) saturate(150%);
+  backdrop-filter: blur(6px) saturate(150%);
+}
+
+.cover__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #e3c98a;
+  margin-bottom: var(--space-6);
+}
+
+.cover__eyebrow::before,
+.cover__eyebrow::after {
+  content: "";
+  width: 2.4rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+.cover__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--space-6);
+  background: linear-gradient(135deg, #f4e4b8 0%, #d8b870 45%, #c79a3f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.cover__lead {
+  max-width: 34rem;
+  margin: 0 auto var(--space-8);
+  color: rgba(244, 240, 230, 0.88);
+  font-size: var(--text-lg);
+}
+
+.cover__actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-10);
+}
+
+/* gold hairline divider */
+.cover__rule {
+  width: 4rem;
+  height: 1px;
+  margin: 0 auto var(--space-8);
+  background: linear-gradient(90deg, transparent, #e3c98a, transparent);
+}
+
+.cover__stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.cover-stat {
+  flex: 1 1 9rem;
+  max-width: 12rem;
+  padding: var(--space-5) var(--space-4);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.cover-stat__num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: #e3c98a;
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+.cover-stat__label {
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(244, 240, 230, 0.7);
+}
+
+@media (max-width: 560px) {
+  .cover__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cover-stat {
+    flex-basis: 6.5rem;
+  }
+}
+
+/* =========================================================================
+   Brand book — «Восковые цветы» palette.
+   Exploration block: the brand hex values ARE the content, so they live here
+   as literals rather than design-system tokens.
+   ========================================================================= */
+.brandbook {
+  background: #f1edf0;
+  padding-block: clamp(var(--space-12), 8vw, var(--space-16));
+  padding-inline: var(--space-6);
+}
+
+.brandbook__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.brandbook__title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: #2c2030;
+  margin: 0 0 var(--space-3);
+}
+
+.brandbook__subtitle {
+  color: #6a6070;
+  max-width: 38rem;
+  margin: 0 auto var(--space-12);
+}
+
+.brandbook__swatches {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(var(--space-5), 4vw, var(--space-10));
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: clamp(8.5rem, 18vw, 11rem);
+  aspect-ratio: 1;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 16px 32px -14px rgba(60, 20, 50, 0.35);
+}
+
+.swatch__hex {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.swatch__role {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-top: var(--space-2);
+  opacity: 0.82;
+}
+
+/* Palette: fill + legible label color per swatch */
+.swatch--plum    { background: #4d1c3e; color: #f8d7e3; }
+.swatch--pink    { background: #e894bc; color: #4d1c3e; }
+.swatch--magenta { background: #c74c9d; color: #ffffff; }
+.swatch--green   { background: #344a39; color: #f8d7e3; }
+.swatch--blush   { background: #f8d7e3; color: #4d1c3e; }

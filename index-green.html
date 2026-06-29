@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flores — цветочная мастерская</title>
+    <title>Flores — цветочная мастерская (тёмно-зелёная тема)</title>
     <meta
       name="description"
       content="Flores — авторские букеты и флористика. Мягкие пастельные композиции из свежих цветов на каждый день и особый случай."
@@ -19,8 +19,10 @@
 
     <!-- Design tokens & components -->
     <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Dark Green + Gold theme (Scheme 3) — token overrides on body.theme-green -->
+    <link rel="stylesheet" href="assets/css/theme-green.css" />
   </head>
-  <body>
+  <body class="theme-green">
     <!-- Header -->
     <header class="site-header">
       <div class="container">
@@ -33,7 +35,7 @@
         <div class="header-right">
           <nav class="site-nav" aria-label="Основная навигация">
             <a href="experiments/hero-schemes.html">Схемы</a>
-            <a href="index-green.html">Тёмно-зелёная версия</a>
+            <a href="index.html">Бежевая версия</a>
           </nav>
           <div class="nav-separator"></div>
           <div class="social-links">
@@ -417,7 +419,6 @@
 
       <!-- Order Form -->
       <section class="section" id="order" style="position: relative; overflow: hidden;">
-        <img src="assets/images/cherry_branch.jpg" alt="" class="order-bg-fern" aria-hidden="true" />
         <div class="container" style="position: relative; z-index: 2;">
           <div class="glass-panel order-card reveal">
             <div class="section__head" style="margin-bottom: var(--space-8);">
@@ -462,9 +463,6 @@
 
       <!-- Contact -->
       <section class="section" id="contact">
-        <img src="assets/images/carnation.png" alt="" class="contact-bg-flower contact-bg-flower--left" aria-hidden="true" />
-        <img src="assets/images/carnation.png" alt="" class="contact-bg-flower contact-bg-flower--center" aria-hidden="true" />
-        <img src="assets/images/carnation.png" alt="" class="contact-bg-flower contact-bg-flower--right" aria-hidden="true" />
         <div class="container">
           <div class="section__head reveal">
             <span class="eyebrow">Контакты</span>

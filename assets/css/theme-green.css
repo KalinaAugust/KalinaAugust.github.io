@@ -1,0 +1,216 @@
+/* Flores — Dark Green + Gold theme (Scheme 3 · Sage & Gold).
+   A full-page recolor of the homepage: token overrides on body.theme-green
+   recolor every token-driven component from main.css. A handful of main.css
+   literals that assume the light beige theme are restored for legibility below.
+   Palette mirrors .scheme--sage in hero-schemes.css. */
+
+body.theme-green {
+  /* deep-green ground with a soft sage glow + dark vignette */
+  --bg-gradient:
+    radial-gradient(circle at 0% 0%, rgba(120, 155, 111, 0.18) 0%, transparent 42%),
+    radial-gradient(circle at 100% 100%, rgba(0, 0, 0, 0.28) 0%, transparent 55%),
+    linear-gradient(135deg, #1b2f24 0%, #20382a 50%, #16271d 100%);
+  --surface-solid: #20382a;
+
+  /* warm gold accents pop against deep green */
+  --accent-primary: #cdab68;
+  --accent-hover: #e3c98a;
+  --accent-secondary: #c9b277;
+  --accent-glow: rgba(220, 190, 130, 0.22);
+
+  /* gold typography: gold headings/emphasis + soft light-gold body */
+  --text-primary: #e7c987;
+  --text-secondary: rgba(231, 210, 158, 0.82);
+  --text-muted: rgba(231, 210, 158, 0.6);
+  --text-highlight: #f4e4b8;
+
+  /* dark glass: a faint light film instead of a frosted-cream tint */
+  --glass-bg: rgba(255, 255, 255, 0.10);
+  --glass-bg-light: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.22);
+  --glass-cutout: rgba(255, 255, 255, 0.07);
+  --glass-cutout-strong: rgba(255, 255, 255, 0.12);
+  --shadow-glass:
+    0 20px 40px -15px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.22);
+  --shadow-inset-cutout: inset 0 2px 4px rgba(0, 0, 0, 0.35);
+
+  /* button variant vars (main.css .btn--* read these) */
+  --v-accent: #cdab68;
+  --v-accent-strong: #b8924c;
+  --v-text: #e7c987;
+
+  /* mid-page rhythm band recolored from beige-peach to a deep-green wash */
+  --section-warm-gradient:
+    radial-gradient(120% 110% at 50% 0%, rgba(125, 155, 111, 0.16) 0%, rgba(0, 0, 0, 0.10) 60%, rgba(0, 0, 0, 0.24) 100%);
+}
+
+/* --- restore main.css light-theme literals for the dark ground ------------- */
+
+/* .hero__lead hardcodes near-black in main.css — restore legibility on dark */
+.theme-green .hero__lead {
+  color: var(--text-secondary);
+}
+
+/* the inner photo-frame border is hardcoded light — darken it so it reads
+   against the bright bouquet photo */
+.theme-green .hero__frame::after {
+  border-color: rgba(0, 0, 0, 0.45);
+}
+
+/* the badge floats over the light photo, where the faint glass tint lets the
+   gold text wash out — give it a dark green fill so the type stays legible */
+.theme-green .hero__badge {
+  background: rgba(20, 34, 25, 0.66);
+}
+
+/* footer wash is a cream literal in main.css — swap to a dark fade */
+.theme-green .site-footer {
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.22) 100%);
+}
+
+/* select chevron icon is a beige literal in main.css — recolor to gold */
+.theme-green select.input-cutout {
+  background-image: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23e3c98a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>');
+}
+
+/* ===========================================================================
+   Accents — break the all-gold monochrome. Gold stays the lead (headings,
+   prices, numbers); two secondary accents add depth and a floral read:
+     • leaf  — fresh sage green for "greenery/freshness" cues
+     • rose  — dusty blush for "floral/romantic" cues
+   Used sparingly on eyebrows + select icon groups so each section differs.
+   =========================================================================== */
+.theme-green {
+  --accent-leaf: #a9c290;
+  --accent-leaf-tint: rgba(169, 194, 144, 0.13);
+  --accent-leaf-edge: rgba(169, 194, 144, 0.32);
+  --accent-rose: #e0a3a6;
+  --accent-rose-tint: rgba(224, 163, 166, 0.13);
+  --accent-rose-edge: rgba(224, 163, 166, 0.32);
+}
+
+/* Eyebrow kickers → sage, so they read distinct from the gold headings */
+.theme-green .eyebrow,
+.theme-green .hero__eyebrow {
+  color: var(--accent-leaf);
+}
+
+/* Hero trust row + checklist ticks → sage (freshness cues) */
+.theme-green .hero-trust svg,
+.theme-green .feature-points svg {
+  color: var(--accent-leaf);
+}
+
+/* Service-card icons (Свадебная флористика и т.п.) → sage glyph + sage circle */
+.theme-green .feature-card__icon {
+  color: var(--accent-leaf);
+  background: var(--accent-leaf-tint);
+  border: 1px solid var(--accent-leaf-edge);
+}
+
+/* "О мастерской" feature icons → blush (floral/romantic) */
+.theme-green .craft-feature__icon {
+  color: var(--accent-rose);
+  background: var(--accent-rose-tint);
+  border-color: var(--accent-rose-edge);
+}
+
+.theme-green .craft-feature:hover .craft-feature__icon {
+  color: var(--accent-rose);
+  border-color: var(--accent-rose);
+  background: var(--accent-rose-tint);
+}
+
+/* Contact list icons → blush cutouts */
+.theme-green .contact-ico {
+  color: var(--accent-rose);
+  background: var(--accent-rose-tint);
+}
+
+/* ===========================================================================
+   Beige hero island — the first block stays in the light "Soft Beige Bloom"
+   palette while the rest of the page is dark green. We re-declare the :root
+   (beige) tokens on .hero so its whole subtree resolves light, and paint the
+   beige gradient on the hero itself (the green body background shows elsewhere).
+   The header stays dark (see the opaque green bar override at the end).
+   =========================================================================== */
+.theme-green .hero {
+  --bg-gradient:
+    radial-gradient(circle at 0% 0%, rgba(255, 245, 235, 0.8) 0%, transparent 40%),
+    radial-gradient(circle at 100% 100%, rgba(210, 175, 150, 0.3) 0%, transparent 50%),
+    linear-gradient(135deg, #f7efe6 0%, #f5e4d6 50%, #eedbc8 100%);
+
+  --accent-primary: #cf9a73;
+  --accent-hover: #bd855e;
+  --accent-secondary: #e0b49a;
+  --accent-glow: rgba(207, 154, 115, 0.35);
+
+  --text-primary: #4a3a30;
+  --text-secondary: rgba(74, 58, 48, 0.72);
+  --text-muted: rgba(74, 58, 48, 0.55);
+  --text-highlight: #b06b42;
+
+  --glass-bg: rgba(255, 252, 248, 0.55);
+  --glass-bg-light: rgba(255, 252, 248, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.65);
+  --glass-cutout: rgba(196, 156, 120, 0.16);
+  --shadow-glass:
+    0 20px 40px -15px rgba(150, 110, 80, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -1px 0 rgba(150, 110, 80, 0.08);
+
+  /* green-accent buttons: primary = sage gradient (white text), ghost = sage
+     border + sage text — botanical accent that ties into the page's palette */
+  --v-accent: #6f8c54;
+  --v-accent-strong: #56743f;
+  --v-text: #4e6b39;
+
+  background: var(--bg-gradient);
+  /* full-screen first block: fill the viewport so no green strip shows below.
+     The header is fixed (out of flow), so the hero spans from the very top. */
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  align-items: center;
+  padding-top: calc(var(--header-height) + var(--space-8));
+  padding-bottom: clamp(var(--space-12), 7vw, var(--space-16));
+}
+
+/* green + gold accents so the beige hero echoes the page's botanical palette */
+.theme-green .hero .hero__eyebrow,
+.theme-green .hero .hero-trust svg {
+  color: #6f8c54; /* deep sage — reads on the cream ground */
+}
+.theme-green .hero .hero__sprig {
+  color: #6f8c54; /* botanical sprig in green instead of peach */
+  opacity: 0.6;
+}
+.theme-green .hero .hero__badge-ico {
+  background: linear-gradient(135deg, #cdab68, #b8924c); /* gold accent */
+}
+
+/* revert the dark-theme literal fixes inside the now-beige hero */
+.theme-green .hero .hero__lead {
+  color: rgba(0, 0, 0, 0.85);
+}
+.theme-green .hero .hero__frame::after {
+  border-color: rgba(255, 255, 255, 0.45);
+}
+.theme-green .hero .hero__badge {
+  background: var(--glass-bg);
+}
+
+/* Dark header: a deep-green bar with gold text (the page's default theme
+   tokens). Fixed so the beige hero spans the full viewport beneath it; the
+   dark bar stays legible over both the beige hero and the green sections. */
+.theme-green .site-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+.theme-green .site-header::before {
+  background: rgba(27, 47, 36, 0.82);
+}

@@ -22,6 +22,7 @@ All colors are defined as CSS variables in [assets/css/main.css](../assets/css/m
 | `--bg-gradient` | `linear-gradient(135deg, #f7efe6 0%, #f5e4d6 50%, #f9ebe0 100%)` | Global body gradient (warm beige with a peach drift) |
 | `--surface-solid` | `#fdf6ee` | Solid opaque cream surface for modals and overlay cards |
 | `--feature-gradient` | `radial-gradient(130% 90% at 50% 0%, #fbe9da 0%, #f6dcc8 45%, #efcdb5 100%)` | Warm peach backdrop for premium/featured surfaces |
+| `--section-warm-gradient` | `radial-gradient(120% 110% at 50% 0%, #f9ece0 0%, #f4e1d0 60%, #efd8c4 100%)` | Soft beige-peach band for mid-page sections (via `.section--warm`, soft top/bottom fades) — adds gentle depth so the page isn't one flat tone |
 
 ### 2.2 Accents & Glows
 | CSS Variable | Value | Description |
@@ -187,7 +188,7 @@ Corner rounding follows **4 structural roles + pill** (tokens in `main.css`). Th
 
 Adhere to an **8-point grid** (tokens `--space-1`…`--space-16`, i.e. `4px`, `8px`, `12px`, `16px`, `20px`, `24px`, `32px`, `40px`, `48px`, `64px`) for rhythm and consistency:
 
-*   **Section rhythm (`--space-section` = `clamp(4.5rem, 9vw, 7.5rem)`):** the single vertical padding for **every** page `.section` (incl. mosaic blocks) — 120px on desktop, fluid down to ~72px on mobile. Don't give sections their own `padding-block`.
+*   **Section rhythm (`--space-section` = `clamp(4.5rem, 9vw, 7.5rem)`):** the single vertical padding for **every** page `.section` — 120px on desktop, fluid down to ~72px on mobile. Don't give sections their own `padding-block`.
 *   **`64px` (`--space-16`):** extra breathing room before the footer / major section partitions.
 *   **`40px` / `32px` (`--space-10` / `--space-8`):** global page wrapper padding, main outer margins.
 *   **`24px` / `20px` (`--space-6` / `--space-5`):** modal padding, large form paddings.
