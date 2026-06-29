@@ -185,8 +185,10 @@ Corner rounding follows **4 structural roles + pill** (tokens in `main.css`). Th
 
 ## 7. Spacings & Paddings (8-Point Grid)
 
-Adhere to an **8-point grid** (tokens `--space-1`…`--space-12`, i.e. `4px`, `8px`, `12px`, `16px`, `20px`, `24px`, `32px`, `40px`, `48px`) for rhythm and consistency:
+Adhere to an **8-point grid** (tokens `--space-1`…`--space-16`, i.e. `4px`, `8px`, `12px`, `16px`, `20px`, `24px`, `32px`, `40px`, `48px`, `64px`) for rhythm and consistency:
 
+*   **Section rhythm (`--space-section` = `clamp(4.5rem, 9vw, 7.5rem)`):** the single vertical padding for **every** page `.section` (incl. mosaic blocks) — 120px on desktop, fluid down to ~72px on mobile. Don't give sections their own `padding-block`.
+*   **`64px` (`--space-16`):** extra breathing room before the footer / major section partitions.
 *   **`40px` / `32px` (`--space-10` / `--space-8`):** global page wrapper padding, main outer margins.
 *   **`24px` / `20px` (`--space-6` / `--space-5`):** modal padding, large form paddings.
 *   **`16px` (`--space-4`):** card inner padding, list item spacing, main container gaps.

@@ -1,0 +1,12 @@
+{
+  "name": "flores",
+  "version": "0.1.0",
+  "description": "Flores — static single-page image site for a flower boutique",
+  "private": true,
+  "scripts": {
+    "dev": "live-server --port=3000 --no-browser --watch=index.html,assets,docs"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

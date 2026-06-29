@@ -72,6 +72,9 @@
   --space-8: 2rem;
   --space-10: 2.5rem;
   --space-12: 3rem;
+  --space-16: 4rem;
+  /* Uniform vertical rhythm for every page section (120px on desktop, fluid down) */
+  --space-section: clamp(4.5rem, 9vw, 7.5rem);
 
   /* Border radii (px — fixed regardless of font scale).
      4 nesting roles + pill so concentric corners stack: inner < control < card < surface. */
@@ -122,6 +125,8 @@ body {
 html {
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
+  /* keep anchored sections clear of the sticky header */
+  scroll-padding-top: calc(var(--header-height) + var(--space-6));
 }
 
 body.menu-open {
@@ -130,6 +135,9 @@ body.menu-open {
 
 body.menu-open .site-header::before {
   opacity: 0;
+  /* wait for the menu overlay to fade in first, then drop the bar bg behind it —
+     avoids a transparent flash where both layers are mid-fade */
+  transition-delay: 0.3s;
 }
 
 body {
@@ -358,7 +366,8 @@ h3 {
   border-bottom: 1px solid var(--glass-border);
   z-index: -1;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  /* on close: bar bg returns quickly so it's solid before the overlay reveals content */
+  transition: opacity 0.15s ease;
 }
 
 .site-header .container {
@@ -386,12 +395,36 @@ a.brand:hover {
 }
 
 .site-nav a {
+  position: relative;
   color: var(--text-secondary);
   font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding-block: var(--space-1);
+  transition: color 0.25s ease;
+}
+
+/* elegant underline that grows from the centre on hover */
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-gold-strong));
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .site-nav a:hover {
-  color: var(--text-highlight);
+  color: var(--text-primary);
+}
+
+.site-nav a:hover::after {
+  transform: scaleX(1);
 }
 
 .header-right {
@@ -528,7 +561,8 @@ a.brand:hover {
 .hero {
   position: relative;
   overflow: hidden;
-  padding-block: clamp(var(--space-10), 7vw, 5.5rem);
+  padding-top: clamp(var(--space-10), 7vw, 5.5rem);
+  padding-bottom: 0;
 }
 
 .hero::before {
@@ -753,7 +787,7 @@ a.brand:hover {
 
 /* Generic section rhythm */
 .section {
-  padding-block: var(--space-12);
+  padding-block: var(--space-section);
 }
 
 .section__head {
@@ -814,22 +848,172 @@ a.brand:hover {
   color: var(--accent-gold-strong);
 }
 
+/* Delivery CTA — nudges the visitor toward ordering (photo + delivery promises) */
+.delivery-cta {
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  margin-top: var(--space-12);
+}
+
+.delivery-cta__media {
+  position: relative;
+  min-height: 13rem;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--accent-secondary);
+}
+
+.delivery-cta__badge {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-pill);
+  /* sits over the photo — opaque chip, no backdrop-filter (one per glass shell) */
+  background: var(--surface-solid);
+  color: var(--text-primary);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  box-shadow: var(--shadow-glass);
+}
+
+.delivery-cta__badge svg {
+  color: var(--accent-hover);
+}
+
+.delivery-cta__body {
+  padding: clamp(var(--space-6), 4vw, var(--space-10));
+}
+
+.delivery-cta__title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  margin: var(--space-2) 0 var(--space-3);
+  color: var(--text-primary);
+}
+
+.delivery-cta__lead {
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-6);
+  max-width: 42rem;
+}
+
+.delivery-points {
+  list-style: none;
+  margin: 0 0 var(--space-8);
+  padding: 0;
+  display: grid;
+  gap: var(--space-4);
+}
+
+.delivery-point {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.delivery-point__icon {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--glass-bg-light);
+  border: 1px solid var(--glass-border);
+  color: var(--accent-hover);
+}
+
+.delivery-point__title {
+  display: block;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.delivery-point__desc {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.delivery-cta__btn {
+  width: 100%;
+}
+
+/* Side-by-side photo + content from tablet up */
+@media (min-width: 768px) {
+  .delivery-cta {
+    grid-template-columns: 0.85fr 1fr;
+    align-items: stretch;
+  }
+  .delivery-cta__media {
+    min-height: 100%;
+  }
+  .delivery-points {
+    grid-template-columns: 1fr 1fr;
+  }
+  .delivery-cta__btn {
+    width: auto;
+  }
+}
+
 /* Footer */
 .site-footer {
-  margin-top: var(--space-12);
-  border-top: 1px solid var(--glass-border);
-  padding-block: var(--space-8);
+  position: relative;
+  padding-block: var(--space-12);
   text-align: center;
   color: var(--text-muted);
   font-size: var(--text-sm);
+  background: linear-gradient(180deg, transparent 0%, rgba(253, 246, 238, 0.55) 100%);
+}
+
+/* Soft centred hairline instead of a hard full-width border */
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100% - 2 * var(--space-6), 60rem);
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--glass-border) 25%, var(--glass-border) 75%, transparent 100%);
+}
+
+.site-footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.site-footer__brand {
+  font-family: var(--font-script);
+  font-size: var(--text-2xl);
+  line-height: 1;
+  color: var(--accent-gold-strong);
+  margin-bottom: var(--space-2);
 }
 
 .site-footer p {
-  margin: 0 0 var(--space-1);
+  margin: 0;
+  max-width: 42rem;
 }
 
-.site-footer p:last-child {
-  margin-bottom: 0;
+.site-footer__legal {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  opacity: 0.85;
+}
+
+/* extra breathing room before the legal block */
+p:not(.site-footer__legal) + .site-footer__legal {
+  margin-top: var(--space-3);
 }
 
 .site-footer a {
@@ -1076,7 +1260,6 @@ a.brand:hover {
 
 /* Mosaic sections — vintage-wallpaper print (tone-on-tone), a distinct motif per section */
 .section-mosaic {
-  padding-block: 8rem;
   background-repeat: repeat;
   background-position: center;
 }
@@ -1407,12 +1590,6 @@ a.brand:hover {
 
 /* Tablet */
 @media (max-width: 1024px) {
-  .section {
-    padding-block: var(--space-10);
-  }
-  .section-mosaic {
-    padding-block: 5.5rem;
-  }
   .feature-stats {
     gap: var(--space-6) var(--space-10);
   }
@@ -1434,12 +1611,6 @@ a.brand:hover {
   }
 
   /* Section rhythm + headings */
-  .section {
-    padding-block: var(--space-10);
-  }
-  .section-mosaic {
-    padding-block: 3.5rem;
-  }
   .section__head {
     margin-bottom: var(--space-8);
   }
@@ -1447,9 +1618,34 @@ a.brand:hover {
     font-size: 2rem;
   }
 
+  /* Bouquets → swipeable carousel (scroll-snap, no JS) */
+  .card-grid {
+    display: flex;
+    gap: var(--space-4);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    /* bleed past the container padding so cards reach the screen edges */
+    margin-inline: calc(-1 * var(--space-4));
+    padding-inline: var(--space-4);
+    /* room for the card shadow — overflow-x clips overflow-y too */
+    padding-block: var(--space-2) var(--space-8);
+    scroll-padding-inline: var(--space-4);
+    scrollbar-width: none;
+  }
+  .card-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .bouquet-card {
+    scroll-snap-align: center;
+    /* every card exactly 80% wide; flex-shrink:0 + min-width:0 stop content
+       (wide or narrow) from changing a card's width */
+    flex: 0 0 80%;
+    min-width: 0;
+  }
+
   /* Hero fine-tuning (layout already stacks at 880) */
   .hero {
-    padding-block: var(--space-8);
+    padding-top: var(--space-8);
   }
   .hero__eyebrow {
     display: none;
@@ -1662,7 +1858,22 @@ textarea.input-cutout {
   content: "";
   position: absolute;
   inset: -50% -20%;
-  background: radial-gradient(circle at 50% 100%, rgba(150, 100, 70, 0.18) 0%, transparent 60%);
+  background: radial-gradient(circle at 50% 35%, rgba(150, 100, 70, 0.10) 0%, transparent 55%);
   z-index: var(--z-behind);
   pointer-events: none;
+}
+
+.order-bg-fern {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  width: 150%;
+  max-width: 1400px;
+  height: auto;
+  opacity: 0.85;
+  mix-blend-mode: darken;
+  filter: contrast(1.2) brightness(1.1);
+  pointer-events: none;
+  z-index: 0;
 }

@@ -32,8 +32,11 @@
         </button>
         <div class="header-right">
           <nav class="site-nav" aria-label="Основная навигация">
-            <a href="experiments/heroes.html">Hero Photo</a>
-            <a href="experiments/heroes-solid.html">Hero Color</a>
+            <a href="#bouquets">Наши букеты</a>
+            <a href="#order">Заказать</a>
+            <a href="#contact">Контакты</a>
+            <a href="experiments/heroes.html">Блок фото</a>
+            <a href="experiments/heroes-solid.html">Блок цвет</a>
           </nav>
           <div class="nav-separator"></div>
           <div class="social-links">
@@ -150,7 +153,7 @@
             </article>
 
             <article class="bouquet-card reveal">
-              <div class="bouquet-card__media" style="background-image: url('assets/images/peach_silk.jpg');"></div>
+              <div class="bouquet-card__media" style="background-image: url('assets/images/spring_breeze.jpg');"></div>
               <div class="bouquet-card__body">
                 <h3>Весенний бриз</h3>
                 <p>Тюльпаны, гортензия, лёгкая прохлада и свежесть.</p>
@@ -159,7 +162,7 @@
             </article>
 
             <article class="bouquet-card reveal">
-              <div class="bouquet-card__media" style="background-image: url('assets/images/morning_light.jpg');"></div>
+              <div class="bouquet-card__media" style="background-image: url('assets/images/crimson_sunset.jpg');"></div>
               <div class="bouquet-card__body">
                 <h3>Малиновый закат</h3>
                 <p>Красные розы, диантусы, яркий и сочный акцент.</p>
@@ -168,7 +171,7 @@
             </article>
 
             <article class="bouquet-card reveal">
-              <div class="bouquet-card__media" style="background-image: url('assets/images/warm_beige.jpg');"></div>
+              <div class="bouquet-card__media" style="background-image: url('assets/images/snow_queen.jpg');"></div>
               <div class="bouquet-card__body">
                 <h3>Снежная королева</h3>
                 <p>Белоснежные лилии, гипсофила, строгая элегантность.</p>
@@ -177,8 +180,60 @@
             </article>
           </div>
 
-          <div style="text-align: center; margin-top: var(--space-12);" class="reveal">
-            <a class="btn btn--primary" href="#order">Заказать букет</a>
+          <div class="delivery-cta glass-panel reveal">
+            <div class="delivery-cta__media" style="background-image: url('assets/images/delivery_hands_peach.jpg');" aria-hidden="true">
+              <span class="delivery-cta__badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                Доставим сегодня до 21:00
+              </span>
+            </div>
+
+            <div class="delivery-cta__body">
+              <span class="eyebrow">Доставка по городу</span>
+              <h3 class="delivery-cta__title">Привезём букет в день заказа</h3>
+              <p class="delivery-cta__lead">Бережно, в аквабоксе и точно ко времени. Вам остаётся только выбрать — остальное мы берём на себя.</p>
+
+              <ul class="delivery-points">
+                <li class="delivery-point">
+                  <span class="delivery-point__icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M15 17h2.5a1 1 0 0 0 .9-.6L21 11l-3-4h-4"/><circle cx="7.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg>
+                  </span>
+                  <span>
+                    <span class="delivery-point__title">В день заказа</span>
+                    <span class="delivery-point__desc">Курьер по Москве за 2–3 часа</span>
+                  </span>
+                </li>
+                <li class="delivery-point">
+                  <span class="delivery-point__icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v9H4v-9"/><rect x="2" y="7" width="20" height="5" rx="1"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7Z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7Z"/></svg>
+                  </span>
+                  <span>
+                    <span class="delivery-point__title">Бесплатно от 150 Br</span>
+                    <span class="delivery-point__desc">Открытка и упаковка — в подарок</span>
+                  </span>
+                </li>
+                <li class="delivery-point">
+                  <span class="delivery-point__icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L8 6H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-4Z"/><circle cx="12" cy="13" r="3.5"/></svg>
+                  </span>
+                  <span>
+                    <span class="delivery-point__title">Фото перед отправкой</span>
+                    <span class="delivery-point__desc">Покажем букет до доставки</span>
+                  </span>
+                </li>
+                <li class="delivery-point">
+                  <span class="delivery-point__icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z"/><path d="M12 3v2"/></svg>
+                  </span>
+                  <span>
+                    <span class="delivery-point__title">Свежесть в аквабоксе</span>
+                    <span class="delivery-point__desc">Цветы остаются стойкими в пути</span>
+                  </span>
+                </li>
+              </ul>
+
+              <a class="btn btn--primary delivery-cta__btn" href="#order">Заказать букет</a>
+            </div>
           </div>
         </div>
       </section>
@@ -363,15 +418,16 @@
       </section>
 
       <!-- Order Form -->
-      <section class="section" id="order">
-        <div class="container">
-          <div class="section__head reveal">
-            <span class="eyebrow">Заказ</span>
-            <h2 class="gradient-title">Заказать букет</h2>
-            <p class="lead">Оставьте заявку, и менеджер свяжется с вами в ближайшее время</p>
-          </div>
-          
+      <section class="section" id="order" style="position: relative; overflow: hidden;">
+        <img src="assets/images/cherry_branch.jpg" alt="" class="order-bg-fern" aria-hidden="true" />
+        <div class="container" style="position: relative; z-index: 2;">
           <div class="glass-panel order-card reveal">
+            <div class="section__head" style="margin-bottom: var(--space-8);">
+              <span class="eyebrow">Заказ</span>
+              <h2 class="gradient-title">Заказать букет</h2>
+              <p class="lead" style="margin-bottom: 0;">Оставьте заявку, и менеджер свяжется с вами в ближайшее время</p>
+            </div>
+            
             <form class="order-form" onsubmit="event.preventDefault(); alert('Ваш заказ отправлен!');">
               <div class="order-form__row">
                 <div class="input-wrapper">
@@ -522,10 +578,11 @@
     <!-- Footer -->
     <footer class="site-footer">
       <div class="container">
+        <p class="site-footer__brand">Flores</p>
         <p>© 2026 Flores · Цветочная мастерская</p>
-        <p>ИП Калинина А.В. · УНП 192837465</p>
-        <p>Юридический адрес: г. Москва, ул. Цветочная, д. 12, оф. 4</p>
-        <p>Свидетельство о государственной регистрации №192837465 от 15.03.2023</p>
+        <p class="site-footer__legal">ИП Калинина А.В. · УНП 192837465</p>
+        <p class="site-footer__legal">Юридический адрес: г. Москва, ул. Цветочная, д. 12, оф. 4</p>
+        <p class="site-footer__legal">Свидетельство о государственной регистрации №192837465 от 15.03.2023</p>
       </div>
     </footer>
 
@@ -612,6 +669,15 @@
           document.body.classList.toggle('menu-open');
           burgerBtn.classList.toggle('is-active');
           headerRight.classList.toggle('is-active');
+        });
+
+        // Close the mobile menu after tapping an in-page anchor link
+        headerRight.querySelectorAll('a[href^="#"]').forEach((link) => {
+          link.addEventListener('click', () => {
+            document.body.classList.remove('menu-open');
+            burgerBtn.classList.remove('is-active');
+            headerRight.classList.remove('is-active');
+          });
         });
       }
     </script>
