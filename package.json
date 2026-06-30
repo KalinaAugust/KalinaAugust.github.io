@@ -4,9 +4,11 @@
   "description": "Flores — static single-page image site for a flower boutique",
   "private": true,
   "scripts": {
-    "dev": "live-server --port=3000 --no-browser --watch=index.html,assets,docs"
+    "dev": "live-server --port=3000 --no-browser --watch=index.html,assets,docs",
+    "cms": "decap-server"
   },
   "devDependencies": {
+    "decap-server": "^3.9.1",
     "live-server": "^1.2.2"
   }
 }

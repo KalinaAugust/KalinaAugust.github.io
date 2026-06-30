@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "title": "Утренний свет",
+      "image": "assets/images/morning_light.jpg",
+      "price": 1200,
+      "description": "Пионовидные розы, эвкалипт, мягкая пастель. Очень длинное описание очень красивых цветов",
+      "available": true
+    },
+    {
+      "title": "Персиковый шёлк",
+      "image": "assets/images/peach_silk.jpg",
+      "price": 140,
+      "description": "Ранункулюсы, фрезия, лёгкая зелень.",
+      "available": true
+    },
+    {
+      "title": "Тёплый беж",
+      "image": "assets/images/warm_beige.jpg",
+      "price": 95,
+      "description": "Сухоцветы и пампасная трава, монохром.",
+      "available": true
+    },
+    {
+      "title": "Весенний бриз",
+      "image": "assets/images/spring_breeze.jpg",
+      "price": 110,
+      "description": "Тюльпаны, гортензия, лёгкая прохлада и свежесть.",
+      "available": true
+    },
+    {
+      "title": "Малиновый закат",
+      "image": "assets/images/crimson_sunset.jpg",
+      "price": 160,
+      "description": "Красные розы, диантусы, яркий и сочный акцент.",
+      "available": true
+    },
+    {
+      "title": "Снежная королева",
+      "image": "assets/images/snow_queen.jpg",
+      "price": 1350,
+      "description": "Белоснежные лилии, гипсофила, строгая элегантность. Тест!",
+      "available": true
+    }
+  ]
+}

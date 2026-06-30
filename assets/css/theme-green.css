@@ -214,3 +214,22 @@ body.theme-green {
 .theme-green .site-header::before {
   background: rgba(27, 47, 36, 0.82);
 }
+
+/* ===========================================================================
+   Bouquet cards — gold surface with dark green / dark type (instead of the
+   default translucent dark-glass body). The photo media stays on top; the
+   body area shows the gold gradient with legible dark text.
+   =========================================================================== */
+.theme-green .bouquet-card {
+  background: var(--gold-gradient);
+  border-color: rgba(120, 95, 45, 0.4);
+}
+
+.theme-green .bouquet-card__body h3,
+.theme-green .bouquet-card__price {
+  color: #20392a; /* dark green — title & price */
+}
+
+.theme-green .bouquet-card__body p {
+  color: #3a3326; /* dark warm charcoal — description */
+}

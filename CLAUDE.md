@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Workflow
+
+- **Do not self-verify in the browser.** Never start a dev/preview server or use browser automation (screenshots, navigation) to check your own changes unless the user explicitly asks. Make the edit and stop — the user reviews visually.
+
 ## Project
 
 **Flores** — a static single-page image site (сайт-визитка / landing) for a flower boutique. Plain **HTML + CSS** with a sprinkle of vanilla JS (scroll reveal only). **No framework, no build step.**
@@ -70,7 +74,23 @@ Three typefaces via Google Fonts (`<link>` in `index.html` `<head>`): **Manrope*
 
 Minimal. The only script is a small `IntersectionObserver` that toggles `.is-visible` on `.reveal` sections for the scroll-in animation (design-system.md §12). Guard motion with `prefers-reduced-motion`. Don't pull in libraries or a bundler for a one-page static site.
 
+## Backend (orders) & Deployment
+
+The site is static, but checkout posts orders to a tiny PHP endpoint. **Full details: `docs/deploy.md` — read it before touching deploy or order flow.**
+
+- **Backend = one file:** `api/order.php` — accepts `POST /api/order.php` (JSON) from `checkout.html`/`cart.js` and forwards the order to **Telegram** (Bot API). **No database** — MySQL is not used. cURL with a stream fallback (some hosts disable cURL).
+- **Secrets:** Telegram bot token + chat id live in **`api/config.php`** (committed — the repo is **private**). `api/config.sample.php` is the template. `order.php` also reads `getenv()` as a fallback.
+- **Hosting model:** classic **PHP + FTP** (target: **hoster.by**). Deploy is automated via GitHub Actions (`.github/workflows/deploy.yml`) on push to `master`/`main` — it FTP-syncs the working tree to the host (FTP creds from GitHub Secrets, `server-dir: ./public_html/`).
+  - **Host requirement:** the host must allow **outbound connections** to `api.telegram.org` — many free PHP hosts block this, so `order.php` can't deliver orders there. Test the order flow locally with `php -S localhost:8000` before relying on a host.
+- **CMS auth is unrelated to hosting:** the `*.workers.dev` URL in `admin/config.yml` is only the Sveltia CMS OAuth proxy on Cloudflare — it does **not** handle orders.
+- **Security note:** because secrets sit in a private repo's git history, treat the stand's token/FTP as throwaway; use a separate test bot and rotate everything when moving to prod.
+
 ## Conventions
 
 - Default UI language for copy: decide per content; keep the page a single `index.html`.
 - Vendored fonts via CDN `<link>`; keep external dependencies to a minimum (ideally just Google Fonts).
+
+### Currency Symbol
+* Use the plain-text `Br` symbol for the Belarusian ruble, written inline right after the amount (e.g. `95 Br`).
+* For plain-text contexts (e.g. form submissions, emails), `BYN` is also acceptable.
+* Do not use the `<span class="byn-icon">` / `.ruble-by` glyph approach — it has been retired.

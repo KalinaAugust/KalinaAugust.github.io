@@ -1,0 +1,36 @@
+name: Deploy to FTP
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Telegram-конфиг (api/config.php) теперь коммитится в репозиторий —
+      # репо приватное, отдельный шаг генерации не нужен.
+
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ./public_html/ # Корень на хостинге (hoster.by обычно public_html/, иногда www/)
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            package*.json
+            CLAUDE.md
+            README.md
+            .agents/**
+            .superpowers/**
+            .idea/**

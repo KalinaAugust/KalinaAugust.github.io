@@ -21,8 +21,6 @@ All colors are defined as CSS variables in [assets/css/main.css](../assets/css/m
 | :--- | :--- | :--- |
 | `--bg-gradient` | `linear-gradient(135deg, #f7efe6 0%, #f5e4d6 50%, #f9ebe0 100%)` | Global body gradient (warm beige with a peach drift) |
 | `--surface-solid` | `#fdf6ee` | Solid opaque cream surface for modals and overlay cards |
-| `--feature-gradient` | `radial-gradient(130% 90% at 50% 0%, #fbe9da 0%, #f6dcc8 45%, #efcdb5 100%)` | Warm peach backdrop for premium/featured surfaces |
-| `--section-warm-gradient` | `radial-gradient(120% 110% at 50% 0%, #f9ece0 0%, #f4e1d0 60%, #efd8c4 100%)` | Soft beige-peach band for mid-page sections (via `.section--warm`, soft top/bottom fades) — adds gentle depth so the page isn't one flat tone |
 
 ### 2.2 Accents & Glows
 | CSS Variable | Value | Description |
@@ -63,6 +61,9 @@ Cards, panels, and other container surfaces use a **Glassmorphism** approach to 
 | `--glass-blur-photo` | `blur(8px) saturate(160%)` | Lighter blur for glass over photos/complex backgrounds (§3.5) |
 | `--glass-cutout` | `rgba(196, 156, 120, 0.16)` | Pressed-in "well" fill for nested structural containers |
 | `--glass-cutout-strong` | `rgba(180, 138, 100, 0.26)` | Deeper cutout fill for stronger inset emphasis |
+| `--field-well-bg` | `rgba(255, 251, 246, 0.55)` | Light cream fill for inset form-field wells (§10.1) — keeps inputs bright, not muddy |
+| `--field-well-bg-hover` | `rgba(255, 253, 250, 0.78)` | Brighter field-well fill on hover/focus (§10.1) |
+| `--shadow-inset-field` | `inset 0 1px 2px rgba(150,110,80,0.12)` | Gentle edge-only inset for form-field wells (§10.1) — subtle, not a deep well |
 | `--shadow-glass` | `0 20px 40px -15px rgba(150,110,80,0.3), inset 0 1px 0 rgba(255,255,255,0.7), inset 0 -1px 0 rgba(150,110,80,0.08)` | Multi-layered shadow (warm outer shadow, top glare, soft bottom edge) |
 | `--shadow-inset-cutout` | `inset 0 2px 4px rgba(150,110,80,0.2)` | Soft warm inset shadow that pushes an element inward (the "well") |
 
@@ -188,7 +189,7 @@ Corner rounding follows **4 structural roles + pill** (tokens in `main.css`). Th
 
 Adhere to an **8-point grid** (tokens `--space-1`…`--space-16`, i.e. `4px`, `8px`, `12px`, `16px`, `20px`, `24px`, `32px`, `40px`, `48px`, `64px`) for rhythm and consistency:
 
-*   **Section rhythm (`--space-section` = `clamp(4.5rem, 9vw, 7.5rem)`):** the single vertical padding for **every** page `.section` — 120px on desktop, fluid down to ~72px on mobile. Don't give sections their own `padding-block`.
+*   **Section rhythm (`--space-section` = `clamp(3rem, 6vw, 5rem)`):** the single vertical padding for **every** page `.section` — 80px on desktop (yielding 160px between blocks), fluid down to ~48px on mobile. Don't give sections their own `padding-block`.
 *   **`64px` (`--space-16`):** extra breathing room before the footer / major section partitions.
 *   **`40px` / `32px` (`--space-10` / `--space-8`):** global page wrapper padding, main outer margins.
 *   **`24px` / `20px` (`--space-6` / `--space-5`):** modal padding, large form paddings.
@@ -235,10 +236,10 @@ Form-control surfaces share one geometry (border-radius `var(--radius-md)`, text
 *   **Hover:** background `var(--glass-bg)`, border-color `rgba(207,154,115,0.45)`.
 *   **Focus:** border-color `var(--accent-primary)`, glow `box-shadow: 0 0 10px var(--accent-glow)`.
 
-**`inset` — pressed-glass well** (use **only when the control rests on a glass surface**, where the recessed look reads correctly):
-*   **Default:** background `var(--glass-cutout)`, `box-shadow: var(--shadow-inset-cutout)`, transparent border.
-*   **Hover:** background `var(--glass-cutout-strong)`.
-*   **Focus:** `box-shadow: var(--shadow-inset-cutout), 0 0 0 1px var(--accent-primary), 0 0 10px var(--accent-glow)`.
+**`inset` — pressed-glass well** (use **only when the control rests on a glass surface**, where the recessed look reads correctly). The well stays **light**: a bright cream fill with a gentle edge-only inset, so the field reads airy rather than a muddy brown box.
+*   **Default:** background `var(--field-well-bg)`, `box-shadow: var(--shadow-inset-field)`, transparent border.
+*   **Hover:** background `var(--field-well-bg-hover)`.
+*   **Focus:** background `var(--field-well-bg-hover)`, `box-shadow: var(--shadow-inset-field), 0 0 0 1px var(--accent-primary), 0 0 10px var(--accent-glow)`.
 
 **Both variants:** error → border-color `var(--color-danger)` + red focus glow. Popover/overlay panels are the opaque L4 surface: `--surface-solid` + `--glass-border` + `--shadow-glass` + blur, at `--z-popover`.
 
@@ -292,3 +293,15 @@ Rules:
 6.  **Respect Unit Separation (`rem` vs `px`):** §8 — `rem` for text/layout spacing, `px` for borders and rounded corners.
 7.  **`backdrop-filter`:** always write both `-webkit-backdrop-filter` and `backdrop-filter` (Safari ≤17 still needs the prefix).
 8.  **Synchronization:** if you change any global variable in `main.css` (or a spacing constant), update this document in the same change to keep the design system in sync.
+
+## 14. Cart & Checkout Components
+
+Shopping cart and checkout styling (all tokens, no hardcoded values).
+
+- **`.cart-link` / `.cart-badge`** — header cart icon wrapper (`position: relative`) and the item-count badge (`--color-danger`, `--radius-pill`, `--text-xs`). Hidden via the `hidden` attribute; `.cart-badge[hidden]` enforces `display: none` over the flex display.
+- **`.bouquet-card__add`** — full-width «В корзину» button under a card body; pairs with `.btn.btn--primary`.
+- **`.checkout-layout`** — two-column grid (cart items + delivery form), collapses to one column ≤880px.
+- **`.cart-item*`** — a cart line: glass row (`--glass-bg`/`--glass-border`/`--radius-lg`) with title, price, and `−`/qty/`+` controls (`.cart-item__btn` on `--glass-bg-light`).
+- **`.checkout-total`** — total row, `--font-display`, `--text-xl`.
+- **`.empty-cart`** — centered panel reused for empty-cart and success states (toggled via `hidden`).
+- **`.checkout-error`** (`--color-danger`) / **`.checkout-success-title`** (`--color-success`) — feedback states.

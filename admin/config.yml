@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: KalinaAugust/flores
+  branch: master
+  base_url: https://sveltia-cms-auth.kalininaugust.workers.dev
+
+media_folder: assets/images
+public_folder: assets/images
+
+collections:
+  - name: catalog
+    label: Каталог
+    files:
+      - name: bouquets
+        label: Букеты
+        file: content/bouquets.json
+        fields:
+          - name: items
+            label: Букеты
+            label_singular: Букет
+            widget: list
+            summary: '{{fields.title}} — {{fields.price}} Br'
+            fields:
+              - { name: title, label: Название, widget: string }
+              - { name: image, label: Фото, widget: image }
+              - { name: price, label: 'Цена (Br)', widget: number, value_type: int, min: 0 }
+              - { name: description, label: Описание, widget: text }
+              - { name: available, label: Показывать на сайте, widget: boolean, default: true }

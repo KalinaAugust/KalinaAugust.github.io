@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оформление заказа — Flores</title>
+    <link rel="icon" href="assets/images/favicon.jpg" type="image/jpeg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600;700&family=Marck+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Design tokens & components -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="checkout-page">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="index.html">Flores</a>
+        <div class="header-right">
+          <a class="social-link" href="index.html" aria-label="На главную">Вернуться в каталог</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section checkout-section">
+        <div class="container">
+          <div class="section__head checkout-head">
+            <h1 class="gradient-title">Оформление заказа</h1>
+          </div>
+
+          <div id="checkout-container" class="checkout-layout">
+            <!-- Cart items -->
+            <div class="checkout-cart-col">
+              <div class="glass-panel panel--pad checkout-summary">
+                <h2 class="eyebrow checkout-subhead">Ваш заказ</h2>
+                <div id="cart-items-container" class="cart-items"></div>
+                <div class="checkout-total">
+                  <span class="checkout-total__label">Итого</span>
+                  <span class="checkout-total__amount" id="cart-total">0 Br</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Delivery form -->
+            <div>
+              <div class="glass-panel panel--pad">
+                <h2 class="eyebrow checkout-subhead">Данные доставки</h2>
+                <form id="checkout-form" class="order-form" novalidate>
+                  <div class="input-wrapper">
+                    <label class="input-label" for="co-name">Ваше имя</label>
+                    <input id="co-name" name="name" type="text" class="input-cutout" placeholder="Как к вам обращаться?" />
+                  </div>
+                  <div class="input-wrapper">
+                    <label class="input-label" for="co-phone">Телефон <span class="input-req" aria-hidden="true">*</span></label>
+                    <input id="co-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" class="input-cutout" placeholder="+375 (29) 000-00-00" aria-required="true" aria-describedby="co-phone-error" />
+                    <p id="co-phone-error" class="field-error" role="alert" hidden></p>
+                  </div>
+                  <div class="input-wrapper">
+                    <label class="input-label" for="co-address">Адрес доставки</label>
+                    <input id="co-address" name="address" type="text" class="input-cutout" placeholder="Улица, дом, квартира" />
+                  </div>
+                  <div class="input-wrapper">
+                    <span class="input-label">Способ оплаты</span>
+                    <div class="pay-options" role="radiogroup" aria-label="Способ оплаты">
+                      <label class="pay-option">
+                        <input type="radio" name="payment" value="Наличными курьеру" checked />
+                        <span class="pay-option__dot" aria-hidden="true"></span>
+                        <span class="pay-option__text">
+                          <span class="pay-option__title">Наличными курьеру</span>
+                          <span class="pay-option__desc">Оплата при получении</span>
+                        </span>
+                      </label>
+                      <label class="pay-option">
+                        <input type="radio" name="payment" value="ЕРИП код" id="pay-erip" />
+                        <span class="pay-option__dot" aria-hidden="true"></span>
+                        <span class="pay-option__text">
+                          <span class="pay-option__title">ЕРИП код</span>
+                          <span class="pay-option__desc">Онлайн по коду оплаты</span>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="erip-info">
+                      <p class="erip-info__lead">Оплатите через систему «Расчёт» (ЕРИП):</p>
+                      <ol class="erip-steps">
+                        <li>Войдите в ЕРИП в интернет- или мобильном банке.</li>
+                        <li>Выберите: Интернет-магазины и сервисы → Flores → Оплата заказа.</li>
+                        <li>Введите код услуги, проверьте сумму и подтвердите оплату.</li>
+                      </ol>
+                      <div class="erip-code">
+                        <span class="erip-code__main">
+                          <span class="erip-code__label">Код услуги в ЕРИП</span>
+                          <span class="erip-code__value" id="erip-code-value">9990123</span>
+                        </span>
+                        <button type="button" class="erip-code__copy" data-copy="9990123">Копировать</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-wrapper">
+                    <label class="input-label" for="co-comment">Комментарий к заказу</label>
+                    <textarea id="co-comment" name="comment" class="input-cutout" rows="3" placeholder="Пожелания, удобное время доставки, текст для открытки…"></textarea>
+                  </div>
+                  <p id="checkout-error" class="checkout-error" hidden>Не удалось отправить заказ. Попробуйте ещё раз или позвоните нам.</p>
+                  <button type="submit" class="btn btn--primary checkout-submit">Подтвердить заказ</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div id="empty-state" class="empty-cart glass-panel" hidden>
+            <div class="empty-cart__icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+                <!-- Decorative sprig peeking out -->
+                <path d="M14 14C12.5 13 11 14 11 14s-1-1.5 0-3c1.5-1.5 3 0 3 0s1.5-1.5 0-3c-1.5-1.5-3 0-3 0s-1 1.5 0 3c-1 1.5 0 3 0 3M11 14v4"></path>
+              </svg>
+            </div>
+            <h2 class="gradient-title">Ваша корзина пуста</h2>
+            <p class="lead">Самое время наполнить её красотой. Перейдите в каталог, чтобы выбрать свой идеальный букет.</p>
+            <a href="index.html#bouquets" class="btn btn--primary empty-cart__btn">Вернуться в каталог</a>
+          </div>
+
+          <div id="success-state" class="empty-cart glass-panel" hidden>
+            <h2 class="gradient-title checkout-success-title">Заказ успешно оформлен!</h2>
+            <p class="lead">Наш менеджер скоро свяжется с вами для подтверждения доставки.</p>
+            <a href="index.html" class="btn btn--primary">На главную</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <p class="site-footer__brand">Flores</p>
+        <p>© 2026 Flores · Цветочная мастерская</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/cart.js"></script>
+    <script>
+      (function () {
+        // Заказы уходят в Telegram через PHP-эндпоинт (api/order.php).
+        // Настройка бота/получателя — см. docs/cms-setup.md.
+        var ORDER_ENDPOINT = '/api/order.php';
+
+        var itemsEl = document.getElementById('cart-items-container');
+        var totalEl = document.getElementById('cart-total');
+        var containerEl = document.getElementById('checkout-container');
+        var emptyEl = document.getElementById('empty-state');
+        var successEl = document.getElementById('success-state');
+        var errorEl = document.getElementById('checkout-error');
+        var form = document.getElementById('checkout-form');
+
+        function esc(s) {
+          return String(s == null ? '' : s)
+            .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+
+        function cartTotal(cart) {
+          return cart.reduce(function (sum, i) { return sum + i.price * i.quantity; }, 0);
+        }
+
+        function render() {
+          var cart = FloresCart.read();
+          if (cart.length === 0) {
+            containerEl.setAttribute('hidden', '');
+            successEl.setAttribute('hidden', '');
+            emptyEl.removeAttribute('hidden');
+            return;
+          }
+          emptyEl.setAttribute('hidden', '');
+          containerEl.removeAttribute('hidden');
+          itemsEl.innerHTML = cart.map(function (item, index) {
+            var imgStyle = item.image ? 'background-image: url(\'' + item.image + '\');' : '';
+            var imgHtml = item.image ? '<div class="cart-item__image" style="' + imgStyle + '"></div>' : '';
+            return '<div class="cart-item">'
+              + '<div class="cart-item__info">'
+              + imgHtml
+              + '<div class="cart-item__details">'
+              + '<span class="cart-item__title">' + esc(item.name) + '</span>'
+              + '<span class="cart-item__price">' + item.price + ' Br</span>'
+              + '</div>'
+              + '</div>'
+              + '<div class="cart-item__controls">'
+              + '<button type="button" class="cart-item__btn" data-index="' + index + '" data-delta="-1" aria-label="Уменьшить">−</button>'
+              + '<span class="cart-item__qty">' + item.quantity + '</span>'
+              + '<button type="button" class="cart-item__btn" data-index="' + index + '" data-delta="1" aria-label="Увеличить">+</button>'
+              + '</div>'
+              + '</div>';
+          }).join('');
+          totalEl.innerHTML = cartTotal(cart) + ' Br';
+        }
+
+        function changeQuantity(index, delta) {
+          var cart = FloresCart.read();
+          if (!cart[index]) return;
+          cart[index].quantity += delta;
+          if (cart[index].quantity <= 0) cart.splice(index, 1);
+          FloresCart.write(cart);
+          FloresCart.updateBadge();
+          render();
+        }
+
+        itemsEl.addEventListener('click', function (e) {
+          var btn = e.target.closest('.cart-item__btn');
+          if (!btn) return;
+          changeQuantity(Number(btn.dataset.index), Number(btn.dataset.delta));
+        });
+
+        var eripCopyBtn = document.querySelector('.erip-code__copy');
+        if (eripCopyBtn) {
+          eripCopyBtn.addEventListener('click', function () {
+            var code = eripCopyBtn.getAttribute('data-copy');
+            var done = function () {
+              var original = 'Копировать';
+              eripCopyBtn.textContent = 'Скопировано';
+              eripCopyBtn.classList.add('is-copied');
+              setTimeout(function () {
+                eripCopyBtn.textContent = original;
+                eripCopyBtn.classList.remove('is-copied');
+              }, 1600);
+            };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(code).then(done).catch(function () {});
+            }
+          });
+        }
+
+        function orderSummary(cart) {
+          var lines = cart.map(function (i) {
+            return i.name + ' × ' + i.quantity + ' = ' + (i.price * i.quantity) + ' BYN';
+          });
+          lines.push('Итого: ' + cartTotal(cart) + ' BYN');
+          return lines.join('\n');
+        }
+
+        var phoneEl = document.getElementById('co-phone');
+        var phoneErrEl = document.getElementById('co-phone-error');
+
+        // Шаблоны группировки национальной части по коду страны.
+        // groups — длины групп цифр, seps — разделители перед каждой группой.
+        // Пример BY: +375 (29) 304-62-27 ; RU: +7 (912) 345-67-89
+        var PHONE_TEMPLATES = {
+          '375': { groups: [2, 3, 2, 2], seps: [' (', ') ', '-', '-'] },
+          '380': { groups: [2, 3, 2, 2], seps: [' (', ') ', '-', '-'] },
+          '7':   { groups: [3, 3, 2, 2], seps: [' (', ') ', '-', '-'] }
+        };
+        var KNOWN_CODES = ['375', '380', '7']; // от длинного к короткому
+
+        // Разбираем сырой ввод на код страны + национальную часть.
+        // Поддержка международных (+375…, +7…) и местных префиксов
+        // (8 0XX… → BY, 8 XXX… → RU, 0XX… → BY).
+        function splitPhone(raw) {
+          var s = String(raw == null ? '' : raw);
+          var hasPlus = /^\s*\+/.test(s);
+          var d = s.replace(/\D/g, '').slice(0, 15);
+          if (!d) return { hasPlus: hasPlus, code: null, national: '' };
+          if (!hasPlus) {
+            if (d.indexOf('80') === 0) return { hasPlus: hasPlus, code: '375', national: d.slice(2) };
+            if (d.charAt(0) === '8')   return { hasPlus: hasPlus, code: '7',   national: d.slice(1) };
+            if (d.charAt(0) === '0')   return { hasPlus: hasPlus, code: '375', national: d.slice(1) };
+          }
+          for (var i = 0; i < KNOWN_CODES.length; i++) {
+            if (d.indexOf(KNOWN_CODES[i]) === 0) {
+              return { hasPlus: hasPlus, code: KNOWN_CODES[i], national: d.slice(KNOWN_CODES[i].length) };
+            }
+          }
+          return { hasPlus: hasPlus, code: null, national: d };
+        }
+
+        // Форматируем по мере ввода: добавляем «+», пробелы и скобки.
+        function formatPhone(raw) {
+          var p = splitPhone(raw);
+          if (!p.code && !p.national) return p.hasPlus ? '+' : '';
+          if (!p.code) {
+            // неизвестный код — просто группируем по 3 цифры
+            var g = p.national.match(/.{1,3}/g);
+            return '+' + (g ? g.join(' ') : '');
+          }
+          var tpl = PHONE_TEMPLATES[p.code];
+          var out = '+' + p.code;
+          var rest = p.national;
+          if (!tpl) {
+            var gg = rest.match(/.{1,3}/g);
+            return out + (rest ? ' ' + gg.join(' ') : '');
+          }
+          var idx = 0;
+          for (var j = 0; j < tpl.groups.length && idx < rest.length; j++) {
+            out += tpl.seps[j] + rest.substr(idx, tpl.groups[j]);
+            idx += tpl.groups[j];
+          }
+          if (idx < rest.length) out += rest.substr(idx); // лишние цифры
+          return out;
+        }
+
+        // Валидность: BY — 9 цифр (код 1–4), RU/KZ — 10, UA — 9,
+        // прочие страны — суммарно 8–15 цифр (E.164).
+        function isValidPhone(raw) {
+          var p = splitPhone(raw);
+          var n = p.national;
+          if (p.code === '375') return /^[1-4]\d{8}$/.test(n);
+          if (p.code === '7')   return /^\d{10}$/.test(n);
+          if (p.code === '380') return /^\d{9}$/.test(n);
+          var total = (p.code ? p.code.length : 0) + n.length;
+          return n.length >= 4 && total >= 8 && total <= 15;
+        }
+
+        function setPhoneError(msg) {
+          if (msg) {
+            phoneErrEl.textContent = msg;
+            phoneErrEl.removeAttribute('hidden');
+            phoneEl.classList.add('is-invalid');
+            phoneEl.setAttribute('aria-invalid', 'true');
+          } else {
+            phoneErrEl.setAttribute('hidden', '');
+            phoneEl.classList.remove('is-invalid');
+            phoneEl.removeAttribute('aria-invalid');
+          }
+        }
+
+        phoneEl.addEventListener('input', function () {
+          var formatted = formatPhone(phoneEl.value);
+          if (formatted !== phoneEl.value) phoneEl.value = formatted;
+          var len = phoneEl.value.length;
+          try { phoneEl.setSelectionRange(len, len); } catch (err) {}
+          if (phoneEl.classList.contains('is-invalid')) setPhoneError('');
+        });
+
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          errorEl.setAttribute('hidden', '');
+
+          var phoneVal = phoneEl.value.trim();
+          if (!phoneVal) {
+            setPhoneError('Укажите номер телефона');
+            phoneEl.focus();
+            return;
+          }
+          if (!isValidPhone(phoneVal)) {
+            setPhoneError('Введите корректный номер, например +375 (29) 304-62-27 или +7 (912) 345-67-89');
+            phoneEl.focus();
+            return;
+          }
+          setPhoneError('');
+
+          var cart = FloresCart.read();
+          if (cart.length === 0) { render(); return; }
+          var fd = new FormData(form);
+          var payload = {
+            name: fd.get('name'),
+            phone: fd.get('phone'),
+            address: fd.get('address'),
+            payment: fd.get('payment'),
+            comment: fd.get('comment'),
+            order: orderSummary(cart)
+          };
+          fetch(ORDER_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(payload)
+          })
+            .then(function (res) {
+              if (!res.ok) throw new Error('HTTP ' + res.status);
+              FloresCart.write([]);
+              FloresCart.updateBadge();
+              containerEl.setAttribute('hidden', '');
+              successEl.removeAttribute('hidden');
+            })
+            .catch(function () {
+              errorEl.removeAttribute('hidden');
+            });
+        });
+
+        render();
+      })();
+    </script>
+  </body>
+</html>
