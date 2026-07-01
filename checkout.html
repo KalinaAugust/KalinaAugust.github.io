@@ -36,7 +36,7 @@
              <a href="#" class="social-link" aria-label="Telegram">
                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"></path><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
              </a>
-             <a href="tel:+375290000000" class="social-link" aria-label="Телефон">
+             <a href="tel:+375445115517" class="social-link" aria-label="Телефон">
                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
              </a>
           </div>
@@ -82,13 +82,25 @@
                     <input id="co-name" name="name" type="text" class="input-cutout" placeholder="Как к вам обращаться?" />
                   </div>
                   <div class="input-wrapper">
-                    <label class="input-label" for="co-phone">Телефон <span class="input-req" aria-hidden="true">*</span></label>
+                    <label class="input-label" for="co-phone">Телефон получателя <span class="input-req" aria-hidden="true">*</span></label>
                     <input id="co-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" class="input-cutout" placeholder="+375 (29) 000-00-00" aria-required="true" aria-describedby="co-phone-error" />
                     <p id="co-phone-error" class="field-error" role="alert" hidden></p>
                   </div>
                   <div class="input-wrapper">
                     <label class="input-label" for="co-address">Адрес доставки</label>
                     <input id="co-address" name="address" type="text" class="input-cutout" placeholder="Улица, дом, квартира" />
+                  </div>
+                  <div class="input-wrapper">
+                    <label class="switch-field" for="co-card-toggle">
+                      <input type="checkbox" id="co-card-toggle" name="cardToggle" />
+                      <span class="switch-field__track" aria-hidden="true"><span class="switch-field__thumb"></span></span>
+                      <span class="switch-field__label">Положить открытку</span>
+                    </label>
+                    <div class="switch-field__content">
+                      <label class="input-label" for="co-card-text">Текст на открытке <span class="input-req" aria-hidden="true">*</span></label>
+                      <textarea id="co-card-text" name="cardText" class="input-cutout" rows="2" placeholder="Что написать на открытке?"></textarea>
+                      <p id="co-card-text-error" class="field-error" role="alert" hidden></p>
+                    </div>
                   </div>
                   <div class="input-wrapper">
                     <span class="input-label">Способ оплаты</span>
@@ -109,26 +121,59 @@
                           <span class="pay-option__desc">Онлайн по коду оплаты</span>
                         </span>
                       </label>
+                      <label class="pay-option">
+                        <input type="radio" name="payment" value="ЕРИП QR-код" id="pay-erip-qr" />
+                        <span class="pay-option__dot" aria-hidden="true"></span>
+                        <span class="pay-option__text">
+                          <span class="pay-option__title">Показать QR-код ЕРИП</span>
+                          <span class="pay-option__desc">Отсканируйте в приложении банка</span>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="erip-qr">
+                      <p class="erip-info__lead">Отсканируйте QR-код в приложении вашего банка для оплаты через ЕРИП:</p>
+                      <img class="erip-qr__image" src="assets/images/erip-qr.png" alt="QR-код для оплаты через ЕРИП" width="240" height="240" />
                     </div>
                     <div class="erip-info">
                       <p class="erip-info__lead">Оплатите через систему «Расчёт» (ЕРИП):</p>
                       <ol class="erip-steps">
                         <li>Войдите в ЕРИП в интернет- или мобильном банке.</li>
-                        <li>Выберите: Интернет-магазины и сервисы → Flores → Оплата заказа.</li>
-                        <li>Введите код услуги, проверьте сумму и подтвердите оплату.</li>
+                        <li>Выберите: Сервис E-POS → E-POS — оплата товаров и услуг.</li>
+                        <li>Введите код услуги, укажите номер счёта, проверьте сумму и подтвердите оплату.</li>
                       </ol>
                       <div class="erip-code">
                         <span class="erip-code__main">
                           <span class="erip-code__label">Код услуги в ЕРИП</span>
-                          <span class="erip-code__value" id="erip-code-value">9990123</span>
+                          <span class="erip-code__value" id="erip-code-value">4440631</span>
                         </span>
-                        <button type="button" class="erip-code__copy" data-copy="9990123">Копировать</button>
+                        <button type="button" class="erip-code__copy" data-copy="4440631">Копировать</button>
+                      </div>
+                      <div class="erip-code">
+                        <span class="erip-code__main">
+                          <span class="erip-code__label">Номер счёта</span>
+                          <span class="erip-code__value" id="erip-account-value">37146-1-11</span>
+                        </span>
+                        <button type="button" class="erip-code__copy" data-copy="37146-1-11">Копировать</button>
                       </div>
                     </div>
                   </div>
                   <div class="input-wrapper">
                     <label class="input-label" for="co-comment">Комментарий к заказу</label>
                     <textarea id="co-comment" name="comment" class="input-cutout" rows="3" placeholder="Пожелания, удобное время доставки, текст для открытки…"></textarea>
+                  </div>
+                  <div class="input-wrapper input-wrapper--consent">
+                    <label class="checkbox-field" for="co-offers-toggle">
+                      <input type="checkbox" id="co-offers-toggle" name="offersConsent" checked />
+                      <span class="checkbox-field__box" aria-hidden="true"></span>
+                      <span class="checkbox-field__label">Согласен на получение спецпредложений</span>
+                    </label>
+                  </div>
+                  <div class="input-wrapper input-wrapper--consent">
+                    <label class="checkbox-field" for="co-pd-toggle">
+                      <input type="checkbox" id="co-pd-toggle" name="pdConsent" checked required />
+                      <span class="checkbox-field__box" aria-hidden="true"></span>
+                      <span class="checkbox-field__label">Согласен на обработку персональных данных</span>
+                    </label>
                   </div>
                   <p id="checkout-error" class="checkout-error" hidden>Не удалось отправить заказ. Попробуйте ещё раз или позвоните нам.</p>
                   <button type="submit" class="btn btn--primary checkout-submit">Подтвердить заказ</button>
@@ -165,10 +210,13 @@
     <footer class="site-footer">
       <div class="container">
         <p class="site-footer__brand">Flores</p>
-        <p>© 2026 Flores · Цветочная мастерская</p>
+        <p>© 2026 Flores · Дом цветов</p>
+        <p class="site-footer__legal">ООО «ВЕСНАДИ» · УНП 491720746</p>
+        <p class="site-footer__legal">Адрес: Беларусь, Гомельская обл., г. Речица, ул. Школьная, д. 44, оф. 13, кв. 247500</p>
       </div>
     </footer>
 
+    <script src="assets/js/phone-utils.js"></script>
     <script src="assets/js/cart.js"></script>
     <script>
       (function () {
@@ -241,8 +289,7 @@
           changeQuantity(Number(btn.dataset.index), Number(btn.dataset.delta));
         });
 
-        var eripCopyBtn = document.querySelector('.erip-code__copy');
-        if (eripCopyBtn) {
+        document.querySelectorAll('.erip-code__copy').forEach(function (eripCopyBtn) {
           eripCopyBtn.addEventListener('click', function () {
             var code = eripCopyBtn.getAttribute('data-copy');
             var done = function () {
@@ -258,7 +305,7 @@
               navigator.clipboard.writeText(code).then(done).catch(function () {});
             }
           });
-        }
+        });
 
         function orderSummary(cart) {
           var lines = cart.map(function (i) {
@@ -271,73 +318,49 @@
         var phoneEl = document.getElementById('co-phone');
         var phoneErrEl = document.getElementById('co-phone-error');
 
-        // Шаблоны группировки национальной части по коду страны.
-        // groups — длины групп цифр, seps — разделители перед каждой группой.
-        // Пример BY: +375 (29) 304-62-27 ; RU: +7 (912) 345-67-89
-        var PHONE_TEMPLATES = {
-          '375': { groups: [2, 3, 2, 2], seps: [' (', ') ', '-', '-'] },
-          '380': { groups: [2, 3, 2, 2], seps: [' (', ') ', '-', '-'] },
-          '7':   { groups: [3, 3, 2, 2], seps: [' (', ') ', '-', '-'] }
-        };
-        var KNOWN_CODES = ['375', '380', '7']; // от длинного к короткому
+        var cardToggleEl = document.getElementById('co-card-toggle');
+        var cardTextEl = document.getElementById('co-card-text');
+        var cardTextErrEl = document.getElementById('co-card-text-error');
 
-        // Разбираем сырой ввод на код страны + национальную часть.
-        // Поддержка международных (+375…, +7…) и местных префиксов
-        // (8 0XX… → BY, 8 XXX… → RU, 0XX… → BY).
-        function splitPhone(raw) {
-          var s = String(raw == null ? '' : raw);
-          var hasPlus = /^\s*\+/.test(s);
-          var d = s.replace(/\D/g, '').slice(0, 15);
-          if (!d) return { hasPlus: hasPlus, code: null, national: '' };
-          if (!hasPlus) {
-            if (d.indexOf('80') === 0) return { hasPlus: hasPlus, code: '375', national: d.slice(2) };
-            if (d.charAt(0) === '8')   return { hasPlus: hasPlus, code: '7',   national: d.slice(1) };
-            if (d.charAt(0) === '0')   return { hasPlus: hasPlus, code: '375', national: d.slice(1) };
+        function setCardTextError(msg) {
+          if (msg) {
+            cardTextErrEl.textContent = msg;
+            cardTextErrEl.removeAttribute('hidden');
+            cardTextEl.classList.add('is-invalid');
+            cardTextEl.setAttribute('aria-invalid', 'true');
+          } else {
+            cardTextErrEl.setAttribute('hidden', '');
+            cardTextEl.classList.remove('is-invalid');
+            cardTextEl.removeAttribute('aria-invalid');
           }
-          for (var i = 0; i < KNOWN_CODES.length; i++) {
-            if (d.indexOf(KNOWN_CODES[i]) === 0) {
-              return { hasPlus: hasPlus, code: KNOWN_CODES[i], national: d.slice(KNOWN_CODES[i].length) };
-            }
-          }
-          return { hasPlus: hasPlus, code: null, national: d };
         }
 
-        // Форматируем по мере ввода: добавляем «+», пробелы и скобки.
-        function formatPhone(raw) {
-          var p = splitPhone(raw);
-          if (!p.code && !p.national) return p.hasPlus ? '+' : '';
-          if (!p.code) {
-            // неизвестный код — просто группируем по 3 цифры
-            var g = p.national.match(/.{1,3}/g);
-            return '+' + (g ? g.join(' ') : '');
+        cardToggleEl.addEventListener('change', function () {
+          if (cardToggleEl.checked) {
+            cardTextEl.setAttribute('required', '');
+          } else {
+            cardTextEl.removeAttribute('required');
+            setCardTextError('');
           }
-          var tpl = PHONE_TEMPLATES[p.code];
-          var out = '+' + p.code;
-          var rest = p.national;
-          if (!tpl) {
-            var gg = rest.match(/.{1,3}/g);
-            return out + (rest ? ' ' + gg.join(' ') : '');
-          }
-          var idx = 0;
-          for (var j = 0; j < tpl.groups.length && idx < rest.length; j++) {
-            out += tpl.seps[j] + rest.substr(idx, tpl.groups[j]);
-            idx += tpl.groups[j];
-          }
-          if (idx < rest.length) out += rest.substr(idx); // лишние цифры
-          return out;
+        });
+
+        cardTextEl.addEventListener('input', function () {
+          if (cardTextEl.classList.contains('is-invalid') && cardTextEl.value.trim()) setCardTextError('');
+        });
+
+        var pdToggleEl = document.getElementById('co-pd-toggle');
+        var submitBtn = form.querySelector('.checkout-submit');
+
+        function updateSubmitState() {
+          submitBtn.disabled = !pdToggleEl.checked;
         }
 
-        // Валидность: BY — 9 цифр (код 1–4), RU/KZ — 10, UA — 9,
-        // прочие страны — суммарно 8–15 цифр (E.164).
-        function isValidPhone(raw) {
-          var p = splitPhone(raw);
-          var n = p.national;
-          if (p.code === '375') return /^[1-4]\d{8}$/.test(n);
-          if (p.code === '7')   return /^\d{10}$/.test(n);
-          if (p.code === '380') return /^\d{9}$/.test(n);
-          var total = (p.code ? p.code.length : 0) + n.length;
-          return n.length >= 4 && total >= 8 && total <= 15;
-        }
+        pdToggleEl.addEventListener('change', updateSubmitState);
+        updateSubmitState();
+
+        // Форматирование/валидация телефона — общий модуль (assets/js/phone-utils.js).
+        var formatPhone = FloresPhone.format;
+        var isValidPhone = FloresPhone.isValid;
 
         function setPhoneError(msg) {
           if (msg) {
@@ -377,6 +400,13 @@
           }
           setPhoneError('');
 
+          if (cardToggleEl.checked && !cardTextEl.value.trim()) {
+            setCardTextError('Укажите текст для открытки');
+            cardTextEl.focus();
+            return;
+          }
+          setCardTextError('');
+
           var cart = FloresCart.read();
           if (cart.length === 0) { render(); return; }
           var fd = new FormData(form);
@@ -386,6 +416,8 @@
             address: fd.get('address'),
             payment: fd.get('payment'),
             comment: fd.get('comment'),
+            cardText: cardToggleEl.checked ? fd.get('cardText') : '',
+            offersConsent: document.getElementById('co-offers-toggle').checked,
             order: orderSummary(cart)
           };
           fetch(ORDER_ENDPOINT, {

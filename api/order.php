@@ -76,15 +76,30 @@ if ($phone === '') {
     respond(['ok' => false, 'error' => 'Phone is required'], 400);
 }
 
-$lines = ['🌸 <b>Новый заказ Flores</b>', ''];
-if (!empty($body['name']))    { $lines[] = '👤 <b>Имя:</b> ' . e($body['name']); }
-$lines[] = '📞 <b>Телефон:</b> ' . e($phone);
-if (!empty($body['address'])) { $lines[] = '📍 <b>Адрес:</b> ' . e($body['address']); }
-if (!empty($body['payment'])) { $lines[] = '💳 <b>Оплата:</b> ' . e($body['payment']); }
-if (!empty($body['comment'])) { $lines[] = '📝 <b>Комментарий:</b> ' . e($body['comment']); }
-$lines[] = '';
-$lines[] = '🛒 <b>Состав заказа:</b>';
-$lines[] = e($body['order'] ?? '—');
+$isCallback = (($body['type'] ?? '') === 'callback');
+
+if ($isCallback) {
+    // Заявка на обратный звонок с лендинга (блок «Закажите звонок»).
+    // Форма #callback-form отправляет только телефон.
+    $lines = ['📞 <b>Заявка на звонок — Flores</b>', ''];
+    $lines[] = '📞 <b>Телефон:</b> ' . e($phone);
+    $lines[] = '';
+    $lines[] = '💐 Консультация: свадьбы / оформление мероприятий / входные группы';
+} else {
+    $lines = ['🌸 <b>Новый заказ Flores</b>', ''];
+    if (!empty($body['name']))    { $lines[] = '👤 <b>Имя:</b> ' . e($body['name']); }
+    $lines[] = '📞 <b>Телефон:</b> ' . e($phone);
+    if (!empty($body['address'])) { $lines[] = '📍 <b>Адрес:</b> ' . e($body['address']); }
+    if (!empty($body['payment'])) { $lines[] = '💳 <b>Оплата:</b> ' . e($body['payment']); }
+    if (!empty($body['cardText'])) { $lines[] = '💌 <b>Текст на открытке:</b> ' . e($body['cardText']); }
+    if (!empty($body['comment'])) { $lines[] = '📝 <b>Комментарий:</b> ' . e($body['comment']); }
+    if (array_key_exists('offersConsent', $body)) {
+        $lines[] = '📬 <b>Согласие на спецпредложения:</b> ' . (!empty($body['offersConsent']) ? 'да' : 'нет');
+    }
+    $lines[] = '';
+    $lines[] = '🛒 <b>Состав заказа:</b>';
+    $lines[] = e($body['order'] ?? '—');
+}
 
 $ok = tg_send(
     'https://api.telegram.org/bot' . $BOT_TOKEN . '/sendMessage',
