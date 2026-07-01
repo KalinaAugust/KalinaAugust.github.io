@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "title": "Композиция в коробке",
+      "image": "assets/images/catalog-arrangements.svg",
+      "price": 160,
+      "description": "Цветы в шляпной коробке с флористической губкой — стоит без вазы.",
+      "available": true
+    },
+    {
+      "title": "Композиция в корзине",
+      "image": "assets/images/catalog-arrangements.svg",
+      "price": 185,
+      "description": "Плетёная корзина с сезонными цветами — готова к подарку.",
+      "available": true
+    },
+    {
+      "title": "Мини-коробочка",
+      "image": "assets/images/catalog-arrangements.svg",
+      "price": 95,
+      "description": "Компактная композиция в маленькой коробке для приятного знака внимания.",
+      "available": true
+    },
+    {
+      "title": "Коробка с макарунами",
+      "image": "assets/images/catalog-arrangements.svg",
+      "price": 210,
+      "description": "Цветы и пирожные макарун в одной коробке — сладкий комплимент.",
+      "available": true
+    },
+    {
+      "title": "Корзина изобилия",
+      "image": "assets/images/catalog-arrangements.svg",
+      "price": 260,
+      "description": "Большая корзина с обильной цветочной композицией на праздник.",
+      "available": true
+    },
+    {
+      "title": "Пастельная коробка",
+      "image": "assets/images/catalog-arrangements.svg",
+      "price": 175,
+      "description": "Нежная композиция в пастельных тонах в круглой коробке.",
+      "available": true
+    },
+    {
+      "title": "Композиция с зеленью",
+      "image": "assets/images/catalog-arrangements.svg",
+      "price": 150,
+      "description": "Лаконичная коробка с цветами и обилием свежей зелени.",
+      "available": true
+    },
+    {
+      "title": "Романтическая коробка",
+      "image": "assets/images/catalog-arrangements.svg",
+      "price": 195,
+      "description": "Розы и пионы в форме сердца в коробке — для особого повода.",
+      "available": true
+    },
+    {
+      "title": "Корзина полевых цветов",
+      "image": "assets/images/catalog-arrangements.svg",
+      "price": 165,
+      "description": "Лёгкая корзина с полевыми цветами и колосьями — деревенский шарм.",
+      "available": true
+    }
+  ]
+}

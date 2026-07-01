@@ -1,0 +1,53 @@
+{
+  "items": [
+    {
+      "title": "Моно роза",
+      "image": "assets/images/catalog-mono.svg",
+      "price": 45,
+      "description": "Один крупный цветок в авторской упаковке — лаконично и выразительно.",
+      "available": true
+    },
+    {
+      "title": "Моно пион",
+      "image": "assets/images/catalog-mono.svg",
+      "price": 65,
+      "description": "Пышный пион в кальке — нежность в самом простом жесте.",
+      "available": true
+    },
+    {
+      "title": "Моно тюльпан",
+      "image": "assets/images/catalog-mono.svg",
+      "price": 35,
+      "description": "Весенний тюльпан на длинном стебле, оформлен в матовую бумагу.",
+      "available": true
+    },
+    {
+      "title": "Моно гортензия",
+      "image": "assets/images/catalog-mono.svg",
+      "price": 70,
+      "description": "Крупная шапка гортензии — объёмно и воздушно, без лишних деталей.",
+      "available": true
+    },
+    {
+      "title": "Моно хризантема",
+      "image": "assets/images/catalog-mono.svg",
+      "price": 40,
+      "description": "Игольчатая хризантема с лёгкой зеленью — стойкий и графичный акцент.",
+      "available": true
+    },
+    {
+      "title": "Моно ранункулюс",
+      "image": "assets/images/catalog-mono.svg",
+      "price": 50,
+      "description": "Многослойный ранункулюс пастельного оттенка в тонкой упаковке.",
+      "available": true
+    },
+    {
+      "title": "Моно лилия",
+      "image": "assets/images/catalog-mono.svg",
+      "price": 55,
+      "description": "Ароматная лилия с раскрытыми бутонами — выразительно и празднично.",
+      "available": true
+    }
+  ]
+}

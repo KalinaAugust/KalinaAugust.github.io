@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Композиция в коробке">
+  <defs>
+    <linearGradient id="bgArr" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7efe6"/>
+      <stop offset="1" stop-color="#eedbc8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgArr)"/>
+  <g stroke="#4a3a30" stroke-width="3">
+    <g fill="#cf9a73">
+      <circle cx="300" cy="300" r="46"/>
+      <circle cx="400" cy="270" r="52"/>
+      <circle cx="500" cy="300" r="46"/>
+      <circle cx="350" cy="340" r="40"/>
+      <circle cx="450" cy="340" r="40"/>
+    </g>
+    <g fill="#e0b49a">
+      <circle cx="300" cy="300" r="22"/>
+      <circle cx="400" cy="270" r="26"/>
+      <circle cx="500" cy="300" r="22"/>
+      <circle cx="350" cy="340" r="18"/>
+      <circle cx="450" cy="340" r="18"/>
+    </g>
+    <g fill="none" stroke="#7fae6f" stroke-width="5" stroke-linecap="round">
+      <path d="M260 360 C230 340 220 320 224 300"/>
+      <path d="M540 360 C570 340 580 320 576 300"/>
+    </g>
+  </g>
+  <g stroke="#4a3a30" stroke-width="4" fill="#c8a36a">
+    <path d="M250 380 L550 380 L560 500 L240 500 Z"/>
+    <path d="M240 380 L560 380 L560 410 L240 410 Z" fill="#d8b87f"/>
+  </g>
+</svg>

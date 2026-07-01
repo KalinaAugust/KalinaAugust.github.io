@@ -28,6 +28,7 @@
         <a class="brand" href="index.html">Flores</a>
         <div class="header-right">
           <nav class="site-nav" aria-label="Основная навигация">
+            <a href="catalog.html">Каталог</a>
           </nav>
           
           <div class="social-links mobile-socials">
@@ -459,6 +460,7 @@
 
     <script src="assets/js/phone-utils.js"></script>
     <script src="assets/js/cart.js"></script>
+    <script src="assets/js/catalog-render.js"></script>
     <!-- Scroll reveal (the page's only JS — design-system.md §12) -->
     <script>
       const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -503,75 +505,20 @@
         });
       });
 
-      // Lightbox Logic
-      const lightbox = document.getElementById('lightbox');
-      const lightboxImg = document.getElementById('lightbox-img');
-      const closeBtn = document.querySelector('.lightbox__close');
-      const overlay = document.querySelector('.lightbox__overlay');
+      // Lightbox — общий модуль (assets/js/catalog-render.js)
+      FloresCatalog.initLightbox();
 
-      // Лайтбокс через делегирование — работает и для динамических карточек
-      document.addEventListener('click', function (e) {
-        const media = e.target.closest('.bouquet-card__media');
-        if (!media) return;
-        const urlMatch = media.style.backgroundImage.match(/url\(['"]?(.*?)['"]?\)/);
-        if (urlMatch && urlMatch[1]) {
-          lightboxImg.src = urlMatch[1];
-          lightbox.classList.add('is-open');
-        }
-      });
-
-      // Каталог букетов из content/bouquets.json -------------------------
+      // Каталог букетов из content/bouquets.json — общий модуль FloresCatalog.
       const bouquetGrid = document.getElementById('bouquet-grid');
-
-      function escHtml(s) {
-        return String(s == null ? '' : s)
-          .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-          .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-      }
-
-      function bouquetCardHTML(b) {
-        const hasPrice = typeof b.price === 'number';
-        const price = hasPrice
-          ? `<span class="bouquet-card__price">${b.price} Br</span>` : '';
-        const addBtn = hasPrice
-          ? `<button type="button" class="btn btn--primary bouquet-card__add" data-name="${escHtml(b.title)}" data-price="${b.price}" data-image="${encodeURI(b.image || '')}">В корзину</button>`
-          : '';
-        return `
-            <article class="bouquet-card reveal">
-              <div class="bouquet-card__media" style="background-image: url('${encodeURI(b.image || '')}');"></div>
-              <div class="bouquet-card__body">
-                <h3>${escHtml(b.title)}</h3>
-                <p>${escHtml(b.description)}</p>
-                ${price}
-                ${addBtn}
-              </div>
-            </article>`;
-      }
-
-      function renderCatalog(data) {
-        const all = Array.isArray(data) ? data : (data.items || []);
-        const visible = all.filter((b) => b.available !== false);
-        bouquetGrid.innerHTML = visible.map(bouquetCardHTML).join('');
-        bouquetGrid.querySelectorAll('.reveal').forEach(observeReveal);
-        if (window.FloresCart) window.FloresCart.updateUI();
-      }
-
       if (bouquetGrid) {
         fetch('content/bouquets.json')
           .then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-          .then(renderCatalog)
+          .then((data) => FloresCatalog.renderCatalog(bouquetGrid, data, observeReveal))
           .catch(() => {
             bouquetGrid.innerHTML =
               '<p class="bouquet-card__body">Каталог временно недоступен — позвоните нам, и мы соберём букет под вас.</p>';
           });
       }
-
-      function closeLightbox() {
-        lightbox.classList.remove('is-open');
-      }
-
-      closeBtn.addEventListener('click', closeLightbox);
-      overlay.addEventListener('click', closeLightbox);
 
       // Mobile Menu Logic
       const burgerBtn = document.querySelector('.burger-btn');

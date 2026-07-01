@@ -26,3 +26,48 @@ collections:
               - { name: price, label: 'Цена (Br)', widget: number, value_type: int, min: 0 }
               - { name: description, label: Описание, widget: text }
               - { name: available, label: Показывать на сайте, widget: boolean, default: true }
+      - name: mono
+        label: Моно букеты
+        file: content/mono.json
+        fields:
+          - name: items
+            label: Моно букеты
+            label_singular: Букет
+            widget: list
+            summary: '{{fields.title}} — {{fields.price}} Br'
+            fields:
+              - { name: title, label: Название, widget: string }
+              - { name: image, label: Фото, widget: image }
+              - { name: price, label: 'Цена (Br)', widget: number, value_type: int, min: 0 }
+              - { name: description, label: Описание, widget: text }
+              - { name: available, label: Показывать на сайте, widget: boolean, default: true }
+      - name: composed
+        label: Сборные букеты
+        file: content/composed.json
+        fields:
+          - name: items
+            label: Сборные букеты
+            label_singular: Букет
+            widget: list
+            summary: '{{fields.title}} — {{fields.price}} Br'
+            fields:
+              - { name: title, label: Название, widget: string }
+              - { name: image, label: Фото, widget: image }
+              - { name: price, label: 'Цена (Br)', widget: number, value_type: int, min: 0 }
+              - { name: description, label: Описание, widget: text }
+              - { name: available, label: Показывать на сайте, widget: boolean, default: true }
+      - name: arrangements
+        label: Композиции в корзинах и коробках
+        file: content/arrangements.json
+        fields:
+          - name: items
+            label: Композиции
+            label_singular: Композиция
+            widget: list
+            summary: '{{fields.title}} — {{fields.price}} Br'
+            fields:
+              - { name: title, label: Название, widget: string }
+              - { name: image, label: Фото, widget: image }
+              - { name: price, label: 'Цена (Br)', widget: number, value_type: int, min: 0 }
+              - { name: description, label: Описание, widget: text }
+              - { name: available, label: Показывать на сайте, widget: boolean, default: true }

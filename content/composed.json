@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "title": "Сборный пастельный",
+      "image": "assets/images/catalog-composed.svg",
+      "price": 120,
+      "description": "Несколько сортов в мягкой пастельной гамме, собрано вручную.",
+      "available": true
+    },
+    {
+      "title": "Персиковое утро",
+      "image": "assets/images/catalog-composed.svg",
+      "price": 135,
+      "description": "Розы, фрезия и эвкалипт в тёплых персиковых тонах.",
+      "available": true
+    },
+    {
+      "title": "Полевой микс",
+      "image": "assets/images/catalog-composed.svg",
+      "price": 95,
+      "description": "Лёгкий букет полевых цветов с ромашкой и колоском — как с луга.",
+      "available": true
+    },
+    {
+      "title": "Ягодный акцент",
+      "image": "assets/images/catalog-composed.svg",
+      "price": 150,
+      "description": "Насыщенные бордо и малина: розы, диантусы и гиперикум.",
+      "available": true
+    },
+    {
+      "title": "Белое облако",
+      "image": "assets/images/catalog-composed.svg",
+      "price": 165,
+      "description": "Монохромный белый букет из роз, гортензии и гипсофилы.",
+      "available": true
+    },
+    {
+      "title": "Лавандовый вечер",
+      "image": "assets/images/catalog-composed.svg",
+      "price": 140,
+      "description": "Сиренево-фиолетовая гамма с лизиантусом и статицей.",
+      "available": true
+    },
+    {
+      "title": "Солнечный день",
+      "image": "assets/images/catalog-composed.svg",
+      "price": 110,
+      "description": "Жёлтые и оранжевые цветы с зеленью — тёплое и бодрое настроение.",
+      "available": true
+    },
+    {
+      "title": "Классический микс",
+      "image": "assets/images/catalog-composed.svg",
+      "price": 180,
+      "description": "Крупный сборный букет из роз, пионов и сезонной зелени.",
+      "available": true
+    }
+  ]
+}
